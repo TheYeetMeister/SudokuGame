@@ -71,7 +71,7 @@ public:
 
         std::set<int> getAvailableNumberSet(int gridSpace);
 
-        void mergeTwoSets(std::set<int> &target, const std::set<int> &given) const;
+        void getTakenValues(std::vector<bool> &target, const std::vector<bool> &given) const;
     private:
         int pickRanValidVal(std::set<int> &availValue);
 
