@@ -4,6 +4,7 @@
 #include <iosfwd>
 #include <set>
 #include <string>
+#include <vector>
 
 class SudokuBoard {
 public:
@@ -86,10 +87,9 @@ public:
 
         int calGridNumber(int row, int col) const;
 
-        std::set<int> allValues;
-        std::set<int>* rowValues;
-        std::set<int>* colValues;
-        std::set<int>* grids;
+        std::vector<bool>* rowValues;
+        std::vector<bool>* colValues;
+        std::vector<bool>* grids;
         std::set<int> allIndivGrids;
 
         int** newGameBoard;
