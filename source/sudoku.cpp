@@ -541,7 +541,7 @@ std::set<int> SudokuBoard::newBoardGenerator::
 }
 
 void SudokuBoard::newBoardGenerator::
-    mergeTwoSets(std::set<int> &target, std::set<int> const &given) const {
+    getTakenValues(std::vector<bool> &target, std::vector<bool> const &given) const {
         for(auto i = given.begin(); i != given.end(); ++i) {
             target.insert(*i);
         }
