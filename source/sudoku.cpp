@@ -509,18 +509,18 @@ int SudokuBoard::newBoardGenerator::pickRanValidVal(std::set<int> &values) {
 }
 
 void SudokuBoard::newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int value) {
-    rowValues[calRowNumber(gridSpace)].insert(value);
-    colValues[calColNumber(gridSpace)].insert(value);
-    grids[calMacroGridCoor(gridSpace)].insert(value);
+    rowValues[calRowNumber(gridSpace)][value - 1] = true;
+    colValues[calColNumber(gridSpace)][value - 1] = true;
+    grids[calMacroGridCoor(gridSpace)][value - 1] = true;
 
     newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = value;
 }
 
 void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
 {
-    rowValues[calRowNumber(gridSpace)].erase(value);
-    colValues[calColNumber(gridSpace)].erase(value);
-    grids[calMacroGridCoor(gridSpace)].erase(value);
+    rowValues[calRowNumber(gridSpace)][value - 1] = false;
+    colValues[calColNumber(gridSpace)][value - 1] = false;
+    grids[calMacroGridCoor(gridSpace)][value - 1] = false;
 }
 
 std::set<int> SudokuBoard::newBoardGenerator::
