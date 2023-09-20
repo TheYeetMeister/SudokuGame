@@ -542,8 +542,10 @@ std::set<int> SudokuBoard::newBoardGenerator::
 
 void SudokuBoard::newBoardGenerator::
     getTakenValues(std::vector<bool> &target, std::vector<bool> const &given) const {
-        for(auto i = given.begin(); i != given.end(); ++i) {
-            target.insert(*i);
+        for(int i = 0; i < given.size(); ++i) {
+            if (given[i]) {
+                target[i] = true;
+            }
         }
 }
 
