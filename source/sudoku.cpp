@@ -437,9 +437,9 @@ SudokuBoard::newBoardGenerator::~newBoardGenerator() {
 void SudokuBoard::newBoardGenerator::createCompletedBoard() {
     if (!size) return;
 
-    std::set<int> **dp = new std::set<int>*[size];
+    std::vector<bool> **dp = new std::vector<bool>*[size];
     for(int i = 0; i < size; ++i) {
-        dp[i] = new std::set<int>[size];
+        dp[i] = new std::vector<bool>[size];
     }
 
     //backtracking algorithm, randomized for sudoku
