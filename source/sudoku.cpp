@@ -523,21 +523,22 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
     grids[calMacroGridCoor(gridSpace)][value - 1] = false;
 }
 
-std::set<int> SudokuBoard::newBoardGenerator::
+std::vector<int> SudokuBoard::newBoardGenerator::
     getAvailableNumberSet(int gridSpace) {
-        std::set<int> unavailableValues;
+        std::vector<bool> numbersTaken(size);
 
-        mergeTwoSets(unavailableValues, rowValues[calRowNumber(gridSpace)]);
-        mergeTwoSets(unavailableValues, colValues[calColNumber(gridSpace)]);
-        mergeTwoSets(unavailableValues, grids[calMacroGridCoor(gridSpace)]);
+        getTakenValues(numbersTaken, rowValues[calRowNumber(gridSpace)]);
+        getTakenValues(numbersTaken, colValues[calColNumber(gridSpace)]);
+        getTakenValues(numbersTaken, grids[calMacroGridCoor(gridSpace)]);
 
-        std::set<int> availableValues = allValues;
+        std::vector<int> availableNumbers;
 
-        for (auto i = unavailableValues.begin(); i != unavailableValues.end(); ++i)
-        {
-            availableValues.erase(*i);
+        for(int i = 0; i < numbersTaken.size(); ++i) {
+            if (!numbersTaken[i]) {
+                availableNumbers.push_back(i + 1);
+            }
         }
-        return availableValues;
+        return availableNumbers;
 }
 
 void SudokuBoard::newBoardGenerator::
