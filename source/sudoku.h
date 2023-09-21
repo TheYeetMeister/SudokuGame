@@ -87,9 +87,9 @@ public:
 
         int calGridNumber(int row, int col) const;
 
-        std::vector<bool>* rowValues;
-        std::vector<bool>* colValues;
-        std::vector<bool>* grids;
+        bool** rowValues;
+        bool** colValues;
+        bool** grids;
         std::set<int> allIndivGrids;
 
         int** newGameBoard;

@@ -423,18 +423,24 @@ SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, 
         for(int i = 0; i < size * size; ++i) {
             allIndivGrids.insert(i);
         }
-        rowValues = new std::vector<bool>[size];
-        colValues = new std::vector<bool>[size];
-        grids = new std::vector<bool>[size];
+        rowValues = new bool*[size];
+        colValues = new bool*[size];
+        grids = new bool*[size];
 
         for(int i = 0; i < size; ++i) {
-            rowValues[i] = std::vector<bool>(size);
-            colValues[i] = std::vector<bool>(size);
-            grids[i] = std::vector<bool>(size);
+            rowValues[i] = new bool[size];
+            colValues[i] = new bool[size];
+            grids[i] = new bool[size];
         }
     }
 
 SudokuBoard::newBoardGenerator::~newBoardGenerator() {
+    for(int i = 0; i < size; ++i) {
+        delete[] rowValues[i];
+        delete[] colValues[i];
+        delete[] grids[i];
+    }
+
     delete[] rowValues;
     delete[] colValues;
     delete[] grids;
@@ -536,7 +542,7 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
 std::vector<int> SudokuBoard::newBoardGenerator::
     getAvailableNumberSet(int gridSpace) {
         std::vector<bool> numbersTaken(size);
-
+        
         getTakenValues(numbersTaken, rowValues[calRowNumber(gridSpace)]);
         getTakenValues(numbersTaken, colValues[calColNumber(gridSpace)]);
         getTakenValues(numbersTaken, grids[calMacroGridCoor(gridSpace)]);
@@ -545,9 +551,10 @@ std::vector<int> SudokuBoard::newBoardGenerator::
 
         for(int i = 0; i < numbersTaken.size(); ++i) {
             if (!numbersTaken[i]) {
-                availableNumbers.push_back(numbersTaken[i] + 1);
+                availableNumbers.push_back(i + 1);
             }
         }
+
         return availableNumbers;
 }
 
