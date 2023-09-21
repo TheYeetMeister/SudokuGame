@@ -462,7 +462,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         int row = calRowNumber(i);
         int col = calColNumber(i);
 
-        if (dp[row][col].size() == 0) {
+        if (!dp[row][col].size()) {
             --i;
             removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
             continue;
