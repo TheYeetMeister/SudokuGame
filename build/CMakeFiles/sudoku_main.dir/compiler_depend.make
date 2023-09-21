@@ -261,16 +261,8 @@ CMakeFiles/sudoku_main.dir/source/sudoku.cpp.o: ../source/sudoku.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/enable_special_members.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/algorithm \
-  /usr/include/c++/11/bits/ranges_algo.h \
-  /usr/include/c++/11/bits/ranges_algobase.h \
-  /usr/include/c++/11/iterator \
-  /usr/include/c++/11/bits/stream_iterator.h \
-  /usr/include/c++/11/bits/ranges_util.h \
-  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/11/functional \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/bits/std_function.h
+  /usr/include/c++/11/unordered_set \
+  /usr/include/c++/11/bits/unordered_set.h
 
 CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o: ../source/sudoku_main.cpp \
   /usr/include/stdc-predef.h \
@@ -479,21 +471,11 @@ CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o: ../source/sudoku_main.cpp \
   /usr/include/c++/11/bits/vector.tcc
 
 
-/usr/include/c++/11/bits/refwrap.h:
-
-/usr/include/c++/11/bits/ranges_util.h:
-
-/usr/include/c++/11/bits/stream_iterator.h:
-
-/usr/include/c++/11/bits/ranges_algobase.h:
-
-/usr/include/c++/11/algorithm:
+/usr/include/c++/11/bits/unordered_set.h:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
 /usr/include/c++/11/bits/invoke.h:
-
-/usr/include/c++/11/bits/std_function.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
@@ -655,6 +637,8 @@ CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o: ../source/sudoku_main.cpp \
 
 /usr/include/c++/11/ext/type_traits.h:
 
+/usr/include/c++/11/unordered_set:
+
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
@@ -733,8 +717,6 @@ CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o: ../source/sudoku_main.cpp \
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
-/usr/include/c++/11/bits/ranges_algo.h:
-
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
@@ -762,8 +744,6 @@ CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o: ../source/sudoku_main.cpp \
 /usr/include/c++/11/clocale:
 
 /usr/include/c++/11/bits/ostream.tcc:
-
-/usr/include/c++/11/iterator:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -808,8 +788,6 @@ CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o: ../source/sudoku_main.cpp \
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/c++/11/functional:
 
 /usr/include/linux/errno.h:
 
@@ -910,8 +888,6 @@ CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o: ../source/sudoku_main.cpp \
 /usr/include/c++/11/utility:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /usr/include/c++/11/stdexcept:
 

@@ -69,7 +69,7 @@ public:
 
         std::set<int> eraseNumOfSquares(int n);
 
-        std::vector<int> getAvailableNumberSet(int gridSpace);
+        std::unordered_set<int> getAvailableNumberSet(int gridSpace);
 
         void getTakenValues(bool* target, const bool* given) const;
     private:
