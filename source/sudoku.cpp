@@ -423,9 +423,9 @@ SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, 
         for(int i = 0; i < size * size; ++i) {
             allIndivGrids.insert(i);
         }
-        rowValues = new std::vector<bool>[size];
-        colValues = new std::vector<bool>[size];
-        grids = new std::vector<bool>[size];
+        rowValues = new std::vector<bool>[size]();
+        colValues = new std::vector<bool>[size]();
+        grids = new std::vector<bool>[size]();
     }
 
 SudokuBoard::newBoardGenerator::~newBoardGenerator() {
@@ -459,13 +459,17 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         int value = dp[row][col][index];
         dp[row][col].erase(dp[row][col].begin() + index);
 
+        std::cout << "1" << std::endl;
+
         insertValueIntoGridSpace(i, value);
         ++i;
-
+        std::cout << "2" << std::endl;
         row = calRowNumber(i);
         col = calColNumber(i);
-
+        std::cout << "3" << std::endl;
         dp[row][col] = getAvailableNumberSet(i);
+
+        std::cout << "4\n" << std::endl;
     }
     insertValueIntoGridSpace(size * size - 1, 
                 *dp[size-1][size-1].begin());
