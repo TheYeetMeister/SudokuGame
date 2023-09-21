@@ -73,6 +73,7 @@ public:
 
         void getTakenValues(bool* target, const bool* given) const;
     private:
+        //picks a random number, INCLUDING the number argument given
         int pickRanVal(int n);
 
         void insertValueIntoGridSpace(int gridSpace, int value);
