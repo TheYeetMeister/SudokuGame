@@ -454,19 +454,11 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         dp[i] = new std::vector<int>[size];
     }
 
-    for(int i = 0; i < size; ++i) {
-        for(int j = 0; j < size; ++j) {
-            std::cout << rowValues[i][j];
-        }
-    }
-    std::cout << '\n';
-
     //backtracking algorithm, randomized for sudoku
     dp[0][0] = getAvailableNumberSet(0);
 
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
-
         int row = calRowNumber(i);
         int col = calColNumber(i);
 
