@@ -494,14 +494,14 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
-int SudokuBoard::newBoardGenerator::pickRanValidVal(std::vector<int> &availValues) {
-    if (!availValues.size()) return -1;
+int SudokuBoard::newBoardGenerator::pickRanVal(int n) {
+    if (!n) return -1;
 
     std::random_device generator;
     std::mt19937 rng(generator());
-    std::uniform_int_distribution<std::mt19937::result_type> distribution(0, availValues.size() - 1);
+    std::uniform_int_distribution<std::mt19937::result_type> distribution(0, n);
 
-    return availValues[distribution(generator)];
+    return distribution(generator);
 }
 
 void SudokuBoard::newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int value) {
