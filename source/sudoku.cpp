@@ -468,7 +468,8 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
             continue;
         }
 
-        int index = pickRanVal(dp[row][col].size() - 1);
+        int index = pickRanVal(dp[row][col].size());
+        std::cout << dp[row][col].size() << " " << index << std::endl;
         int value = dp[row][col][index];
         dp[row][col].erase(dp[row][col].begin() + index);
 
