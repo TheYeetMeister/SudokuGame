@@ -982,7 +982,7 @@ TEST(SudokuBoardGeneration, CreateSolvedPuzzle3) {
     game.generateNewPlayableBoard(0);
 
     EXPECT_TRUE(game.isTheWholeBoardSolved());
-}
+} 
 
 TEST(SudokuBoardGeneration, CreatePlayablePuzzle) {
     SudokuBoard game = SudokuBoard();

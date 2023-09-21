@@ -428,9 +428,9 @@ SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, 
         grids = new bool*[size];
 
         for(int i = 0; i < size; ++i) {
-            rowValues[i] = new bool[size];
-            colValues[i] = new bool[size];
-            grids[i] = new bool[size];
+            rowValues[i] = new bool[size]{};
+            colValues[i] = new bool[size]{};
+            grids[i] = new bool[size]{};
         }
     }
 
@@ -454,8 +454,16 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         dp[i] = new std::vector<int>[size];
     }
 
+    for(int i = 0; i < size; ++i) {
+        for(int j = 0; j < size; ++j) {
+            std::cout << rowValues[i][j];
+        }
+    }
+    std::cout << '\n';
+
     //backtracking algorithm, randomized for sudoku
     dp[0][0] = getAvailableNumberSet(0);
+
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
 
