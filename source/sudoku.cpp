@@ -38,9 +38,9 @@ SudokuBoard::~SudokuBoard() {
     if (madeNotUsingNew) return;
 
     for (int i = 0; i < size; ++i) {
-        delete gameBoard[i];
+        delete[] gameBoard[i];
     }
-    delete gameBoard;
+    delete[] gameBoard;
 }
 
 int** SudokuBoard::getGameBoard(){
@@ -452,6 +452,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
     dp[0][0] = getAvailableNumberSet(0);
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
+
         int row = calRowNumber(i);
         int col = calColNumber(i);
 
@@ -465,17 +466,14 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         int value = dp[row][col][index];
         dp[row][col].erase(dp[row][col].begin() + index);
 
-        std::cout << "1" << std::endl;
 
         insertValueIntoGridSpace(i, value);
         ++i;
-        std::cout << "2" << std::endl;
+        
         row = calRowNumber(i);
         col = calColNumber(i);
-        std::cout << "3" << std::endl;
+        
         dp[row][col] = getAvailableNumberSet(i);
-
-        std::cout << "4\n" << std::endl;
     }
     insertValueIntoGridSpace(size * size - 1, 
                 *dp[size-1][size-1].begin());
