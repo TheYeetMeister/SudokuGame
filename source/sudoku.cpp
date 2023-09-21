@@ -466,7 +466,6 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         int value = dp[row][col][index];
         dp[row][col].erase(dp[row][col].begin() + index);
 
-
         insertValueIntoGridSpace(i, value);
         ++i;
         
@@ -546,7 +545,7 @@ std::vector<int> SudokuBoard::newBoardGenerator::
 
         for(int i = 0; i < numbersTaken.size(); ++i) {
             if (!numbersTaken[i]) {
-                availableNumbers.push_back(i + 1);
+                availableNumbers.push_back(numbersTaken[i] + 1);
             }
         }
         return availableNumbers;
