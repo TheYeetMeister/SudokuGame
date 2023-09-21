@@ -455,9 +455,10 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
             continue;
         }
 
-        int value = pickRanValidVal(dp[row][col]);
+        int index = pickRanVal(dp[row][col].size() - 1);
+        int value = dp[row][col][index];
+        dp[row][col].erase(dp[row][col].begin() + index);
 
-        dp[row][col].erase(value);
         insertValueIntoGridSpace(i, value);
         ++i;
 
