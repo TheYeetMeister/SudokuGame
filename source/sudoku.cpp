@@ -475,10 +475,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         insertValueIntoGridSpace(i, value);
         ++i;
         
-        row = calRowNumber(i);
-        col = calColNumber(i);
-        
-        dp[row][col] = getAvailableNumberSet(i);
+        dp[calRowNumber(i)][calColNumber(i)] = getAvailableNumberSet(i);
     }
     insertValueIntoGridSpace(size * size - 1, 
                 dp[size-1][size-1][0]);
@@ -514,7 +511,9 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
+//picks a random number, INCLUDING the number argument given
 int SudokuBoard::newBoardGenerator::pickRanVal(int n) {
+
     if (n < 0) return -1;
 
     std::random_device generator;
