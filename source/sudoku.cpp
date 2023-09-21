@@ -481,7 +481,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         dp[row][col] = getAvailableNumberSet(i);
     }
     insertValueIntoGridSpace(size * size - 1, 
-                *dp[size-1][size-1].begin());
+                dp[size-1][size-1][0]);
     //end of algorithm
 
     for(int i = 0; i < size; ++i) {
@@ -541,7 +541,7 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
 
 std::vector<int> SudokuBoard::newBoardGenerator::
     getAvailableNumberSet(int gridSpace) {
-        bool* numbersTaken = new bool[size];
+        bool* numbersTaken = new bool[size]{};
         
         getTakenValues(numbersTaken, rowValues[calRowNumber(gridSpace)]);
         getTakenValues(numbersTaken, colValues[calColNumber(gridSpace)]);
