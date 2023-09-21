@@ -71,7 +71,7 @@ public:
 
         std::vector<int> getAvailableNumberSet(int gridSpace);
 
-        void getTakenValues(std::vector<bool> &target, const std::vector<bool> &given) const;
+        void getTakenValues(bool* target, const bool* given) const;
     private:
         int pickRanVal(int n);
 

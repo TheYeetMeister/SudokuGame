@@ -559,8 +559,8 @@ std::vector<int> SudokuBoard::newBoardGenerator::
 }
 
 void SudokuBoard::newBoardGenerator::
-    getTakenValues(std::vector<bool> &target, std::vector<bool> const &given) const {
-        for(int i = 0; i < given.size(); ++i) {
+    getTakenValues(bool* target, const bool* given) const {
+        for(int i = 0; i < size; ++i) {
             if (given[i]) {
                 target[i] = true;
             }
