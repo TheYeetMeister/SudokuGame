@@ -12,6 +12,9 @@ set(SUDOKU_SRC_FILES
 source/sudoku.h
 source/sudoku.cpp)
 
+target_compile_options(sudoku_main PRIVATE "-fsanitize=address")
+target_link_options(sudoku_main PRIVATE "-fsanitize=address")
+
 add_executable(sudoku_main ${SUDOKU_SRC_FILES} source/sudoku_main.cpp)
 
 find_package(GTest)

@@ -1,0 +1,170 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: g++ 
+      Build flags: -Wall;-Wextra;-Wpedantic;-ggdb
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 9/21/2023 2:00:11 PM.
+      Project "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\3.27.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\3.27.4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\3.27.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.56
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/KTran/Repos/SudokuGame/build/CMakeFiles/3.27.4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/KTran/Repos/SudokuGame/build/CMakeFiles/CMakeScratch/TryCompile-vfluph"
+      binary: "C:/Users/KTran/Repos/SudokuGame/build/CMakeFiles/CMakeScratch/TryCompile-vfluph"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-Wall -Wextra -Wpedantic -ggdb"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/KTran/Repos/SudokuGame/build/CMakeFiles/CMakeScratch/TryCompile-vfluph'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_c2966.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 9/21/2023 2:00:14 PM.
+        Project "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vfluph\\cmTC_c2966.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c2966.dir\\Debug\\".
+          Creating directory "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vfluph\\Debug\\".
+          Creating directory "cmTC_c2966.dir\\Debug\\cmTC_c2966.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c2966.dir\\Debug\\cmTC_c2966.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c2966.dir\\Debug\\\\" /Fd"cmTC_c2966.dir\\Debug\\vc142.pdb" /external:W4 /Gd /TP /errorReport:queue  -Wextra -Wpedantic -ggdb "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /Wall /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c2966.dir\\Debug\\\\" /Fd"cmTC_c2966.dir\\Debug\\vc142.pdb" /external:W4 /Gd /TP /errorReport:queue  -Wextra -Wpedantic -ggdb "C:\\Program Files\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        cl : command line error D8021: invalid numeric argument '/Wextra' [C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vfluph\\cmTC_c2966.vcxproj]
+        Done Building Project "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vfluph\\cmTC_c2966.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vfluph\\cmTC_c2966.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          cl : command line error D8021: invalid numeric argument '/Wextra' [C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vfluph\\cmTC_c2966.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.53
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe"
+    directories:
+      source: "C:/Users/KTran/Repos/SudokuGame/build/CMakeFiles/CMakeScratch/TryCompile-61uilq"
+      binary: "C:/Users/KTran/Repos/SudokuGame/build/CMakeFiles/CMakeScratch/TryCompile-61uilq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-Wall -Wextra -Wpedantic -ggdb"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/KTran/Repos/SudokuGame/build/CMakeFiles/CMakeScratch/TryCompile-61uilq'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_20cac.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 9/21/2023 2:00:14 PM.
+        Project "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\cmTC_20cac.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_20cac.dir\\Debug\\".
+          Creating directory "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\Debug\\".
+          Creating directory "cmTC_20cac.dir\\Debug\\cmTC_20cac.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_20cac.dir\\Debug\\cmTC_20cac.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /Wall /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_20cac.dir\\Debug\\\\" /Fd"cmTC_20cac.dir\\Debug\\vc142.pdb" /external:W4 /Gd /TP /errorReport:queue  -Wextra -Wpedantic -ggdb "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\testCXXCompiler.cxx"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /Wall /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_20cac.dir\\Debug\\\\" /Fd"cmTC_20cac.dir\\Debug\\vc142.pdb" /external:W4 /Gd /TP /errorReport:queue  -Wextra -Wpedantic -ggdb "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\testCXXCompiler.cxx"
+        cl : command line error D8021: invalid numeric argument '/Wextra' [C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\cmTC_20cac.vcxproj]
+        Done Building Project "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\cmTC_20cac.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\cmTC_20cac.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          cl : command line error D8021: invalid numeric argument '/Wextra' [C:\\Users\\KTran\\Repos\\SudokuGame\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61uilq\\cmTC_20cac.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.59
+        
+      exitCode: 1
+...
