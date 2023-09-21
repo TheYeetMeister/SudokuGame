@@ -73,7 +73,7 @@ public:
 
         void getTakenValues(std::vector<bool> &target, const std::vector<bool> &given) const;
     private:
-        int pickRanValidVal(std::set<int> &availValue);
+        int pickRanValidVal(std::vector<int> &availValue);
 
         void insertValueIntoGridSpace(int gridSpace, int value);
 
