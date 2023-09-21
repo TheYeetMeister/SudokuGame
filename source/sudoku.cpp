@@ -484,7 +484,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         dp[calRowNumber(i)][calColNumber(i)] = getAvailableNumberSet(i);
     }
     insertValueIntoGridSpace(size * size - 1, 
-                dp[size-1][size-1][0]);
+                *dp[size-1][size-1].begin());
     //end of algorithm
 
     for(int i = 0; i < size; ++i) {
