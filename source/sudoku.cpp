@@ -450,9 +450,9 @@ SudokuBoard::newBoardGenerator::~newBoardGenerator() {
 void SudokuBoard::newBoardGenerator::createCompletedBoard() {
     if (!size) return;
 
-    std::vector<int> **dp = new std::vector<int>*[size];
+    std::unordered_set<int> **dp = new std::unordered_set<int>*[size];
     for(int i = 0; i < size; ++i) {
-        dp[i] = new std::vector<int>[size];
+        dp[i] = new std::unordered_set<int>[size];
     }
 
     //backtracking algorithm, randomized for sudoku
@@ -471,8 +471,12 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         }
 
         int index = pickRanVal(dp[row][col].size() - 1);
-        int value = dp[row][col][index];
-        dp[row][col].erase(dp[row][col].begin() + index);
+        auto iterator = dp[row][col].begin();
+        std::advance(iterator, index);
+
+        int value = *iterator;
+
+        dp[row][col].erase(value);
 
         insertValueIntoGridSpace(i, value);
         ++i;
@@ -540,7 +544,7 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
     grids[calMacroGridCoor(gridSpace)][value - 1] = false;
 }
 
-std::vector<int> SudokuBoard::newBoardGenerator::
+std::unordered_set<int> SudokuBoard::newBoardGenerator::
     getAvailableNumberSet(int gridSpace) {
         bool* numbersTaken = new bool[size]{};
         
@@ -548,11 +552,11 @@ std::vector<int> SudokuBoard::newBoardGenerator::
         getTakenValues(numbersTaken, colValues[calColNumber(gridSpace)]);
         getTakenValues(numbersTaken, grids[calMacroGridCoor(gridSpace)]);
 
-        std::vector<int> availableNumbers;
+        std::unordered_set<int> availableNumbers;
 
         for(int i = 0; i < size; ++i) {
             if (!numbersTaken[i]) {
-                availableNumbers.push_back(i + 1);
+                availableNumbers.insert(i + 1);
             }
         }
         

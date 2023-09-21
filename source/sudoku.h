@@ -4,7 +4,7 @@
 #include <iosfwd>
 #include <set>
 #include <string>
-#include <vector>
+#include <unordered_set>
 
 class SudokuBoard {
 public:
