@@ -7,7 +7,7 @@
 #include <random>
 #include <cmath>
 #include <unordered_map>
-#include <unordered_set>
+#include <algorithm>
 
 const int UPPER_LIMIT = INT_MAX;
 
@@ -450,9 +450,9 @@ SudokuBoard::newBoardGenerator::~newBoardGenerator() {
 void SudokuBoard::newBoardGenerator::createCompletedBoard() {
     if (!size) return;
 
-    std::unordered_set<int> **dp = new std::unordered_set<int>*[size];
+    std::vector<int> **dp = new std::vector<int>*[size];
     for(int i = 0; i < size; ++i) {
-        dp[i] = new std::unordered_set<int>[size];
+        dp[i] = new std::vector<int>[size];
     }
 
     //backtracking algorithm, randomized for sudoku
@@ -460,7 +460,6 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
 
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
-
         int row = calRowNumber(i);
         int col = calColNumber(i);
 
@@ -471,12 +470,8 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         }
 
         int index = pickRanVal(dp[row][col].size() - 1);
-        auto iterator = dp[row][col].begin();
-        std::advance(iterator, index);
-
-        int value = *iterator;
-
-        dp[row][col].erase(value);
+        int value = dp[row][col][index];
+        dp[row][col].erase(dp[row][col].begin() + index);
 
         insertValueIntoGridSpace(i, value);
         ++i;
@@ -484,7 +479,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         dp[calRowNumber(i)][calColNumber(i)] = getAvailableNumberSet(i);
     }
     insertValueIntoGridSpace(size * size - 1, 
-                *dp[size-1][size-1].begin());
+                dp[size-1][size-1][0]);
     //end of algorithm
 
     for(int i = 0; i < size; ++i) {
@@ -544,7 +539,7 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
     grids[calMacroGridCoor(gridSpace)][value - 1] = false;
 }
 
-std::unordered_set<int> SudokuBoard::newBoardGenerator::
+std::vector<int> SudokuBoard::newBoardGenerator::
     getAvailableNumberSet(int gridSpace) {
         bool* numbersTaken = new bool[size]{};
         
@@ -552,11 +547,11 @@ std::unordered_set<int> SudokuBoard::newBoardGenerator::
         getTakenValues(numbersTaken, colValues[calColNumber(gridSpace)]);
         getTakenValues(numbersTaken, grids[calMacroGridCoor(gridSpace)]);
 
-        std::unordered_set<int> availableNumbers;
+        std::vector<int> availableNumbers;
 
         for(int i = 0; i < size; ++i) {
             if (!numbersTaken[i]) {
-                availableNumbers.insert(i + 1);
+                availableNumbers.push_back(i + 1);
             }
         }
         

@@ -4,7 +4,7 @@
 #include <iosfwd>
 #include <set>
 #include <string>
-#include <unordered_set>
+#include <vector>
 
 class SudokuBoard {
 public:
@@ -69,7 +69,7 @@ public:
 
         std::set<int> eraseNumOfSquares(int n);
 
-        std::unordered_set<int> getAvailableNumberSet(int gridSpace);
+        std::vector<int> getAvailableNumberSet(int gridSpace);
 
         void getTakenValues(bool* target, const bool* given) const;
     private:
