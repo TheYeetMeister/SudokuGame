@@ -484,7 +484,13 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     }
 
     for (int i = 0; i < n; ++i) {
-        int gridNumber = pickRanValidVal(remainingGridNumbers);
+        int index = pickRanVal(remainingGridNumbers.size() - 1);
+
+        auto iterator = remainingGridNumbers.begin();
+
+        std::advance(iterator, index);
+
+        int gridNumber = *iterator;
 
         newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)] = 0;
 
