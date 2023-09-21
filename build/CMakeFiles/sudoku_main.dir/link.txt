@@ -1,1 +1,1 @@
-/usr/bin/g++ -Wall -Wextra -Wpedantic -ggdb -g CMakeFiles/sudoku_main.dir/source/sudoku.cpp.o CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o -o sudoku_main 
+/usr/bin/g++ -Wall -Wextra -Wpedantic -ggdb -fsanitize=address -g CMakeFiles/sudoku_main.dir/source/sudoku.cpp.o CMakeFiles/sudoku_main.dir/source/sudoku_main.cpp.o -o sudoku_main 
