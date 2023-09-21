@@ -468,8 +468,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
             continue;
         }
 
-        int index = pickRanVal(dp[row][col].size());
-        std::cout << dp[row][col].size() << " " << index << std::endl;
+        int index = pickRanVal(dp[row][col].size() - 1);
         int value = dp[row][col][index];
         dp[row][col].erase(dp[row][col].begin() + index);
 
@@ -516,7 +515,7 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 }
 
 int SudokuBoard::newBoardGenerator::pickRanVal(int n) {
-    if (!n) return -1;
+    if (n < 0) return -1;
 
     std::random_device generator;
     std::mt19937 rng(generator());
