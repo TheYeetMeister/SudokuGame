@@ -211,4 +211,11 @@ CMakeFiles/sudoku_gtests.dir/source/sudoku.cpp.o: \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/unordered_map.h
+ /usr/include/c++/11/bits/unordered_map.h /usr/include/c++/11/algorithm \
+ /usr/include/c++/11/bits/ranges_algo.h \
+ /usr/include/c++/11/bits/ranges_algobase.h /usr/include/c++/11/iterator \
+ /usr/include/c++/11/bits/stream_iterator.h \
+ /usr/include/c++/11/bits/ranges_util.h \
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/bits/std_function.h

@@ -7,6 +7,7 @@
 #include <random>
 #include <cmath>
 #include <unordered_map>
+#include <unordered_set>
 
 const int UPPER_LIMIT = INT_MAX;
 
@@ -459,6 +460,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
 
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
+
         int row = calRowNumber(i);
         int col = calColNumber(i);
 
