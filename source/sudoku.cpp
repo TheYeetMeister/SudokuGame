@@ -460,7 +460,6 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
 
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
-        std::cout << "GRIDNUMBER: "<< i << std::endl;
 
         int row = calRowNumber(i);
         int col = calColNumber(i);
