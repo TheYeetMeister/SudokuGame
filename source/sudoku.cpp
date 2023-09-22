@@ -513,6 +513,10 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
+bool isUniqueSolution(std::vector<int> emptyGrids) {
+    
+}
+
 //picks a random number, INCLUDING the number argument given
 int SudokuBoard::newBoardGenerator::pickRanVal(int n) {
 
