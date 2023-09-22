@@ -460,6 +460,8 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
 
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
+        std::cout << "GRIDNUMBER: "<< i << std::endl;
+
         int row = calRowNumber(i);
         int col = calColNumber(i);
 
@@ -562,9 +564,7 @@ std::vector<int> SudokuBoard::newBoardGenerator::
 void SudokuBoard::newBoardGenerator::
     getTakenValues(bool* target, const bool* given) const {
         for(int i = 0; i < size; ++i) {
-            if (given[i]) {
-                target[i] = true;
-            }
+            target[i] = target[i] || given[i];
         }
 }
 
