@@ -545,12 +545,20 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
             --index;
             int i = emptyGrids[index];
             removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
+            if (solved) {
+                return false;
+            } else {
+                solved = true;
+            }
+            continue;
         }
 
         int i = emptyGrids[index];
         
         dp[index] = getAvailableNumberSet(i);
     }
+
+    return solved;
 }
 
 //picks a random number, INCLUDING the number argument given
