@@ -535,27 +535,36 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
     //solution checking algorithm
     int index = 0;
-    int i = emptyGrids[index];
-    dp[0] = getAvailableNumberSet(i);
+    int gridNumber = emptyGrids[index];
+    dp[0] = getAvailableNumberSet(gridNumber);
+
+    for (auto i = dp.begin(); i != dp.end(); ++i) {
+        std::cout << "{";
+        for (auto j = i->begin(); j != i->end(); ++j) {
+            std::cout << *j << " ";
+        }
+        std::cout << "} ";
+    }
+    std::cout << '\n';
 
     while(!dp[0].empty()) {
         if (dp[index].empty()) {
             --index;
-            i = emptyGrids[index];
-            removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
+            gridNumber = emptyGrids[index];
+            removeValueFromGridSpace(gridNumber, newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)]);
             continue;
         }
     
         int value = dp[index][0];
         dp[index].erase(dp[index].begin());
 
-        insertValueIntoGridSpace(i, value);
+        insertValueIntoGridSpace(gridNumber, value);
         ++index;
 
         if (index >= int(dp.size())) {
             --index;
-            i = emptyGrids[index];
-            removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
+            gridNumber = emptyGrids[index];
+            removeValueFromGridSpace(gridNumber, newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)]);
             if (solved) {
                 return false;
             } else {
@@ -563,10 +572,11 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
             }
             continue;
         }
-        i = emptyGrids[index];
+        gridNumber = emptyGrids[index];
         
-        dp[index] = getAvailableNumberSet(i);
+        dp[index] = getAvailableNumberSet(gridNumber);
     }
+    std::cout << '\n';
     //end of algorithm
 
     return solved;
