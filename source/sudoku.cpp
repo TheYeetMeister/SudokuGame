@@ -512,10 +512,12 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
-bool isUniqueSolution(std::vector<int> &emptyGrids) {
+bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids) {
     if (emptyGrids.empty()) return true;
 
     std::vector<std::vector<int>> dp(emptyGrids.size());
+
+    dp[0] = getAvailableNumberSet(emptyGrids[0]);
 
     for(int i = 0; i < totalGridsOneLess;) {
 
