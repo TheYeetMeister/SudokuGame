@@ -507,14 +507,20 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 
         erasedNumbers.push_back(gridNumber);
 
+        int row = calRowNumber(gridNumber);
+        int col = calColNumber(gridNumber);
+
+        int prevValue = newGameBoard[row][col];
+
+        removeValueFromGridSpace(prevValue, newGameBoard[row][col]);
+
         if (!isUniqueSolution(erasedNumbers)) {
+            insertValueIntoGridSpace(prevValue, newGameBoard[row][col]);
             erasedNumbers.pop_back();
             --i;
             continue;
         }
-
         newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)] = 0;
-
         remainingGridNumbers.erase(gridNumber);
     }
 
@@ -528,25 +534,26 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
     bool solved = false;
 
-     //solution checking algorithm
+    //solution checking algorithm
     int index = 0;
     int i = emptyGrids[index];
     dp[0] = getAvailableNumberSet(i);
 
     while(!dp[0].empty()) {
-        if (dp[i].empty()) {
+        std::cout << "BEGIN1" << std::endl;
+        if (dp[index].empty()) {
             --index;
             i = emptyGrids[index];
             removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
             continue;
         }
-
+        std::cout << "BEGIN2" << std::endl;
         int value = dp[index][0];
         dp[index].erase(dp[index].begin());
 
         insertValueIntoGridSpace(i, value);
         ++index;
-
+        std::cout << "BEGIN3" << std::endl;
         if (index >= dp.size()) {
             --index;
             i = emptyGrids[index];
@@ -558,7 +565,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
             }
             continue;
         }
-
+        std::cout << "BEGIN4" << std::endl;
         i = emptyGrids[index];
         
         dp[index] = getAvailableNumberSet(i);
