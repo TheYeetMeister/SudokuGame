@@ -506,18 +506,20 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 
         int gridNumber = *iterator;
 
-        erasedNumbers.push_back(gridNumber);
-
         int row = calRowNumber(gridNumber);
         int col = calColNumber(gridNumber);
 
         int prevValue = newGameBoard[row][col];
+
+        erasedNumbers.push_back(gridNumber);
+        prevValues.push_back(prevValue);
 
         removeValueFromGridSpace(gridNumber, prevValue);
 
         if (!isUniqueSolution(erasedNumbers)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
             erasedNumbers.pop_back();
+            prevValues.pop_back();
             --i;
         } else {
             remainingGridNumbers.erase(gridNumber);
