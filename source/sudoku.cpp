@@ -403,7 +403,7 @@ void SudokuBoard::generateNewPlayableBoard(double percentageEmpty) {
     anchoredCoor.clear();
 
 
-    newBoardGenerator generator = newBoardGenerator(gameBoard, size, gridSize);
+    newBoardGenerator generator = newBoardGenerator(gameBoard, size, gridSize, *this);
 
     generator.createCompletedBoard();
 
