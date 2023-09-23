@@ -563,7 +563,6 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
         if (index >= int(dp.size())) {
             --index;
-            gridNumber = emptyGrids[index];
             removeValueFromGridSpace(gridNumber, newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)]);
             if (solved) {
                 return false;
