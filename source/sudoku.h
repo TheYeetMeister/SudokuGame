@@ -94,7 +94,6 @@ public:
         bool** colValues;
         bool** grids;
         std::set<int> allIndivGrids;
-        SudokuBoard &parent;
 
         int** newGameBoard;
         int size;

@@ -418,7 +418,7 @@ std::ostream &operator<<(std::ostream &out, const SudokuBoard &b) {
 }
 
 SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize)
-                : newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
+                :newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
     {
         for(int i = 0; i < size * size; ++i) {
             allIndivGrids.insert(i);
@@ -536,7 +536,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
     while(!dp[0].empty()) {
         if (dp[i].empty()) {
             --index;
-            int i = emptyGrids[index];
+            i = emptyGrids[index];
             removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
             continue;
         }
@@ -549,7 +549,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
         if (index >= dp.size()) {
             --index;
-            int i = emptyGrids[index];
+            i = emptyGrids[index];
             removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
             if (solved) {
                 return false;
@@ -559,7 +559,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
             continue;
         }
 
-        int i = emptyGrids[index];
+        i = emptyGrids[index];
         
         dp[index] = getAvailableNumberSet(i);
     }
