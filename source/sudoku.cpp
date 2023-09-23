@@ -513,7 +513,30 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 }
 
 bool isUniqueSolution(std::vector<int> &emptyGrids) {
-    
+    if (emptyGrids.empty()) return true;
+
+    std::vector<std::vector<int>> dp(emptyGrids.size());
+
+    for(int i = 0; i < totalGridsOneLess;) {
+
+        int row = calRowNumber(i);
+        int col = calColNumber(i);
+
+        if (dp[row][col].empty()) {
+            --i;
+            removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
+            continue;
+        }
+
+        int index = pickRanVal(dp[row][col].size() - 1);
+        int value = dp[row][col][index];
+        dp[row][col].erase(dp[row][col].begin() + index);
+
+        insertValueIntoGridSpace(i, value);
+        ++i;
+        
+        dp[calRowNumber(i)][calColNumber(i)] = getAvailableNumberSet(i);
+    }
 }
 
 //picks a random number, INCLUDING the number argument given
