@@ -61,7 +61,7 @@ public:
 
     class newBoardGenerator {
     public:
-        newBoardGenerator(int** newGameBoard, int size, int gridSize);
+        newBoardGenerator(int** newGameBoard, int size, int gridSize, SudokuBoard &parent);
 
         ~newBoardGenerator();
 
