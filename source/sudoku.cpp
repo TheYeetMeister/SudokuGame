@@ -524,6 +524,10 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
         } else {
             remainingGridNumbers.erase(gridNumber);
         }
+
+        for (int i = 0; i < int(erasedNumbers.size()); ++i) {
+            removeValueFromGridSpace(erasedNumbers[i], prevValues[i]);
+        }
     }
 
     return remainingGridNumbers;
