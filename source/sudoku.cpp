@@ -505,6 +505,14 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 
         int gridNumber = *iterator;
 
+        erasedNumbers.push_back(gridNumber);
+
+        if (!isUniqueSolution(erasedNumbers)) {
+            erasedNumbers.pop_back();
+            --i;
+            continue;
+        }
+
         newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)] = 0;
 
         remainingGridNumbers.erase(gridNumber);
