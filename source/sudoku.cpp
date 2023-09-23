@@ -490,6 +490,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
 
 std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     std::set<int> remainingGridNumbers = allIndivGrids;
+    std::vector<int> erasedNumbers;
 
     if (n < 0 || n > size * size) {
         throw ValueOutOfBounds("Number of values erased too large, or too small");
@@ -519,6 +520,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
     bool solved = false;
 
+     //solution checking algorithm
     int index = 0;
     int i = emptyGrids[index];
     dp[0] = getAvailableNumberSet(i);
@@ -557,6 +559,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
         
         dp[index] = getAvailableNumberSet(i);
     }
+    //end of algorithm
 
     return solved;
 }
