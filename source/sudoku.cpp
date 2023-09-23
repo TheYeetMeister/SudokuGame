@@ -520,7 +520,6 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
             --i;
             continue;
         }
-        newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)] = 0;
         remainingGridNumbers.erase(gridNumber);
     }
 
@@ -600,6 +599,8 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
     rowValues[calRowNumber(gridSpace)][value - 1] = false;
     colValues[calColNumber(gridSpace)][value - 1] = false;
     grids[calMacroGridCoor(gridSpace)][value - 1] = false;
+
+    newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = 0;
 }
 
 std::vector<int> SudokuBoard::newBoardGenerator::
