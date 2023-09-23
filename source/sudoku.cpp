@@ -7,7 +7,6 @@
 #include <random>
 #include <cmath>
 #include <unordered_map>
-#include <algorithm>
 
 const int UPPER_LIMIT = INT_MAX;
 
@@ -418,8 +417,8 @@ std::ostream &operator<<(std::ostream &out, const SudokuBoard &b) {
     return out;
 }
 
-SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize)
-                : newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
+SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize, SudokuBoard &parent)
+                : newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size), parent(parent)
     {
         for(int i = 0; i < size * size; ++i) {
             allIndivGrids.insert(i);
@@ -513,7 +512,7 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
-bool isUniqueSolution(std::vector<int> emptyGrids) {
+bool isUniqueSolution(std::vector<int> &emptyGrids) {
     
 }
 

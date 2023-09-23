@@ -73,7 +73,7 @@ public:
 
         void getTakenValues(bool* target, const bool* given) const;
 
-        bool isUniqueSolution(std::vector<int> emptyGrids);
+        bool isUniqueSolution(std::vector<int> &emptyGrids);
     private:
         //picks a random number, INCLUDING the number argument given
         int pickRanVal(int n);
@@ -94,6 +94,7 @@ public:
         bool** colValues;
         bool** grids;
         std::set<int> allIndivGrids;
+        SudokuBoard &parent;
 
         int** newGameBoard;
         int size;
