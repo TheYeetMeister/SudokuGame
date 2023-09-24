@@ -531,6 +531,8 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
         }
     }
 
+    remainingGridNumbers.merge(invalidGrids);
+
     return remainingGridNumbers;
 }
 
