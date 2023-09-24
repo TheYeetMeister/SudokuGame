@@ -492,6 +492,7 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     std::set<int> remainingGridNumbers = allIndivGrids;
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
+    std::set<int> invalidGrids;
 
     if (n < 0 || n > size * size) {
         throw ValueOutOfBounds("Number of values erased too large, or too small");
@@ -518,12 +519,12 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 
         if (!isUniqueSolution(erasedNumbers)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
+            invalidGrids.insert(gridNumber);
             erasedNumbers.pop_back();
             prevValues.pop_back();
             --i;
-        } else {
-            remainingGridNumbers.erase(gridNumber);
         }
+        remainingGridNumbers.erase(gridNumber);
 
         for (int i = 0; i < int(erasedNumbers.size()); ++i) {
             removeValueFromGridSpace(erasedNumbers[i], prevValues[i]);
@@ -540,12 +541,13 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
     bool solved = false;
 
-    //solution checking algorithm
+    //solution checking algorithm, altered to continuing going even after a solution is found
     int index = 0;
     int gridNumber = emptyGrids[index];
     dp[0] = getAvailableNumberSet(gridNumber);
 
     while(!dp[0].empty() || index > 0) {
+        //checks if current index is empty
         if (dp[index].empty()) {
             --index;
             gridNumber = emptyGrids[index];
@@ -558,6 +560,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
         insertValueIntoGridSpace(gridNumber, value);
 
+        //checks if the current index is out of bounds
         if (index >= int(dp.size() - 1)) {
             removeValueFromGridSpace(gridNumber, newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)]);
             if (!solved) {
