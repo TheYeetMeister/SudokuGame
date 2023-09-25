@@ -69,7 +69,8 @@ public:
 
         std::set<int> eraseNumOfSquares(int n);
 
-        std::vector<int> getAvailableNumberSet(int gridSpace);
+        void getAvailableNumberSet(int gridSpace,
+                                    std::vector<int> &target) const;
 
         bool isUniqueSolution(std::vector<int> &emptyGrids);
     private:
