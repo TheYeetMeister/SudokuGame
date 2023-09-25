@@ -458,7 +458,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
     }
 
     //backtracking algorithm, randomized for sudoku
-    dp[0][0] = getAvailableNumberSet(0);
+    getAvailableNumberSet(0, dp[0][0]);
 
     int totalGridsOneLess = size * size - 1;
     for(int i = 0; i < totalGridsOneLess;) {
@@ -479,7 +479,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
         insertValueIntoGridSpace(i, value);
         ++i;
         
-        dp[calRowNumber(i)][calColNumber(i)] = getAvailableNumberSet(i);
+        getAvailableNumberSet(i, dp[calRowNumber(i)][calColNumber(i)]);
     }
     insertValueIntoGridSpace(size * size - 1, 
                 dp[size-1][size-1][0]);
@@ -550,7 +550,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
     //solution checking algorithm, altered to continuing going even after a solution is found
     int index = 0;
     int gridNumber = emptyGrids[index];
-    dp[0] = getAvailableNumberSet(gridNumber);
+    getAvailableNumberSet(gridNumber, dp[0]);
 
     while(!dp[0].empty() || index > 0) {
         //checks if current index is empty
@@ -580,7 +580,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
         ++index;
         gridNumber = emptyGrids[index];
         
-        dp[index] = getAvailableNumberSet(gridNumber);
+        getAvailableNumberSet(gridNumber, dp[index]);
     }
     //end of algorithm
 
