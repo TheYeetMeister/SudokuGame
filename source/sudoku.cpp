@@ -13,6 +13,9 @@ const int UPPER_LIMIT = INT_MAX;
 constexpr int SIZE_OF_TEST_BOARD = 9;
 constexpr int GRIDSIZE_OF_TEST_BOARD = 3;
 
+std::random_device generator;
+std::mt19937 rng(generator());
+
 SudokuBoard::SudokuBoard(int gridSize): size(gridSize*gridSize), gridSize(gridSize) {
     if (gridSize < 1 || gridSize > 99) {
         throw ValueOutOfBounds("Value given for board is out of bounds: " + std::to_string(gridSize));
@@ -590,8 +593,6 @@ int SudokuBoard::newBoardGenerator::pickRanVal(int n) {
 
     if (n < 0) return -1;
 
-    std::random_device generator;
-    std::mt19937 rng(generator());
     std::uniform_int_distribution<std::mt19937::result_type> distribution(0, n);
 
     return distribution(generator);
