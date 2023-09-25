@@ -590,8 +590,8 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 
 //picks a random number, INCLUDING the number argument given
 int SudokuBoard::newBoardGenerator::pickRanVal(int n) {
-
     if (n < 0) return -1;
+    if (!n) return 0;
 
     std::uniform_int_distribution<std::mt19937::result_type> distribution(0, n);
 
