@@ -75,7 +75,7 @@ public:
         bool isUniqueSolution(std::vector<int> &emptyGrids);
     private:
         //picks a random number, INCLUDING the number argument given
-        int pickRanVal(int n);
+        int pickRanVal(int n) const;
 
         void insertValueIntoGridSpace(int gridSpace, int value);
 

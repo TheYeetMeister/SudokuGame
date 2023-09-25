@@ -588,7 +588,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 }
 
 //picks a random number, INCLUDING the number argument given
-int SudokuBoard::newBoardGenerator::pickRanVal(int n) {
+int SudokuBoard::newBoardGenerator::pickRanVal(int n) const {
     if (n < 0) return -1;
     if (!n) return 0;
 
