@@ -522,6 +522,8 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 
         removeValueFromGridSpace(gridNumber, prevValue);
 
+        remainingGridNumbers.erase(gridNumber);
+
         if (!isUniqueSolution(erasedNumbers)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
             invalidGrids.insert(gridNumber);
@@ -529,7 +531,6 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
             prevValues.pop_back();
             --i;
         }
-        remainingGridNumbers.erase(gridNumber);
 
         for (int i = 0; i < int(erasedNumbers.size()); ++i) {
             removeValueFromGridSpace(erasedNumbers[i], prevValues[i]);

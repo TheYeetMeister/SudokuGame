@@ -999,3 +999,11 @@ TEST(SudokuBoardGeneration, CreatePlayablePuzzle2) {
 
     EXPECT_EQ(game.getAnchoredcoor().size(), 9 * 9 - 32);
 }
+
+TEST(SudokuBoardGeneration, CreatePlayablePuzzle3) {
+    SudokuBoard game = SudokuBoard();
+
+    game.generateNewPlayableBoard(0.62);
+
+    EXPECT_EQ(game.getAnchoredcoor().size(), 9 * 9 - 50);
+}
