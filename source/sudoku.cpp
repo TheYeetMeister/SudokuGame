@@ -501,6 +501,8 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     for (int i = 0; i < n; ++i) {
         int index = pickRanVal(remainingGridNumbers.size() - 1);
 
+        std::cout << index << std::endl;
+
         auto iterator = remainingGridNumbers.begin();
 
         std::advance(iterator, index);
