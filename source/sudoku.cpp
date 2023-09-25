@@ -616,9 +616,12 @@ std::vector<int> SudokuBoard::newBoardGenerator::
     getAvailableNumberSet(int gridSpace) {
         bool* numbersTaken = new bool[size]{};
         
-        getTakenValues(numbersTaken, rowValues[calRowNumber(gridSpace)]);
-        getTakenValues(numbersTaken, colValues[calColNumber(gridSpace)]);
-        getTakenValues(numbersTaken, grids[calMacroGridCoor(gridSpace)]);
+        for (int i = 0; i < size; ++i) {
+            numbersTaken[i] = rowValues[calRowNumber(gridSpace)][size] ||
+                                colValues[calColNumber(gridSpace)][size] ||
+                                grids[calMacroGridCoor(gridSpace)];
+
+        }
 
         std::vector<int> availableNumbers;
 
