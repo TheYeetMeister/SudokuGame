@@ -614,24 +614,17 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
 
 std::vector<int> SudokuBoard::newBoardGenerator::
     getAvailableNumberSet(int gridSpace) {
-        bool* numbersTaken = new bool[size]{};
+        std::vector<int> availableNumbers;
         
         for (int i = 0; i < size; ++i) {
-            numbersTaken[i] = rowValues[calRowNumber(gridSpace)][i] ||
-                                colValues[calColNumber(gridSpace)][i] ||
-                                grids[calMacroGridCoor(gridSpace)][i];
-
-        }
-
-        std::vector<int> availableNumbers;
-
-        for(int i = 0; i < size; ++i) {
-            if (!numbersTaken[i]) {
-                availableNumbers.push_back(i + 1);
+            if(!rowValues[calRowNumber(gridSpace)][i] &&
+                                !colValues[calColNumber(gridSpace)][i] &&
+                                !grids[calMacroGridCoor(gridSpace)][i]) {
+                                    availableNumbers.push_back(i + 1);
             }
+
         }
         
-        delete[] numbersTaken;
         return availableNumbers;
 }
 
