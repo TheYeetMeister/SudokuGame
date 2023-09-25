@@ -71,8 +71,6 @@ public:
 
         std::vector<int> getAvailableNumberSet(int gridSpace);
 
-        void getTakenValues(bool* target, const bool* given) const;
-
         bool isUniqueSolution(std::vector<int> &emptyGrids);
     private:
         //picks a random number, INCLUDING the number argument given

@@ -632,15 +632,6 @@ std::vector<int> SudokuBoard::newBoardGenerator::
         return availableNumbers;
 }
 
-void SudokuBoard::newBoardGenerator::
-    getTakenValues(bool* target, const bool* given) const {
-        for(int i = 0; i < size; ++i) {
-            if (!target[i] && given[i]) {
-                target[i] = given[i];
-            }
-        }
-}
-
 int SudokuBoard::newBoardGenerator::calRowNumber(int gridSpace) const{
     return (gridSpace / size);
 }
