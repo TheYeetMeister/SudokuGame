@@ -619,7 +619,7 @@ std::vector<int> SudokuBoard::newBoardGenerator::
         for (int i = 0; i < size; ++i) {
             numbersTaken[i] = rowValues[calRowNumber(gridSpace)][size] ||
                                 colValues[calColNumber(gridSpace)][size] ||
-                                grids[calMacroGridCoor(gridSpace)];
+                                grids[calMacroGridCoor(gridSpace)][size];
 
         }
 
