@@ -529,6 +529,9 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
 
         if (!isUniqueSolution(erasedNumbers)) {
             createCompletedBoard();
+            for(auto i = erasedNumbers.begin(); i != erasedNumbers.end(); ++i) {
+                remainingGridNumbers.insert(*i);
+            }
             erasedNumbers.clear();
             prevValues.clear();
             i = 0;
