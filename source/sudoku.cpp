@@ -452,6 +452,12 @@ SudokuBoard::newBoardGenerator::~newBoardGenerator() {
 void SudokuBoard::newBoardGenerator::createCompletedBoard() {
     if (!size) return;
 
+    for(int i = 0; i < size; ++i) {
+        for(int j = 0; j < size; ++j) {
+            rowValues[i][j] = colValues[i][j] = grids[i][j] = false;
+        }
+    }
+
     std::vector<int> **dp = new std::vector<int>*[size];
     for(int i = 0; i < size; ++i) {
         dp[i] = new std::vector<int>[size];
