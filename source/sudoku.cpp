@@ -536,8 +536,8 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
             --i;
         }
 
-        for (int i = 0; i < int(erasedNumbers.size()); ++i) {
-            removeValueFromGridSpace(erasedNumbers[i], prevValues[i]);
+        for (int j = 0; j < int(erasedNumbers.size()); ++j) {
+            removeValueFromGridSpace(erasedNumbers[j], prevValues[j]);
         }
     }
 
