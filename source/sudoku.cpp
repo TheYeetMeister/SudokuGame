@@ -424,7 +424,7 @@ SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, 
                 :newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
     {
         for(int i = 0; i < size * size; ++i) {
-            allIndivGrids.insert(i);
+            remainingGridNumbers.insert(i);
         }
         rowValues = new bool*[size];
         colValues = new bool*[size];
@@ -498,9 +498,9 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
 }
 
 std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
-    std::set<int> remainingGridNumbers = allIndivGrids;
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
+    std::set<int> invalidGrids;
 
     if (n < 0 || n > size * size) {
         throw ValueOutOfBounds("Number of values erased too large, or too small");
@@ -528,19 +528,19 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
         remainingGridNumbers.erase(gridNumber);
 
         if (!isUniqueSolution(erasedNumbers)) {
-            createCompletedBoard();
-            for(auto i = erasedNumbers.begin(); i != erasedNumbers.end(); ++i) {
-                remainingGridNumbers.insert(*i);
-            }
-            erasedNumbers.clear();
-            prevValues.clear();
-            i = 0;
+            insertValueIntoGridSpace(gridNumber, prevValue);
+            invalidGrids.insert(gridNumber);
+            erasedNumbers.pop_back();
+            prevValues.pop_back();
+            --i;
         }
 
         for (int j = 0; j < int(erasedNumbers.size()); ++j) {
             removeValueFromGridSpace(erasedNumbers[j], prevValues[j]);
         }
     }
+
+    remainingGridNumbers.merge(invalidGrids);
 
     return remainingGridNumbers;
 }

@@ -92,7 +92,7 @@ public:
         bool** rowValues;
         bool** colValues;
         bool** grids;
-        std::set<int> allIndivGrids;
+        std::set<int> remainingGridNumbers;
 
         int** newGameBoard;
         int size;
