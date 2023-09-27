@@ -85,33 +85,6 @@ private:
 
 std::ostream &operator<<(std::ostream& out, const SudokuBoard &b);
 
-class GridPositionAlreadyTaken: public std::exception {
-public:
-    GridPositionAlreadyTaken(const std::string &msg = "") {
-        message += msg;
-    }
-
-    std::string what() {
-        return message;
-    }
-private:
-    std::string message = "Grid Position in board already taken!: ";
-};
-
-class ValueOutOfBounds: public std::exception {
-public:
-    ValueOutOfBounds(const std::string &msg = "") {
-        message += msg;
-    }
-
-    std::string what() {
-        return message;
-    }
-private:
-    std::string message = "Given game value out of bounds!: ";
-};
-
-
 class newBoardGenerator {
 public:
     newBoardGenerator(int** newGameBoard, int size, int gridSize);
@@ -151,6 +124,32 @@ private:
     int size;
     int gridSize;
     int numberOfAvailableGrids;
+};
+
+class GridPositionAlreadyTaken: public std::exception {
+public:
+    GridPositionAlreadyTaken(const std::string &msg = "") {
+        message += msg;
+    }
+
+    std::string what() {
+        return message;
+    }
+private:
+    std::string message = "Grid Position in board already taken!: ";
+};
+
+class ValueOutOfBounds: public std::exception {
+public:
+    ValueOutOfBounds(const std::string &msg = "") {
+        message += msg;
+    }
+
+    std::string what() {
+        return message;
+    }
+private:
+    std::string message = "Given game value out of bounds!: ";
 };
 
 #endif
