@@ -420,7 +420,7 @@ std::ostream &operator<<(std::ostream &out, const SudokuBoard &b) {
     return out;
 }
 
-SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize)
+newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize)
                 :newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
     {
         for(int i = 0; i < size * size; ++i) {
@@ -437,7 +437,7 @@ SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, 
         }
     }
 
-SudokuBoard::newBoardGenerator::~newBoardGenerator() {
+newBoardGenerator::~newBoardGenerator() {
     for(int i = 0; i < size; ++i) {
         delete[] rowValues[i];
         delete[] colValues[i];
@@ -449,7 +449,7 @@ SudokuBoard::newBoardGenerator::~newBoardGenerator() {
     delete[] grids;
 }
 
-void SudokuBoard::newBoardGenerator::createCompletedBoard() {
+void newBoardGenerator::createCompletedBoard() {
     if (!size) return;
 
     for(int i = 0; i < size; ++i) {
@@ -497,7 +497,7 @@ void SudokuBoard::newBoardGenerator::createCompletedBoard() {
     delete[] dp;
 }
 
-std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
+std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
     std::set<int> invalidGrids;
@@ -545,7 +545,7 @@ std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
-bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids) {
+bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids) {
     if (emptyGrids.empty()) return true;
 
     std::vector<std::vector<int>> dp(emptyGrids.size());
@@ -593,7 +593,7 @@ bool SudokuBoard::newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGri
 }
 
 //picks a random number, INCLUDING the number argument given
-int SudokuBoard::newBoardGenerator::pickRanVal(int n) const {
+int newBoardGenerator::pickRanVal(int n) const {
     if (n < 0) return -1;
     if (!n) return 0;
 
@@ -602,7 +602,7 @@ int SudokuBoard::newBoardGenerator::pickRanVal(int n) const {
     return distribution(generator);
 }
 
-void SudokuBoard::newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int value) {
+void newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int value) {
     rowValues[calRowNumber(gridSpace)][value - 1] = true;
     colValues[calColNumber(gridSpace)][value - 1] = true;
     grids[calMacroGridCoor(gridSpace)][value - 1] = true;
@@ -610,7 +610,7 @@ void SudokuBoard::newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int
     newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = value;
 }
 
-void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
+void newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
 {
     rowValues[calRowNumber(gridSpace)][value - 1] = false;
     colValues[calColNumber(gridSpace)][value - 1] = false;
@@ -619,7 +619,7 @@ void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int
     newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = 0;
 }
 
-void SudokuBoard::newBoardGenerator::
+void newBoardGenerator::
     getAvailableNumberSet(int gridSpace, std::vector<int> &target) const {   
         for (int i = 0; i < size; ++i) {
             if(!rowValues[calRowNumber(gridSpace)][i] &&
@@ -631,21 +631,21 @@ void SudokuBoard::newBoardGenerator::
         }
 }
 
-int SudokuBoard::newBoardGenerator::calRowNumber(int gridSpace) const{
+int newBoardGenerator::calRowNumber(int gridSpace) const{
     return (gridSpace / size);
 }
 
-int SudokuBoard::newBoardGenerator::calColNumber(int gridSpace) const{
+int newBoardGenerator::calColNumber(int gridSpace) const{
     return(gridSpace % size);
 }
 
-int SudokuBoard::newBoardGenerator::calMacroGridCoor(int gridSpace) const {
+int newBoardGenerator::calMacroGridCoor(int gridSpace) const {
     int gridRow = (gridSpace / size) / (gridSize);
     int gridCol = (gridSpace % size) / (gridSize);
 
     return (gridRow * gridSize + gridCol);
 }
 
-int SudokuBoard::newBoardGenerator::calGridNumber(int row, int col) const {
+int newBoardGenerator::calGridNumber(int row, int col) const {
     return ((row * size) + col);
 }

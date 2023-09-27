@@ -58,47 +58,6 @@ public:
     //generating newBoard class (public for testing purposes)
 
     void generateNewPlayableBoard(double percentageEmpty);
-
-    class newBoardGenerator {
-    public:
-        newBoardGenerator(int** newGameBoard, int size, int gridSize);
-
-        ~newBoardGenerator();
-
-        void createCompletedBoard();
-
-        std::set<int> eraseNumOfSquares(int n);
-
-        void getAvailableNumberSet(int gridSpace,
-                                    std::vector<int> &target) const;
-
-        bool isUniqueSolution(std::vector<int> &emptyGrids);
-    private:
-        //picks a random number, INCLUDING the number argument given
-        int pickRanVal(int n) const;
-
-        void insertValueIntoGridSpace(int gridSpace, int value);
-
-        void removeValueFromGridSpace(int gridSpace, int value);
-
-        int calRowNumber(int gridSpace) const;
-
-        int calColNumber(int gridSpace) const;
-
-        int calMacroGridCoor(int gridSpace) const;
-
-        int calGridNumber(int row, int col) const;
-
-        bool** rowValues;
-        bool** colValues;
-        bool** grids;
-        std::set<int> remainingGridNumbers;
-
-        int** newGameBoard;
-        int size;
-        int gridSize;
-        int numberOfAvailableGrids;
-    };
 private:
 
     std::string adjustStringSize(const char value) const;
@@ -151,5 +110,47 @@ public:
 private:
     std::string message = "Given game value out of bounds!: ";
 };
+
+
+class newBoardGenerator {
+    public:
+        newBoardGenerator(int** newGameBoard, int size, int gridSize);
+
+        ~newBoardGenerator();
+
+        void createCompletedBoard();
+
+        std::set<int> eraseNumOfSquares(int n);
+
+        void getAvailableNumberSet(int gridSpace,
+                                    std::vector<int> &target) const;
+
+        bool isUniqueSolution(std::vector<int> &emptyGrids);
+    private:
+        //picks a random number, INCLUDING the number argument given
+        int pickRanVal(int n) const;
+
+        void insertValueIntoGridSpace(int gridSpace, int value);
+
+        void removeValueFromGridSpace(int gridSpace, int value);
+
+        int calRowNumber(int gridSpace) const;
+
+        int calColNumber(int gridSpace) const;
+
+        int calMacroGridCoor(int gridSpace) const;
+
+        int calGridNumber(int row, int col) const;
+
+        bool** rowValues;
+        bool** colValues;
+        bool** grids;
+        std::set<int> remainingGridNumbers;
+
+        int** newGameBoard;
+        int size;
+        int gridSize;
+        int numberOfAvailableGrids;
+    };
 
 #endif
