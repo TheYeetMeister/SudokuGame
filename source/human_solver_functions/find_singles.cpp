@@ -15,7 +15,12 @@ singlesFinder::singlesFinder(int** gameBoard, int size): gameBoard(gameBoard), s
 void singlesFinder::setTakenValues() {
     for(int i = 0; i < size; ++i) {
         for(int j = 0; j < size; ++j) {
+            if (gameBoard[i][j] != 0) {
+                int valueIndex = gameBoard[i][j] - 1;
 
+                takenRowValues[i][valueIndex] = true;
+                takenColValues[j][valueIndex] = true;
+            }
         }
     }
 }
