@@ -1,6 +1,6 @@
 #include "find_singles.h"
 
-singlesFinder::singlesFinder(int** gameBoard, int size): gameBoard(gameBoard), size(size) { 
+SinglesFinder::SinglesFinder(int** gameBoard, int size, int gridSize): gameBoard(gameBoard), size(size), gridSize(gridSize) { 
     takenRowValues = new bool*[size]{};
     takenColValues = new bool*[size]{};
     takenMacroGridValues = new bool*[size]{};
@@ -12,7 +12,7 @@ singlesFinder::singlesFinder(int** gameBoard, int size): gameBoard(gameBoard), s
     }
 }
 
-void singlesFinder::setTakenValues() {
+void SinglesFinder::setTakenValues() {
     for(int i = 0; i < size; ++i) {
         for(int j = 0; j < size; ++j) {
             if (gameBoard[i][j] != 0) {
@@ -25,7 +25,9 @@ void singlesFinder::setTakenValues() {
     }
 }
 
-singlesFinder::~singlesFinder() {
+
+
+SinglesFinder::~SinglesFinder() {
     for(int i = 0; i < size; ++i) {
         delete[] takenRowValues[i];
         delete[] takenColValues[i];
