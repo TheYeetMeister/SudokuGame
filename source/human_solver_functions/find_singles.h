@@ -5,9 +5,10 @@
 
 class singlesFinder {
 public:
+    singlesFinder(int** gameBoard);
 
 private:
-    int** gameBoard;
+    const int** gameBoard;
     
     bool** availRowValues;
     bool** availColValues;
