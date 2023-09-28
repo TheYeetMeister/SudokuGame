@@ -8,13 +8,18 @@ public:
     singlesFinder(int** gameBoard, int size);
 
     ~singlesFinder();
+
+    //used for naked singles AND full houses/last digits
+    int findSingleDigit();
 private:
+    void setTakenValues();
+
     const int** gameBoard;
     const int size;
     
-    bool** availRowValues;
-    bool** availColValues;
-    bool** availMacroGridValues;
+    bool** takenRowValues;
+    bool** takenColValues;
+    bool** takenMacroGridValues;
 };
 
 #endif

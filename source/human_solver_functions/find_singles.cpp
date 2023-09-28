@@ -12,6 +12,13 @@ singlesFinder::singlesFinder(int** gameBoard, int size): gameBoard(gameBoard), s
     }
 }
 
+void singlesFinder::setTakenValues() {
+    for(int i = 0; i < size; ++i) {
+        for(int i = 0; j < size; ++j) {
+
+        }
+    }
+}
 
 singlesFinder::~singlesFinder() {
     for(int i = 0; i < size; ++i) {
