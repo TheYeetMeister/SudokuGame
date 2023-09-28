@@ -25,7 +25,7 @@ void SinglesFinder::setTakenValues() {
     }
 }
 
-int SinglesFinder::calGridValue(int row, int col) const {
+int SinglesFinder::calMacroGridIndex(int row, int col) const {
     return row * gridSize + col;
 }
 
