@@ -23,9 +23,22 @@ void SinglesFinder::setTakenValues(std::vector<std::vector<bool>> &takenRowValue
     }
 }
 
-std::vector SinglesFinder::findSingleDigits() {
+std::unordered_map<int, int> SinglesFinder::findSingleDigits() {
+    std::vector<std::vector<bool>> takenRowValues(
+        size, 
+        std::vector<bool>(size, 0));
 
+    std::vector<std::vector<bool>> takenColValues(
+        size, 
+        std::vector<bool>(size, 0));
+
+    std::vector<std::vector<bool>> takenMacroGridValues(
+        size, 
+        std::vector<bool>(size, 0));
+
+    setTakenValues(takenRowValues, takenColValues, takenMacroGridValues);
 }
+
 
 int SinglesFinder::calMacroGridIndex(int row, int col) const {
     return row * gridSize + col % gridSize;
