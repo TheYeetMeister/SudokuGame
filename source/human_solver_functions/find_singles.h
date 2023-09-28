@@ -7,7 +7,11 @@ class singlesFinder {
 public:
 
 private:
-
+    int** gameBoard;
+    
+    bool** availRowValues;
+    bool** availColValues;
+    bool** availMacroGridValues;
 };
 
 #endif
