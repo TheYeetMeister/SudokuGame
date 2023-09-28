@@ -7,6 +7,7 @@ class singlesFinder {
 public:
     singlesFinder(int** gameBoard, int size);
 
+    ~singlesFinder();
 private:
     const int** gameBoard;
     const int size;

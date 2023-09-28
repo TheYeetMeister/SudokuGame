@@ -13,3 +13,14 @@ singlesFinder::singlesFinder(int** gameBoard, int size): gameBoard(gameBoard), s
 }
 
 
+singlesFinder::~singlesFinder() {
+    for(int i = 0; i < size; ++i) {
+        delete[] availRowValues[i];
+        delete[] availColValues[i];
+        delete[] availMacroGridValues[i];
+    }
+
+    delete[] availRowValues;
+    delete[] availColValues;
+    delete[] availMacroGridValues;
+}
