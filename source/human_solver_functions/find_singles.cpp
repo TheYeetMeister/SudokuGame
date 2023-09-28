@@ -20,13 +20,14 @@ void SinglesFinder::setTakenValues() {
 
                 takenRowValues[i][valueIndex] = true;
                 takenColValues[j][valueIndex] = true;
+                takenMacroGridValues[calMacroGridIndex(i, j)][valueIndex] = true;
             }
         }
     }
 }
 
 int SinglesFinder::calMacroGridIndex(int row, int col) const {
-    return row * gridSize + col;
+    return row * gridSize + col % gridSize;
 }
 
 SinglesFinder::~SinglesFinder() {
