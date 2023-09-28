@@ -1,18 +1,14 @@
 #include "find_singles.h"
 
-SinglesFinder::SinglesFinder(int** gameBoard, int size, int gridSize): gameBoard(gameBoard), size(size), gridSize(gridSize) { 
-    takenRowValues = new bool*[size]{};
-    takenColValues = new bool*[size]{};
-    takenMacroGridValues = new bool*[size]{};
+#include <iostream>
+#include <memory>
+#include <vector>
 
-    for(int i = 0; i < size; ++i) {
-        takenRowValues[i] = new bool[size]{};
-        takenColValues[i] = new bool[size]{};
-        takenMacroGridValues[i] = new bool[size]{};
-    }
-}
+SinglesFinder::SinglesFinder(int** gameBoard, int size, int gridSize): gameBoard(gameBoard), size(size), gridSize(gridSize) { }
 
-void SinglesFinder::setTakenValues() {
+void SinglesFinder::setTakenValues(std::vector<std::vector<bool>> &takenRowValues,
+                                    std::vector<std::vector<bool>> &takenColValues, 
+                                    std::vector<std::vector<bool>> &takenMacroGridValues) {
     for(int i = 0; i < size; ++i) {
         for(int j = 0; j < size; ++j) {
             if (gameBoard[i][j] != 0) {
@@ -28,16 +24,4 @@ void SinglesFinder::setTakenValues() {
 
 int SinglesFinder::calMacroGridIndex(int row, int col) const {
     return row * gridSize + col % gridSize;
-}
-
-SinglesFinder::~SinglesFinder() {
-    for(int i = 0; i < size; ++i) {
-        delete[] takenRowValues[i];
-        delete[] takenColValues[i];
-        delete[] takenMacroGridValues[i];
-    }
-
-    delete[] takenRowValues;
-    delete[] takenColValues;
-    delete[] takenMacroGridValues;
 }
