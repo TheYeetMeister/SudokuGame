@@ -25,7 +25,9 @@ void SinglesFinder::setTakenValues() {
     }
 }
 
-
+int SinglesFinder::calGridValue(int row, int col) const {
+    return row * gridSize + col;
+}
 
 SinglesFinder::~SinglesFinder() {
     for(int i = 0; i < size; ++i) {
