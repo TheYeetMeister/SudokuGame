@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <unordered_map>
 
 SinglesFinder::SinglesFinder(int** gameBoard, int size, int gridSize): gameBoard(gameBoard), size(size), gridSize(gridSize) { }
 
@@ -20,6 +21,10 @@ void SinglesFinder::setTakenValues(std::vector<std::vector<bool>> &takenRowValue
             }
         }
     }
+}
+
+std::vector SinglesFinder::findSingleDigits() {
+
 }
 
 int SinglesFinder::calMacroGridIndex(int row, int col) const {

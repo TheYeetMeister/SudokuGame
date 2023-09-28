@@ -8,7 +8,7 @@ public:
     SinglesFinder(int** gameBoard, int size, int gridSize);
 
     //used for naked singles AND full houses/last digits
-    int findSingleDigit();
+    std::unordered_map<int, int> findSingleDigits();
 private:
     void setTakenValues(std::vector<std::vector<bool>> &takenRowValues,
                         std::vector<std::vector<bool>> &takenColValues, 
