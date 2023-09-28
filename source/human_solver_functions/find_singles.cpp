@@ -1,26 +1,26 @@
 #include "find_singles.h"
 
 singlesFinder::singlesFinder(int** gameBoard, int size): gameBoard(gameBoard), size(size) { 
-    availRowValues = new bool*[size]{};
-    availColValues = new bool*[size]{};
-    availMacroGridValues = new bool*[size]{};
+    takenRowValues = new bool*[size]{};
+    takenColValues = new bool*[size]{};
+    takenMacroGridValues = new bool*[size]{};
 
     for(int i = 0; i < size; ++i) {
-        availRowValues[i] = new bool[size]{};
-        availColValues[i] = new bool[size]{};
-        availMacroGridValues[i] = new bool[size]{};
+        takenRowValues[i] = new bool[size]{};
+        takenColValues[i] = new bool[size]{};
+        takenMacroGridValues[i] = new bool[size]{};
     }
 }
 
 
 singlesFinder::~singlesFinder() {
     for(int i = 0; i < size; ++i) {
-        delete[] availRowValues[i];
-        delete[] availColValues[i];
-        delete[] availMacroGridValues[i];
+        delete[] takenRowValues[i];
+        delete[] takenColValues[i];
+        delete[] takenMacroGridValues[i];
     }
 
-    delete[] availRowValues;
-    delete[] availColValues;
-    delete[] availMacroGridValues;
+    delete[] takenRowValues;
+    delete[] takenColValues;
+    delete[] takenMacroGridValues;
 }
