@@ -1,5 +1,3 @@
 #include "find_singles.h"
 
-singlesFinder::singlesFinder(int** gameBoard): gameBoard(gameBoard), size(size) {
-
-}
+singlesFinder::singlesFinder(int** gameBoard, int size): gameBoard(gameBoard), size(size) { }
