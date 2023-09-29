@@ -40,7 +40,7 @@ std::unordered_map<int, int> SinglesFinder::findSingleDigits() {
 }
 
 int SinglesFinder::calGridNumber(int row, int col) const {
-    
+    return row * size + col;
 }
 
 
