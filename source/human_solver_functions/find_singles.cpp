@@ -39,6 +39,10 @@ std::unordered_map<int, int> SinglesFinder::findSingleDigits() {
     std::unordered_map<int, int> openGridAndValue;
 }
 
+int SinglesFinder::calGridNumber(int row, int col) const {
+    
+}
+
 
 int SinglesFinder::calMacroGridIndex(int row, int col) const {
     return row * gridSize + col % gridSize;

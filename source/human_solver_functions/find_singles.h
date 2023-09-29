@@ -17,6 +17,7 @@ private:
                         std::vector<std::vector<bool>> &takenMacroGridValues);
 
     int calMacroGridIndex(int row, int col) const;
+    int calGridNumber(int row, int col) const;
 
     const int** gameBoard;
     const int size;
