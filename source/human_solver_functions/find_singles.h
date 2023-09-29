@@ -2,6 +2,8 @@
 #define SUDOKU_HPP
 
 #include <iosfwd>
+#include <vector>
+#include <unordered_map>
 
 class SinglesFinder {
 public:

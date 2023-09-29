@@ -2,8 +2,6 @@
 
 #include <iostream>
 #include <memory>
-#include <vector>
-#include <unordered_map>
 
 SinglesFinder::SinglesFinder(int** gameBoard, int size, int gridSize): gameBoard(gameBoard), size(size), gridSize(gridSize) { }
 
@@ -37,6 +35,8 @@ std::unordered_map<int, int> SinglesFinder::findSingleDigits() {
         std::vector<bool>(size, 0));
 
     setTakenValues(takenRowValues, takenColValues, takenMacroGridValues);
+
+    std::unordered_map<int, int> openGridAndValue;
 }
 
 
