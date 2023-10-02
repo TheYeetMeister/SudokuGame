@@ -7,6 +7,7 @@
 #include <random>
 #include <cmath>
 #include <unordered_map>
+#include "sudoku_generator.h"
 
 const int UPPER_LIMIT = INT_MAX;
 
