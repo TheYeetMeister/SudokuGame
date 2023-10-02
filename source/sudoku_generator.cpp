@@ -3,7 +3,7 @@
 #include <random>
 #include <vector>
 #include <set>
-#include "sudoku.h"
+#include "sudoku_generator.h"
 
 std::random_device generator;
 std::mt19937 rng(generator());
