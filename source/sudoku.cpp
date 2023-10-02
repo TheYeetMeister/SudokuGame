@@ -4,8 +4,6 @@
 #include <set>
 #include <string>
 #include <climits>
-#include <random>
-#include <cmath>
 #include <unordered_map>
 #include "sudoku_generator.h"
 
@@ -13,9 +11,6 @@ const int UPPER_LIMIT = INT_MAX;
 
 constexpr int SIZE_OF_TEST_BOARD = 9;
 constexpr int GRIDSIZE_OF_TEST_BOARD = 3;
-
-std::random_device generator;
-std::mt19937 rng(generator());
 
 SudokuBoard::SudokuBoard(int gridSize): size(gridSize*gridSize), gridSize(gridSize) {
     if (gridSize < 1 || gridSize > 99) {
