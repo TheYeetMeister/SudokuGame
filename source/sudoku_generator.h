@@ -46,7 +46,7 @@ private:
     int numberOfAvailableGrids;
 };
 
-class ValueOutOfCreationBounds: public std::exception {
+class CreationValueOutOfBounds: public std::exception {
 public:
     ValueOutOfBounds(const std::string &msg = "") {
         message += msg;

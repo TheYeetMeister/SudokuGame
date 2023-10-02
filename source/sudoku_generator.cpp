@@ -91,7 +91,7 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     std::set<int> invalidGrids;
 
     if (n < 0 || n > size * size) {
-        throw ValueOutOfBounds("Number of values erased too large, or too small");
+        throw CreationValueOutOfBounds("Number of values erased too large, or too small");
     }
 
     for (int i = 0; i < n; ++i) {
