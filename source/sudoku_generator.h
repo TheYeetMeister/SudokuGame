@@ -1,5 +1,5 @@
-#ifndef SUDOKU_HPP
-#define SUDOKU_HPP
+#ifndef SUDOKU_GENERATOR_HPP
+#define SUDOKU_GENERATOR_HPP
 
 
 #endif
