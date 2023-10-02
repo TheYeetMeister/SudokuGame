@@ -1,5 +1,10 @@
 #include "sudoku_generator.h"
 
+#include <random>
+#include "sudoku.h"
+#include <vector>
+#include <set>
+
 newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize)
                 :newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
     {

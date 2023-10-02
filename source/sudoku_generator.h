@@ -1,6 +1,9 @@
 #ifndef SUDOKU_GENERATOR_HPP
 #define SUDOKU_GENERATOR_HPP
 
+#include <vector>
+#include <set>
+
 class newBoardGenerator {
 public:
     newBoardGenerator(int** newGameBoard, int size, int gridSize);
