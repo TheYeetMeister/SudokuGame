@@ -189,6 +189,10 @@ int newBoardGenerator::pickRanVal(int n) const {
     return distribution(generator);
 }
 
+void newBoardGenerator::SValueRemove(int colRowMinimum, int minimum) {
+    
+}
+
 void newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int value) {
     rowValues[calRowNumber(gridSpace)][value - 1] = true;
     colValues[calColNumber(gridSpace)][value - 1] = true;
