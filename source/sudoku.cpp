@@ -6,7 +6,7 @@
 #include <climits>
 #include <cmath>
 #include <unordered_map>
-#include "sudoku_generator.h"
+#include "sudoku_generator.cpp"
 
 const int UPPER_LIMIT = INT_MAX;
 
