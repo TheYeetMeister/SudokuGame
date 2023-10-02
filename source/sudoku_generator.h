@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <set>
+#include <string>
 
 class newBoardGenerator {
 public:
@@ -44,4 +45,19 @@ private:
     int gridSize;
     int numberOfAvailableGrids;
 };
+
+class ValueOutOfCreationBounds: public std::exception {
+public:
+    ValueOutOfBounds(const std::string &msg = "") {
+        message += msg;
+    }
+
+    std::string what() {
+        return message;
+    }
+private:
+    std::string message = "Generated value out of bounds!: ";
+};
+
+
 #endif
