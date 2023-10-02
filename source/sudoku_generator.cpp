@@ -5,6 +5,9 @@
 #include <set>
 #include "sudoku.h"
 
+std::random_device generator;
+std::mt19937 rng(generator());
+
 newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize)
                 :newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
     {
