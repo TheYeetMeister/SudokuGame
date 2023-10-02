@@ -1003,7 +1003,7 @@ TEST(SudokuBoardGeneration, CreatePlayablePuzzle2) {
 TEST(SudokuBoardGeneration, CreatePlayablePuzzle3) {
     SudokuBoard game = SudokuBoard();
 
-    game.generateNewPlayableBoard(0.62);
+    game.generateNewPlayableBoard(0.50);
 
-    EXPECT_EQ(game.getAnchoredcoor().size(), 9 * 9 - 50);
+    EXPECT_EQ(game.getAnchoredcoor().size(), 9 * 9 - 41);
 }
