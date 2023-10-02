@@ -4,6 +4,7 @@
 #include <set>
 #include <string>
 #include <climits>
+#include <cmath>
 #include <unordered_map>
 #include "sudoku_generator.h"
 
