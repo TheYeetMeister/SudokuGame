@@ -48,7 +48,7 @@ private:
 
 class CreationValueOutOfBounds: public std::exception {
 public:
-    ValueOutOfBounds(const std::string &msg = "") {
+    CreationValueOutOfBounds(const std::string &msg = "") {
         message += msg;
     }
 
