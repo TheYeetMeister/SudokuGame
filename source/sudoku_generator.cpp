@@ -88,11 +88,14 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
     std::set<int> invalidGrids;
+    int fullGridSize = size * size;
 
-    if (n < 0 || n > size * size) {
+    if (n < 0 || n > fullGridSize) {
         throw CreationValueOutOfBounds("Number of values erased too large, or too small");
     }
 
+    //change erasing values to digging hole algorithm, instead of random, left to right, up to down
+    //optimizes it
     for (int i = 0; i < n; ++i) {
         int index = pickRanVal(remainingGridNumbers.size() - 1);
 
