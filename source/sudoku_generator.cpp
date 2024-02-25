@@ -108,8 +108,6 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
         //hold value that's removed for pruning for searching other solutions
         int value = removeValueFromGridSpace(gridNumber, prevValue);
 
-        remainingGridNumbers.erase(gridNumber);
-
         if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
         } else {
