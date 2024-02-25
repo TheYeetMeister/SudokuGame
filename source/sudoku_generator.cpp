@@ -133,7 +133,7 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
-bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, int gridNumber, int value) {
+bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, int erasedGrid, int erasedValue) {
     if (emptyGrids.empty()) return true;
 
     std::vector<std::vector<int>> dp(emptyGrids.size());

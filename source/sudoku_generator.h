@@ -19,7 +19,7 @@ public:
                                 std::vector<int> &target,
                                 int excludedVal = -1) const;
 
-    bool isUniqueSolution(std::vector<int> &emptyGrids, int gridNumber, int value);
+    bool isUniqueSolution(std::vector<int> &emptyGrids, int erasedGrid, int erasedValue);
 private:
     //picks a random number, INCLUDING the number argument given
     int pickRanVal(int n) const;
