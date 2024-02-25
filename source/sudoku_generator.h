@@ -16,7 +16,8 @@ public:
     std::set<int> eraseNumOfSquares(int n);
 
     void getAvailableNumberSet(int gridSpace,
-                                std::vector<int> &target) const;
+                                std::vector<int> &target,
+                                int exludedVal = -1) const;
 
     bool isUniqueSolution(std::vector<int> &emptyGrids, int gridNumber, int value);
 private:
