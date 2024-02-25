@@ -175,7 +175,7 @@ bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, int erase
         if (erasedGrid == gridNumber) {
             getAvailableNumberSet(gridNumber, dp[index], erasedValue);
         } else {
-            getAvailableNumberSet(gridNumber, dp[0]);
+            getAvailableNumberSet(gridNumber, dp[index]);
         }
     }
     //end of algorithm
