@@ -87,7 +87,6 @@ void newBoardGenerator::createCompletedBoard() {
 std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
-    std::set<int> invalidGrids;
     int fullGridSize = size * size;
     int eraseCount = 0;
 
@@ -113,16 +112,9 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
 
         if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
-            invalidGrids.insert(gridNumber);
-            erasedNumbers.pop_back();
-            prevValues.pop_back();
         } else {
             remainingGridNumbers.erase(gridNumber);
             ++eraseCount;
-        }
-
-        for (int j = 0; j < int(erasedNumbers.size()); ++j) {
-            removeValueFromGridSpace(erasedNumbers[j], prevValues[j]);
         }
     }
 
@@ -165,6 +157,13 @@ bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, std::vect
 
         //checks if the current index is out of bounds, which means it's solved
         if (index >= int(dp.size() - 1)) {
+            //reset board to previous erased values, also removing the end most recent erased value
+            //as we know it's not a valid value to remove since it doesn't make a unique solution
+            erasedNumbers.pop_back();
+            prevValues.pop_back();
+            for (int j = 0; j < int(erasedNumbers.size()); ++j) {
+                removeValueFromGridSpace(erasedNumbers[j], prevValues[j]);
+            }
             return false;
         }
 
