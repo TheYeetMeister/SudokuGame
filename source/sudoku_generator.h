@@ -17,7 +17,7 @@ public:
 
     void getAvailableNumberSet(int gridSpace,
                                 std::vector<int> &target,
-                                int exludedVal = -1) const;
+                                int excludedVal = -1) const;
 
     bool isUniqueSolution(std::vector<int> &emptyGrids, int gridNumber, int value);
 private:

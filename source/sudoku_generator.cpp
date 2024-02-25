@@ -214,11 +214,12 @@ int newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
 }
 
 void newBoardGenerator::
-    getAvailableNumberSet(int gridSpace, std::vector<int> &target, int exludedVal) const {   
+    getAvailableNumberSet(int gridSpace, std::vector<int> &target, int excludedVal) const {   
         for (int i = 0; i < size; ++i) {
             if(!rowValues[calRowNumber(gridSpace)][i] &&
                !colValues[calColNumber(gridSpace)][i] &&
-               !grids[calMacroGridCoor(gridSpace)][i]) {
+               !grids[calMacroGridCoor(gridSpace)][i] &&
+                i + 1 != excludedVal) {
                     target.push_back(i + 1);
             }
 
