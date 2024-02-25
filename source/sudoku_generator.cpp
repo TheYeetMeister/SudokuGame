@@ -89,22 +89,15 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     std::vector<int> prevValues;
     std::set<int> invalidGrids;
     int fullGridSize = size * size;
+    int eraseCount = 0;
 
     if (n < 0 || n > fullGridSize) {
         throw CreationValueOutOfBounds("Number of values erased too large, or too small");
     }
 
-    //change erasing values to digging hole algorithm, instead of random, left to right, up to down
+    //change erasing random values to digging hole algorithm, instead of random, left to right, up to down
     //optimizes it
-    for (int i = 0; i < n; ++i) {
-        int index = pickRanVal(remainingGridNumbers.size() - 1);
-
-        auto iterator = remainingGridNumbers.begin();
-
-        std::advance(iterator, index);
-
-        int gridNumber = *iterator;
-
+    for (int gridNumber = 0; gridNumber < fullGridSize && eraseCount < n; ++gridNumber) {
         int row = calRowNumber(gridNumber);
         int col = calColNumber(gridNumber);
 
@@ -118,20 +111,20 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
 
         remainingGridNumbers.erase(gridNumber);
 
-        if (!isUniqueSolution(erasedNumbers, gridNumber, value)) {
+        if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
             invalidGrids.insert(gridNumber);
             erasedNumbers.pop_back();
             prevValues.pop_back();
-            --i;
+        } else {
+            remainingGridNumbers.erase(gridNumber);
+            ++eraseCount;
         }
 
         for (int j = 0; j < int(erasedNumbers.size()); ++j) {
             removeValueFromGridSpace(erasedNumbers[j], prevValues[j]);
         }
     }
-
-    remainingGridNumbers.merge(invalidGrids);
 
     return remainingGridNumbers;
 }
