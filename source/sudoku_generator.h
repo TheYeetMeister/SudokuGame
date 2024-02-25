@@ -18,7 +18,7 @@ public:
     void getAvailableNumberSet(int gridSpace,
                                 std::vector<int> &target) const;
 
-    bool isUniqueSolution(std::vector<int> &emptyGrids);
+    bool isUniqueSolution(std::vector<int> &emptyGrids, int gridNumber, int value);
 private:
     //picks a random number, INCLUDING the number argument given
     int pickRanVal(int n) const;
@@ -27,7 +27,7 @@ private:
 
     void insertValueIntoGridSpace(int gridSpace, int value);
 
-    void removeValueFromGridSpace(int gridSpace, int value);
+    int removeValueFromGridSpace(int gridSpace, int value);
 
     int calRowNumber(int gridSpace) const;
 

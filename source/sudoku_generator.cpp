@@ -110,11 +110,12 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
         erasedNumbers.push_back(gridNumber);
         prevValues.push_back(prevValue);
 
-        removeValueFromGridSpace(gridNumber, prevValue);
+        //hold value that's removed for pruning for searching other solutions
+        int value = removeValueFromGridSpace(gridNumber, prevValue);
 
         remainingGridNumbers.erase(gridNumber);
 
-        if (!isUniqueSolution(erasedNumbers)) {
+        if (!isUniqueSolution(erasedNumbers, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
             invalidGrids.insert(gridNumber);
             erasedNumbers.pop_back();
@@ -132,7 +133,7 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
-bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids) {
+bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, int gridNumber, int value) {
     if (emptyGrids.empty()) return true;
 
     std::vector<std::vector<int>> dp(emptyGrids.size());
@@ -201,13 +202,15 @@ void newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int value) {
     newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = value;
 }
 
-void newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
+int newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
 {
     rowValues[calRowNumber(gridSpace)][value - 1] = false;
     colValues[calColNumber(gridSpace)][value - 1] = false;
     grids[calMacroGridCoor(gridSpace)][value - 1] = false;
 
+    int value = newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)];
     newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = 0;
+    return value;
 }
 
 void newBoardGenerator::
