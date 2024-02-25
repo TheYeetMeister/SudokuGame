@@ -211,9 +211,9 @@ int newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
     colValues[calColNumber(gridSpace)][value - 1] = false;
     grids[calMacroGridCoor(gridSpace)][value - 1] = false;
 
-    int value = newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)];
+    int valueReturn = newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)];
     newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = 0;
-    return value;
+    return valueReturn;
 }
 
 void newBoardGenerator::
