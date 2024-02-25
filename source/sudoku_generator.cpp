@@ -138,12 +138,17 @@ bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, int erase
 
     std::vector<std::vector<int>> dp(emptyGrids.size());
 
-    bool solved = false;
-
     //solution checking algorithm, altered to continuing going even after a solution is found
     int index = 0;
     int gridNumber = emptyGrids[index];
-    getAvailableNumberSet(gridNumber, dp[0]);
+
+    //this checks if the checked grid number is the same as the one where we erased the previous value
+    //if it is avoid the excluded value as we know that has one solution
+    if (erasedGrid == gridNumber) {
+        getAvailableNumberSet(gridNumber, dp[0], erasedValue);
+    } else {
+        getAvailableNumberSet(gridNumber, dp[0]);
+    }
 
     while(!dp[0].empty() || index > 0) {
         //checks if current index is empty
@@ -159,25 +164,23 @@ bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, int erase
 
         insertValueIntoGridSpace(gridNumber, value);
 
-        //checks if the current index is out of bounds
+        //checks if the current index is out of bounds, which means it's solved
         if (index >= int(dp.size() - 1)) {
-            removeValueFromGridSpace(gridNumber, newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)]);
-            if (!solved) {
-                solved = true;
-            } else {
-                return false;
-            }
-            continue;
+            return false;
         }
 
         ++index;
         gridNumber = emptyGrids[index];
         
-        getAvailableNumberSet(gridNumber, dp[index]);
+        if (erasedGrid == gridNumber) {
+            getAvailableNumberSet(gridNumber, dp[index], erasedValue);
+        } else {
+            getAvailableNumberSet(gridNumber, dp[0]);
+        }
     }
     //end of algorithm
 
-    return solved;
+    return true;
 }
 
 //picks a random number, INCLUDING the number argument given
