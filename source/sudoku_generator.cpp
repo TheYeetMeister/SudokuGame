@@ -111,6 +111,8 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
 
         remainingGridNumbers.erase(gridNumber);
 
+        //added prev grid numbers and values
+        //so if another solution is found it can quickly reset the board
         if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
             invalidGrids.insert(gridNumber);
@@ -129,7 +131,8 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
     return remainingGridNumbers;
 }
 
-bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, int erasedGrid, int erasedValue) {
+bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, std::vector<int> &erasedNumbers, std::vector<int> &prevValues, 
+                                        int erasedGrid, int erasedValue) {
     if (emptyGrids.empty()) return true;
 
     std::vector<std::vector<int>> dp(emptyGrids.size());
