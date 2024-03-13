@@ -982,7 +982,7 @@ TEST(SudokuBoardGeneration, CreateSolvedPuzzle3) {
     game.generateNewPlayableBoard(0);
 
     EXPECT_TRUE(game.isTheWholeBoardSolved());
-}
+} 
 
 TEST(SudokuBoardGeneration, CreatePlayablePuzzle) {
     SudokuBoard game = SudokuBoard();
@@ -998,4 +998,12 @@ TEST(SudokuBoardGeneration, CreatePlayablePuzzle2) {
     game.generateNewPlayableBoard(0.39);
 
     EXPECT_EQ(game.getAnchoredcoor().size(), 9 * 9 - 32);
+}
+
+TEST(SudokuBoardGeneration, CreatePlayablePuzzle3) {
+    SudokuBoard game = SudokuBoard();
+
+    game.generateNewPlayableBoard(0.50);
+
+    EXPECT_EQ(game.getAnchoredcoor().size(), 9 * 9 - 41);
 }

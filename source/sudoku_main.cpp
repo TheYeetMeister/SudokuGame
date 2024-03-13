@@ -5,7 +5,7 @@
 constexpr double EASY_PERCENTAGE_MISSING = 0.54;
 constexpr double MEDIUM_PERCENTAGE_MISSING = 0.62;
 constexpr double HARD_PERCENTAGE_MISSING = 0.70;
-constexpr double EXPERT_PERCENTAGE_MISSING = 0.72;
+constexpr double EXPERT_PERCENTAGE_MISSING = 0.75;
 
 int getIntInput() {
     std::string input;

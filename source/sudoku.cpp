@@ -4,9 +4,9 @@
 #include <set>
 #include <string>
 #include <climits>
-#include <random>
 #include <cmath>
 #include <unordered_map>
+#include "sudoku_generator.cpp"
 
 const int UPPER_LIMIT = INT_MAX;
 
@@ -38,9 +38,9 @@ SudokuBoard::~SudokuBoard() {
     if (madeNotUsingNew) return;
 
     for (int i = 0; i < size; ++i) {
-        delete gameBoard[i];
+        delete[] gameBoard[i];
     }
-    delete gameBoard;
+    delete[] gameBoard;
 }
 
 int** SudokuBoard::getGameBoard(){
@@ -415,158 +415,4 @@ std::ostream &operator<<(std::ostream &out, const SudokuBoard &b) {
     b.print(out);
 
     return out;
-}
-
-SudokuBoard::newBoardGenerator::newBoardGenerator(int** newGameBoard, int size, int gridSize)
-                : newGameBoard(newGameBoard), size(size), gridSize(gridSize), numberOfAvailableGrids(size * size)
-    {
-        for(int i = 0; i < size * size; ++i) {
-            allIndivGrids.insert(i);
-        }
-
-        for (int i = 1; i <= size; ++i) {
-            allValues.insert(i);
-        }
-
-        rowValues = new std::set<int>[size];
-        colValues = new std::set<int>[size];
-        grids = new std::set<int>[size];
-    }
-
-SudokuBoard::newBoardGenerator::~newBoardGenerator() {
-    delete[] rowValues;
-    delete[] colValues;
-    delete[] grids;
-}
-
-void SudokuBoard::newBoardGenerator::createCompletedBoard() {
-    if (!size) return;
-
-    std::set<int> **dp = new std::set<int>*[size];
-    for(int i = 0; i < size; ++i) {
-        dp[i] = new std::set<int>[size];
-    }
-
-    //backtracking algorithm, randomized for sudoku
-    dp[0][0] = getAvailableNumberSet(0);
-    int totalGridsOneLess = size * size - 1;
-    for(int i = 0; i < totalGridsOneLess;) {
-        int row = calRowNumber(i);
-        int col = calColNumber(i);
-
-        if (dp[row][col].size() == 0) {
-            --i;
-            removeValueFromGridSpace(i, newGameBoard[calRowNumber(i)][calColNumber(i)]);
-            continue;
-        }
-
-        int value = pickRanValidVal(dp[row][col]);
-
-        dp[row][col].erase(value);
-        insertValueIntoGridSpace(i, value);
-        ++i;
-
-        row = calRowNumber(i);
-        col = calColNumber(i);
-
-        dp[row][col] = getAvailableNumberSet(i);
-    }
-    insertValueIntoGridSpace(size * size - 1, 
-                *dp[size-1][size-1].begin());
-    //end of algorithm
-
-    for(int i = 0; i < size; ++i) {
-        delete[] dp[i];
-    }
-    delete[] dp;
-}
-
-std::set<int> SudokuBoard::newBoardGenerator::eraseNumOfSquares(int n) {
-    std::set<int> remainingGridNumbers = allIndivGrids;
-
-    if (n < 0 || n > size * size) {
-        throw ValueOutOfBounds("Number of values erased too large, or too small");
-    }
-
-    for (int i = 0; i < n; ++i) {
-        int gridNumber = pickRanValidVal(remainingGridNumbers);
-
-        newGameBoard[calRowNumber(gridNumber)][calColNumber(gridNumber)] = 0;
-
-        remainingGridNumbers.erase(gridNumber);
-    }
-
-    return remainingGridNumbers;
-}
-
-int SudokuBoard::newBoardGenerator::pickRanValidVal(std::set<int> &values) {
-    if (!values.size()) return -1;
-
-    std::random_device generator;
-    std::mt19937 rng(generator());
-    std::uniform_int_distribution<std::mt19937::result_type> distribution(0, values.size() - 1);
-
-    auto tempIndex = values.begin();
-
-    std::advance(tempIndex, distribution(generator));
-
-    return *tempIndex;
-}
-
-void SudokuBoard::newBoardGenerator::insertValueIntoGridSpace(int gridSpace, int value) {
-    rowValues[calRowNumber(gridSpace)].insert(value);
-    colValues[calColNumber(gridSpace)].insert(value);
-    grids[calMacroGridCoor(gridSpace)].insert(value);
-
-    newGameBoard[calRowNumber(gridSpace)][calColNumber(gridSpace)] = value;
-}
-
-void SudokuBoard::newBoardGenerator::removeValueFromGridSpace(int gridSpace, int value)
-{
-    rowValues[calRowNumber(gridSpace)].erase(value);
-    colValues[calColNumber(gridSpace)].erase(value);
-    grids[calMacroGridCoor(gridSpace)].erase(value);
-}
-
-std::set<int> SudokuBoard::newBoardGenerator::
-    getAvailableNumberSet(int gridSpace) {
-        std::set<int> unavailableValues;
-
-        mergeTwoSets(unavailableValues, rowValues[calRowNumber(gridSpace)]);
-        mergeTwoSets(unavailableValues, colValues[calColNumber(gridSpace)]);
-        mergeTwoSets(unavailableValues, grids[calMacroGridCoor(gridSpace)]);
-
-        std::set<int> availableValues = allValues;
-
-        for (auto i = unavailableValues.begin(); i != unavailableValues.end(); ++i)
-        {
-            availableValues.erase(*i);
-        }
-        return availableValues;
-}
-
-void SudokuBoard::newBoardGenerator::
-    mergeTwoSets(std::set<int> &target, std::set<int> const &given) const {
-        for(auto i = given.begin(); i != given.end(); ++i) {
-            target.insert(*i);
-        }
-}
-
-int SudokuBoard::newBoardGenerator::calRowNumber(int gridSpace) const{
-    return (gridSpace / size);
-}
-
-int SudokuBoard::newBoardGenerator::calColNumber(int gridSpace) const{
-    return(gridSpace % size);
-}
-
-int SudokuBoard::newBoardGenerator::calMacroGridCoor(int gridSpace) const {
-    int gridRow = (gridSpace / size) / (gridSize);
-    int gridCol = (gridSpace % size) / (gridSize);
-
-    return (gridRow * gridSize + gridCol);
-}
-
-int SudokuBoard::newBoardGenerator::calGridNumber(int row, int col) const {
-    return ((row * size) + col);
 }

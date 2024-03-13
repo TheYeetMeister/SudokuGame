@@ -57,46 +57,6 @@ public:
     //generating newBoard class (public for testing purposes)
 
     void generateNewPlayableBoard(double percentageEmpty);
-
-    class newBoardGenerator {
-    public:
-        newBoardGenerator(int** newGameBoard, int size, int gridSize);
-
-        ~newBoardGenerator();
-
-        void createCompletedBoard();
-
-        std::set<int> eraseNumOfSquares(int n);
-
-        std::set<int> getAvailableNumberSet(int gridSpace);
-
-        void mergeTwoSets(std::set<int> &target, const std::set<int> &given) const;
-    private:
-        int pickRanValidVal(std::set<int> &availValue);
-
-        void insertValueIntoGridSpace(int gridSpace, int value);
-
-        void removeValueFromGridSpace(int gridSpace, int value);
-
-        int calRowNumber(int gridSpace) const;
-
-        int calColNumber(int gridSpace) const;
-
-        int calMacroGridCoor(int gridSpace) const;
-
-        int calGridNumber(int row, int col) const;
-
-        std::set<int> allValues;
-        std::set<int>* rowValues;
-        std::set<int>* colValues;
-        std::set<int>* grids;
-        std::set<int> allIndivGrids;
-
-        int** newGameBoard;
-        int size;
-        int gridSize;
-        int numberOfAvailableGrids;
-    };
 private:
 
     std::string adjustStringSize(const char value) const;
