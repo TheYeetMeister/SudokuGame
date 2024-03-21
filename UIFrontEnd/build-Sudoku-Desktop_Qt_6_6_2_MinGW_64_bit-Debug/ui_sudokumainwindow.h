@@ -66,6 +66,7 @@ public:
         QFont font3;
         font3.setPointSize(15);
         VEasyBtn->setFont(font3);
+        VEasyBtn->setAutoFillBackground(false);
         EasyBtn = new QPushButton(centralwidget);
         EasyBtn->setObjectName("EasyBtn");
         EasyBtn->setGeometry(QRect(180, 320, 111, 41));

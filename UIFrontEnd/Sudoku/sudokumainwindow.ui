@@ -85,6 +85,9 @@
       <pointsize>15</pointsize>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>Very Easy</string>
     </property>

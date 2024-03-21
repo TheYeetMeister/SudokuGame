@@ -7,6 +7,14 @@ SudokuMainWindow::SudokuMainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Main Menu");
+
+    //sets color of btn
+    QPalette btn = ui->VEasyBtn->palette();
+    btn.setColor(QPalette::Button, QColor(Qt::green));
+    ui->VEasyBtn->setAutoFillBackground(true);
+    ui->VEasyBtn->setPalette(btn);
+    ui->VEasyBtn->setFlat(true);
+    ui->VEasyBtn->update();
 }
 
 SudokuMainWindow::~SudokuMainWindow()
