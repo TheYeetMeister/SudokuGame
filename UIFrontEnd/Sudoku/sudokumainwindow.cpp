@@ -15,7 +15,7 @@ SudokuMainWindow::~SudokuMainWindow()
 
 void SudokuMainWindow::on_StartBtn_clicked()
 {
-    gameWindow = std::unique_ptr<game>(new game(this));
+    gameWindow = std::unique_ptr<game>(new game(this, "Easy"));
     gameWindow->show();
     this->hide();
 }

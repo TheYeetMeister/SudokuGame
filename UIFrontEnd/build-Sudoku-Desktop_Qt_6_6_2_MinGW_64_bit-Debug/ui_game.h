@@ -12,18 +12,26 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_game
 {
 public:
+    QLabel *DiffLabel;
 
     void setupUi(QDialog *game)
     {
         if (game->objectName().isEmpty())
             game->setObjectName("game");
-        game->resize(400, 300);
+        game->resize(788, 544);
+        DiffLabel = new QLabel(game);
+        DiffLabel->setObjectName("DiffLabel");
+        DiffLabel->setGeometry(QRect(150, 140, 191, 71));
+        QFont font;
+        font.setPointSize(30);
+        DiffLabel->setFont(font);
 
         retranslateUi(game);
 
@@ -33,6 +41,7 @@ public:
     void retranslateUi(QDialog *game)
     {
         game->setWindowTitle(QCoreApplication::translate("game", "Dialog", nullptr));
+        DiffLabel->setText(QCoreApplication::translate("game", "TextLabel", nullptr));
     } // retranslateUi
 
 };

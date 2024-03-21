@@ -12,7 +12,7 @@ class game : public QDialog
     Q_OBJECT
 
 public:
-    explicit game(QWidget *parent = nullptr);
+    explicit game(QWidget *parent, QString message);
     ~game();
 
 private:
