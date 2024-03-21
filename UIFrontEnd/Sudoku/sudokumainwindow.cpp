@@ -6,6 +6,7 @@ SudokuMainWindow::SudokuMainWindow(QWidget *parent)
     , ui(new Ui::SudokuMainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Main Menu");
 }
 
 SudokuMainWindow::~SudokuMainWindow()

@@ -7,9 +7,11 @@ game::game(QWidget *parent, QString message)
 {
     ui->setupUi(this);
     ui->DiffLabel->setText(message);
+    this->setWindowTitle("Sudoku");
 }
 
 game::~game()
 {
+    QDialog::show();
     delete ui;
 }

@@ -27,5 +27,7 @@ private slots:
 private:
     Ui::SudokuMainWindow *ui;
     std::unique_ptr<game> gameWindow;
+    //difficulty rated from a scale of 1-5, (Very Easy - Evil)
+    unsigned int difficulty = 1;
 };
 #endif // SUDOKUMAINWINDOW_H
