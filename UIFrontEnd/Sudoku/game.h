@@ -15,6 +15,9 @@ public:
     explicit game(QWidget *parent, QString message);
     ~game();
 
+signals:
+    void openMainMenu();
+
 private:
     Ui::game *ui;
 };

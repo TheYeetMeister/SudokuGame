@@ -24,6 +24,8 @@ private slots:
 
     void on_QuitBtn_clicked();
 
+    void showWindow();
+
 private:
     Ui::SudokuMainWindow *ui;
     std::unique_ptr<game> gameWindow;

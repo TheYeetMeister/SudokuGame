@@ -19,6 +19,8 @@ void SudokuMainWindow::on_StartBtn_clicked()
     gameWindow = std::unique_ptr<game>(new game(this, "Easy"));
     gameWindow->show();
     this->hide();
+
+    connect(gameWindow.get(), &game::openMainMenu, this, &SudokuMainWindow::showWindow);
 }
 
 
@@ -27,3 +29,6 @@ void SudokuMainWindow::on_QuitBtn_clicked()
     this->close();
 }
 
+void SudokuMainWindow::showWindow() {
+    this->show();
+}
