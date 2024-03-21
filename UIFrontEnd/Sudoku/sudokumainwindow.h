@@ -2,6 +2,8 @@
 #define SUDOKUMAINWINDOW_H
 
 #include <QMainWindow>
+#include <memory>
+#include "game.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +19,13 @@ public:
     SudokuMainWindow(QWidget *parent = nullptr);
     ~SudokuMainWindow();
 
+private slots:
+    void on_StartBtn_clicked();
+
+    void on_QuitBtn_clicked();
+
 private:
     Ui::SudokuMainWindow *ui;
+    std::unique_ptr<game> gameWindow;
 };
 #endif // SUDOKUMAINWINDOW_H

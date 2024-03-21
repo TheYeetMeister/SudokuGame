@@ -12,3 +12,17 @@ SudokuMainWindow::~SudokuMainWindow()
 {
     delete ui;
 }
+
+void SudokuMainWindow::on_StartBtn_clicked()
+{
+    gameWindow = std::unique_ptr<game>(new game(this));
+    gameWindow->show();
+    this->hide();
+}
+
+
+void SudokuMainWindow::on_QuitBtn_clicked()
+{
+    this->close();
+}
+
