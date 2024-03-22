@@ -29,6 +29,10 @@ private slots:
 
     void showWindow();
 
+    void on_VEasyBtn_clicked();
+
+    void on_EasyBtn_clicked();
+
 private:
     Ui::SudokuMainWindow *ui;
     std::unique_ptr<game> gameWindow;
