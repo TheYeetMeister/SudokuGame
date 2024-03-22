@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <memory>
+#include <unordered_map>
 #include "game.h"
 
 QT_BEGIN_NAMESPACE
@@ -31,5 +32,6 @@ private:
     std::unique_ptr<game> gameWindow;
     //difficulty rated from a scale of 1-5, (Very Easy - Evil)
     unsigned int difficulty = 1;
+    std::unordered_map<unsigned int, QPushButton*> diffValues;
 };
 #endif // SUDOKUMAINWINDOW_H

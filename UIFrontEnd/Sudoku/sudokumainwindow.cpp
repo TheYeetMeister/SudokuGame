@@ -8,6 +8,12 @@ SudokuMainWindow::SudokuMainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("Main Menu");
 
+    diffValues[1] = ui->VEasyBtn;
+    diffValues[2] = ui->EasyBtn;
+    diffValues[3] = ui->MedBtn;
+    diffValues[4] = ui->HardBtn;
+    diffValues[5] = ui->EvilBtn;
+
     //sets color of btn
     QPalette btn = ui->VEasyBtn->palette();
     btn.setColor(QPalette::Button, QColor(Qt::green));
