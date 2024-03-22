@@ -8,6 +8,7 @@ SudokuMainWindow::SudokuMainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("Main Menu");
 
+    //for easy recall reset of current button values
     diffValues[1] = ui->VEasyBtn;
     diffValues[2] = ui->EasyBtn;
     diffValues[3] = ui->MedBtn;
@@ -30,7 +31,7 @@ SudokuMainWindow::~SudokuMainWindow()
 
 void SudokuMainWindow::on_StartBtn_clicked()
 {
-    gameWindow = std::unique_ptr<game>(new game(this, "Easy"));
+    gameWindow = std::unique_ptr<game>(new game(this, difficulty));
     gameWindow->show();
     this->hide();
 
