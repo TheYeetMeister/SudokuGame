@@ -17,6 +17,10 @@ public:
 
 signals:
     void openMainMenu();
+    void closeWholeGame();
+
+private slots:
+    void on_QuitBtn_clicked();
 
 private:
     Ui::game *ui;
