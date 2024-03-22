@@ -46,10 +46,12 @@ game::~game()
 
 void game::on_QuitBtn_clicked()
 {
-    connect(this, &game::finished, this, [this](){
-        emit closeWholeGame();
-    });
-
     this->close();
+}
+
+
+void game::on_QuitAllBtn_clicked()
+{
+    qApp->exit();
 }
 

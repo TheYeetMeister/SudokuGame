@@ -40,14 +40,18 @@ struct qt_meta_stringdata_CLASSgameENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSgameENDCLASS = QtMocHelpers::stringData(
     "game",
     "openMainMenu",
-    ""
+    "",
+    "on_QuitBtn_clicked",
+    "on_QuitAllBtn_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSgameENDCLASS_t {
-    uint offsetsAndSizes[6];
+    uint offsetsAndSizes[10];
     char stringdata0[5];
     char stringdata1[13];
     char stringdata2[1];
+    char stringdata3[19];
+    char stringdata4[22];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSgameENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -55,11 +59,15 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
     {
         QT_MOC_LITERAL(0, 4),  // "game"
         QT_MOC_LITERAL(5, 12),  // "openMainMenu"
-        QT_MOC_LITERAL(18, 0)   // ""
+        QT_MOC_LITERAL(18, 0),  // ""
+        QT_MOC_LITERAL(19, 18),  // "on_QuitBtn_clicked"
+        QT_MOC_LITERAL(38, 21)   // "on_QuitAllBtn_clicked"
     },
     "game",
     "openMainMenu",
-    ""
+    "",
+    "on_QuitBtn_clicked",
+    "on_QuitAllBtn_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -71,7 +79,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,9 +87,17 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x06,    1 /* Public */,
+       1,    0,   32,    2, 0x06,    1 /* Public */,
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       3,    0,   33,    2, 0x08,    2 /* Private */,
+       4,    0,   34,    2, 0x08,    3 /* Private */,
 
  // signals: parameters
+    QMetaType::Void,
+
+ // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -97,6 +113,10 @@ Q_CONSTINIT const QMetaObject game::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<game, std::true_type>,
         // method 'openMainMenu'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_QuitBtn_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_QuitAllBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -109,6 +129,8 @@ void game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         (void)_t;
         switch (_id) {
         case 0: _t->openMainMenu(); break;
+        case 1: _t->on_QuitBtn_clicked(); break;
+        case 2: _t->on_QuitAllBtn_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -143,13 +165,13 @@ int game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }

@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -20,6 +21,8 @@ class Ui_game
 {
 public:
     QLabel *DiffLabel;
+    QPushButton *QuitBtn;
+    QPushButton *QuitAllBtn;
 
     void setupUi(QDialog *game)
     {
@@ -32,6 +35,16 @@ public:
         QFont font;
         font.setPointSize(30);
         DiffLabel->setFont(font);
+        QuitBtn = new QPushButton(game);
+        QuitBtn->setObjectName("QuitBtn");
+        QuitBtn->setGeometry(QRect(640, 40, 111, 41));
+        QFont font1;
+        font1.setPointSize(15);
+        QuitBtn->setFont(font1);
+        QuitAllBtn = new QPushButton(game);
+        QuitAllBtn->setObjectName("QuitAllBtn");
+        QuitAllBtn->setGeometry(QRect(640, 100, 111, 41));
+        QuitAllBtn->setFont(font1);
 
         retranslateUi(game);
 
@@ -42,6 +55,8 @@ public:
     {
         game->setWindowTitle(QCoreApplication::translate("game", "Dialog", nullptr));
         DiffLabel->setText(QCoreApplication::translate("game", "TextLabel", nullptr));
+        QuitBtn->setText(QCoreApplication::translate("game", "Quit", nullptr));
+        QuitAllBtn->setText(QCoreApplication::translate("game", "Quit All", nullptr));
     } // retranslateUi
 
 };
