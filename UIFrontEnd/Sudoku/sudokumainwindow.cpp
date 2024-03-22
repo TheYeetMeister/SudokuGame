@@ -46,3 +46,14 @@ void SudokuMainWindow::on_QuitBtn_clicked()
 void SudokuMainWindow::showWindow() {
     this->show();
 }
+
+void SudokuMainWindow::reset_Btn() {
+    QPushButton* btn = diffValues[difficulty];
+
+    QPalette btnPalette = btn->palette();
+    btnPalette.setColor(QPalette::Button, QColor(Qt::gray));
+    btn->setAutoFillBackground(true);
+    btn->setPalette(btnPalette);
+    btn->setFlat(true);
+    btn->update();
+}

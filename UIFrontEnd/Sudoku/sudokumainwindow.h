@@ -21,6 +21,8 @@ public:
     ~SudokuMainWindow();
 
 private slots:
+    void reset_Btn();
+
     void on_StartBtn_clicked();
 
     void on_QuitBtn_clicked();
