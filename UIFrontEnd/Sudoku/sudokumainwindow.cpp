@@ -91,3 +91,57 @@ void SudokuMainWindow::on_EasyBtn_clicked()
     }
 }
 
+
+void SudokuMainWindow::on_MedBtn_clicked()
+{
+    if (difficulty != 3) {
+        reset_Btn();
+
+        difficulty = 3;
+        QPushButton* btn = ui->MedBtn;
+
+        QPalette btnPalette = btn->palette();
+        btnPalette.setColor(QPalette::Button, QColor(Qt::yellow));
+        btn->setAutoFillBackground(true);
+        btn->setPalette(btnPalette);
+        btn->setFlat(true);
+        btn->update();
+    }
+}
+
+
+void SudokuMainWindow::on_HardBtn_clicked()
+{
+    if (difficulty != 4) {
+        reset_Btn();
+
+        difficulty = 4;
+        QPushButton* btn = ui->HardBtn;
+
+        QPalette btnPalette = btn->palette();
+        btnPalette.setColor(QPalette::Button, QColor(Qt::red));
+        btn->setAutoFillBackground(true);
+        btn->setPalette(btnPalette);
+        btn->setFlat(true);
+        btn->update();
+    }
+}
+
+
+void SudokuMainWindow::on_EvilBtn_clicked()
+{
+    if (difficulty != 5) {
+        reset_Btn();
+
+        difficulty = 5;
+        QPushButton* btn = ui->EvilBtn;
+
+        QPalette btnPalette = btn->palette();
+        btnPalette.setColor(QPalette::Button, QColor(Qt::darkRed));
+        btn->setAutoFillBackground(true);
+        btn->setPalette(btnPalette);
+        btn->setFlat(true);
+        btn->update();
+    }
+}
+

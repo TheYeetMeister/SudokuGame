@@ -45,11 +45,14 @@ constexpr auto qt_meta_stringdata_CLASSSudokuMainWindowENDCLASS = QtMocHelpers::
     "on_QuitBtn_clicked",
     "showWindow",
     "on_VEasyBtn_clicked",
-    "on_EasyBtn_clicked"
+    "on_EasyBtn_clicked",
+    "on_MedBtn_clicked",
+    "on_HardBtn_clicked",
+    "on_EvilBtn_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSSudokuMainWindowENDCLASS_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[22];
     char stringdata0[17];
     char stringdata1[10];
     char stringdata2[1];
@@ -58,6 +61,9 @@ struct qt_meta_stringdata_CLASSSudokuMainWindowENDCLASS_t {
     char stringdata5[11];
     char stringdata6[20];
     char stringdata7[19];
+    char stringdata8[18];
+    char stringdata9[19];
+    char stringdata10[19];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSSudokuMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -70,7 +76,10 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSudokuMainWindowENDCLASS_t qt_m
         QT_MOC_LITERAL(48, 18),  // "on_QuitBtn_clicked"
         QT_MOC_LITERAL(67, 10),  // "showWindow"
         QT_MOC_LITERAL(78, 19),  // "on_VEasyBtn_clicked"
-        QT_MOC_LITERAL(98, 18)   // "on_EasyBtn_clicked"
+        QT_MOC_LITERAL(98, 18),  // "on_EasyBtn_clicked"
+        QT_MOC_LITERAL(117, 17),  // "on_MedBtn_clicked"
+        QT_MOC_LITERAL(135, 18),  // "on_HardBtn_clicked"
+        QT_MOC_LITERAL(154, 18)   // "on_EvilBtn_clicked"
     },
     "SudokuMainWindow",
     "reset_Btn",
@@ -79,7 +88,10 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSudokuMainWindowENDCLASS_t qt_m
     "on_QuitBtn_clicked",
     "showWindow",
     "on_VEasyBtn_clicked",
-    "on_EasyBtn_clicked"
+    "on_EasyBtn_clicked",
+    "on_MedBtn_clicked",
+    "on_HardBtn_clicked",
+    "on_EvilBtn_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -91,7 +103,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSudokuMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -99,14 +111,20 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSudokuMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   50,    2, 0x08,    1 /* Private */,
-       3,    0,   51,    2, 0x08,    2 /* Private */,
-       4,    0,   52,    2, 0x08,    3 /* Private */,
-       5,    0,   53,    2, 0x08,    4 /* Private */,
-       6,    0,   54,    2, 0x08,    5 /* Private */,
-       7,    0,   55,    2, 0x08,    6 /* Private */,
+       1,    0,   68,    2, 0x08,    1 /* Private */,
+       3,    0,   69,    2, 0x08,    2 /* Private */,
+       4,    0,   70,    2, 0x08,    3 /* Private */,
+       5,    0,   71,    2, 0x08,    4 /* Private */,
+       6,    0,   72,    2, 0x08,    5 /* Private */,
+       7,    0,   73,    2, 0x08,    6 /* Private */,
+       8,    0,   74,    2, 0x08,    7 /* Private */,
+       9,    0,   75,    2, 0x08,    8 /* Private */,
+      10,    0,   76,    2, 0x08,    9 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -137,6 +155,12 @@ Q_CONSTINIT const QMetaObject SudokuMainWindow::staticMetaObject = { {
         // method 'on_VEasyBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_EasyBtn_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_MedBtn_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_HardBtn_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_EvilBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -154,6 +178,9 @@ void SudokuMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 3: _t->showWindow(); break;
         case 4: _t->on_VEasyBtn_clicked(); break;
         case 5: _t->on_EasyBtn_clicked(); break;
+        case 6: _t->on_MedBtn_clicked(); break;
+        case 7: _t->on_HardBtn_clicked(); break;
+        case 8: _t->on_EvilBtn_clicked(); break;
         default: ;
         }
     }
@@ -179,13 +206,13 @@ int SudokuMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 9;
     }
     return _id;
 }

@@ -33,6 +33,12 @@ private slots:
 
     void on_EasyBtn_clicked();
 
+    void on_MedBtn_clicked();
+
+    void on_HardBtn_clicked();
+
+    void on_EvilBtn_clicked();
+
 private:
     Ui::SudokuMainWindow *ui;
     std::unique_ptr<game> gameWindow;
