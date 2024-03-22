@@ -49,5 +49,7 @@ void game::on_QuitBtn_clicked()
     connect(this, &game::finished, this, [this](){
         emit closeWholeGame();
     });
+
+    this->close();
 }
 
