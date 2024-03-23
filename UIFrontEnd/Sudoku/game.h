@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <QDialog>
+#include <unordered_map>
 
 namespace Ui {
 class game;
@@ -25,6 +26,10 @@ private slots:
 
 private:
     Ui::game *ui;
+
+    unsigned int difficulty;
+    std::unordered_map<int, QPushButton*> buttonUIs;
+    int currentGrid = 0;
 };
 
 #endif // GAME_H

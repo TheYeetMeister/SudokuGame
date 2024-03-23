@@ -9,11 +9,11 @@ SudokuMainWindow::SudokuMainWindow(QWidget *parent)
     this->setWindowTitle("Main Menu");
 
     //for easy recall reset of current button values
-    diffValues[1] = ui->VEasyBtn;
-    diffValues[2] = ui->EasyBtn;
-    diffValues[3] = ui->MedBtn;
-    diffValues[4] = ui->HardBtn;
-    diffValues[5] = ui->EvilBtn;
+    diffValues = {{1, ui->VEasyBtn},
+                  {2, ui->EasyBtn},
+                  {3, ui->MedBtn},
+                  {4, ui->HardBtn},
+                  {5, ui->EvilBtn}};
 
     //sets color of btn
     QPalette btn = ui->VEasyBtn->palette();

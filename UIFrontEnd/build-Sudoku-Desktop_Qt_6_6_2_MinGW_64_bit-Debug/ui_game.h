@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -20,33 +19,48 @@ QT_BEGIN_NAMESPACE
 class Ui_game
 {
 public:
-    QLabel *DiffLabel;
     QPushButton *QuitBtn;
     QPushButton *QuitAllBtn;
+    QPushButton *grid1;
+    QPushButton *grid2;
 
     void setupUi(QDialog *game)
     {
         if (game->objectName().isEmpty())
             game->setObjectName("game");
-        game->resize(788, 544);
-        DiffLabel = new QLabel(game);
-        DiffLabel->setObjectName("DiffLabel");
-        DiffLabel->setGeometry(QRect(150, 140, 191, 71));
-        QFont font;
-        font.setPointSize(30);
-        DiffLabel->setFont(font);
+        game->resize(1143, 775);
         QuitBtn = new QPushButton(game);
         QuitBtn->setObjectName("QuitBtn");
-        QuitBtn->setGeometry(QRect(640, 40, 111, 41));
-        QFont font1;
-        font1.setPointSize(15);
-        QuitBtn->setFont(font1);
+        QuitBtn->setGeometry(QRect(980, 90, 111, 41));
+        QFont font;
+        font.setPointSize(15);
+        QuitBtn->setFont(font);
         QuitAllBtn = new QPushButton(game);
         QuitAllBtn->setObjectName("QuitAllBtn");
-        QuitAllBtn->setGeometry(QRect(640, 100, 111, 41));
-        QuitAllBtn->setFont(font1);
+        QuitAllBtn->setGeometry(QRect(980, 30, 111, 41));
+        QuitAllBtn->setFont(font);
+        grid1 = new QPushButton(game);
+        grid1->setObjectName("grid1");
+        grid1->setGeometry(QRect(110, 80, 51, 51));
+        QFont font1;
+        font1.setPointSize(30);
+        grid1->setFont(font1);
+        grid1->setAutoFillBackground(false);
+        grid1->setAutoDefault(false);
+        grid1->setFlat(true);
+        grid2 = new QPushButton(game);
+        grid2->setObjectName("grid2");
+        grid2->setGeometry(QRect(170, 80, 51, 51));
+        grid2->setFont(font1);
+        grid2->setAutoFillBackground(false);
+        grid2->setAutoDefault(false);
+        grid2->setFlat(true);
 
         retranslateUi(game);
+
+        grid1->setDefault(false);
+        grid2->setDefault(false);
+
 
         QMetaObject::connectSlotsByName(game);
     } // setupUi
@@ -54,9 +68,10 @@ public:
     void retranslateUi(QDialog *game)
     {
         game->setWindowTitle(QCoreApplication::translate("game", "Dialog", nullptr));
-        DiffLabel->setText(QCoreApplication::translate("game", "TextLabel", nullptr));
         QuitBtn->setText(QCoreApplication::translate("game", "Quit", nullptr));
         QuitAllBtn->setText(QCoreApplication::translate("game", "Quit All", nullptr));
+        grid1->setText(QCoreApplication::translate("game", "9", nullptr));
+        grid2->setText(QCoreApplication::translate("game", "8", nullptr));
     } // retranslateUi
 
 };
