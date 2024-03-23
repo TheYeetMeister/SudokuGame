@@ -24,7 +24,11 @@ private slots:
 
     void on_QuitAllBtn_clicked();
 
+    void on_grid1_clicked();
+
 private:
+    void resetPrevBtn();
+
     Ui::game *ui;
 
     unsigned int difficulty;
