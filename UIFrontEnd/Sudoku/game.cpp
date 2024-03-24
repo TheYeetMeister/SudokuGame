@@ -53,6 +53,7 @@ void game::resetPrevBtn() {
 
         QPalette btnPalette = btn->palette();
         btnPalette.setColor(QPalette::Button, QColor(Qt::white));
+        btn->setPalette(btnPalette);
         btn->update();
     }
 }
