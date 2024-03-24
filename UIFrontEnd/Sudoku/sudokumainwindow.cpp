@@ -53,6 +53,7 @@ void SudokuMainWindow::reset_Btn() {
 
     QPalette btnPalette = QApplication::palette(btn);
     btn->setPalette(btnPalette);
+    btn->setAutoFillBackground(false);
     btn->setFlat(false);
     btn->update();
 }

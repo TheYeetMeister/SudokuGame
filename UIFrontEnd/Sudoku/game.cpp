@@ -32,13 +32,21 @@ void game::on_QuitAllBtn_clicked()
     qApp->exit();
 }
 
+void game::activateBtn(int gridNumber) {
+    QPushButton* btn = buttonUIs[gridNumber];
+
+    QPalette btnPalette = btn->palette();
+    btnPalette.setColor(QPalette::Button, QColor(Qt::cyan));
+    btn->setPalette(btnPalette);
+    btn->update();
+}
+
 void game::resetPrevBtn() {
     if (currentGrid != 0) {
         QPushButton* btn = buttonUIs[currentGrid];
 
         QPalette btnPalette = QApplication::palette(btn);
         btn->setPalette(btnPalette);
-        btn->setFlat(true);
         btn->update();
     }
 }
@@ -46,10 +54,24 @@ void game::resetPrevBtn() {
 
 void game::on_grid1_clicked()
 {
-    if (currentGrid != 0 && currentGrid != 1) {
+    if (currentGrid != 1) {
+        resetPrevBtn();
+
         currentGrid = 1;
 
+        activateBtn(1);
+    }
+}
 
+
+void game::on_grid2_clicked()
+{
+    if (currentGrid != 2) {
+        resetPrevBtn();
+
+        currentGrid = 2;
+
+        activateBtn(2);
     }
 }
 

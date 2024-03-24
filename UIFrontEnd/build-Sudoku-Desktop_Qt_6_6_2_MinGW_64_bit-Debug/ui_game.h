@@ -45,14 +45,14 @@ public:
         QFont font1;
         font1.setPointSize(30);
         grid1->setFont(font1);
-        grid1->setAutoFillBackground(false);
+        grid1->setAutoFillBackground(true);
         grid1->setAutoDefault(false);
         grid1->setFlat(true);
         grid2 = new QPushButton(game);
         grid2->setObjectName("grid2");
         grid2->setGeometry(QRect(170, 80, 51, 51));
         grid2->setFont(font1);
-        grid2->setAutoFillBackground(false);
+        grid2->setAutoFillBackground(true);
         grid2->setAutoDefault(false);
         grid2->setFlat(true);
 

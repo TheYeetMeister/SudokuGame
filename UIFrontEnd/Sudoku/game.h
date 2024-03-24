@@ -26,8 +26,12 @@ private slots:
 
     void on_grid1_clicked();
 
+    void on_grid2_clicked();
+
 private:
     void resetPrevBtn();
+
+    void activateBtn(int gridNumber);
 
     Ui::game *ui;
 
