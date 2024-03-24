@@ -32,6 +32,10 @@ void game::on_QuitAllBtn_clicked()
     qApp->exit();
 }
 
+void game::changeCurrGridInt(int value) {
+
+}
+
 void game::activateBtn(int gridNumber) {
     QPushButton* btn = buttonUIs[gridNumber];
 

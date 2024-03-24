@@ -33,6 +33,8 @@ private:
 
     void activateBtn(int gridNumber);
 
+    void changeCurrGridInt(int value);
+
     Ui::game *ui;
 
     unsigned int difficulty;
