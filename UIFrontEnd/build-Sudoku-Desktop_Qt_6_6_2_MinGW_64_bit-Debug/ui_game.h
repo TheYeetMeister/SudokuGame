@@ -51,6 +51,13 @@ public:
         grid1 = new QPushButton(game);
         grid1->setObjectName("grid1");
         grid1->setGeometry(QRect(110, 80, 51, 51));
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid1->setPalette(palette);
         QFont font1;
         font1.setPointSize(30);
         grid1->setFont(font1);
@@ -60,6 +67,11 @@ public:
         grid2 = new QPushButton(game);
         grid2->setObjectName("grid2");
         grid2->setGeometry(QRect(170, 80, 51, 51));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid2->setPalette(palette1);
         grid2->setFont(font1);
         grid2->setAutoFillBackground(true);
         grid2->setAutoDefault(false);

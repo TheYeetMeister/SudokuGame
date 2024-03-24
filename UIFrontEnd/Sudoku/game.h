@@ -28,6 +28,24 @@ private slots:
 
     void on_grid2_clicked();
 
+    void on_numOneBtn_clicked();
+
+    void on_numTwoBtn_clicked();
+
+    void on_numThreeBtn_clicked();
+
+    void on_numFourBtn_clicked();
+
+    void on_pushFiveBtn_clicked();
+
+    void on_numSixBtn_clicked();
+
+    void on_numSevenBtn_clicked();
+
+    void on_numEightBtn_clicked();
+
+    void on_numNineBtn_clicked();
+
 private:
     void resetPrevBtn();
 
