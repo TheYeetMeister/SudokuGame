@@ -23,6 +23,15 @@ public:
     QPushButton *QuitAllBtn;
     QPushButton *grid1;
     QPushButton *grid2;
+    QPushButton *numOneBtn;
+    QPushButton *numTwoBtn;
+    QPushButton *numThreeBtn;
+    QPushButton *numFourBtn;
+    QPushButton *pushFiveBtn;
+    QPushButton *numSixBtn;
+    QPushButton *numSevenBtn;
+    QPushButton *numEightBtn;
+    QPushButton *numNineBtn;
 
     void setupUi(QDialog *game)
     {
@@ -55,6 +64,44 @@ public:
         grid2->setAutoFillBackground(true);
         grid2->setAutoDefault(false);
         grid2->setFlat(true);
+        numOneBtn = new QPushButton(game);
+        numOneBtn->setObjectName("numOneBtn");
+        numOneBtn->setGeometry(QRect(120, 470, 61, 61));
+        QFont font2;
+        font2.setPointSize(33);
+        numOneBtn->setFont(font2);
+        numTwoBtn = new QPushButton(game);
+        numTwoBtn->setObjectName("numTwoBtn");
+        numTwoBtn->setGeometry(QRect(200, 470, 61, 61));
+        numTwoBtn->setFont(font2);
+        numThreeBtn = new QPushButton(game);
+        numThreeBtn->setObjectName("numThreeBtn");
+        numThreeBtn->setGeometry(QRect(280, 470, 61, 61));
+        numThreeBtn->setFont(font2);
+        numFourBtn = new QPushButton(game);
+        numFourBtn->setObjectName("numFourBtn");
+        numFourBtn->setGeometry(QRect(360, 470, 61, 61));
+        numFourBtn->setFont(font2);
+        pushFiveBtn = new QPushButton(game);
+        pushFiveBtn->setObjectName("pushFiveBtn");
+        pushFiveBtn->setGeometry(QRect(440, 470, 61, 61));
+        pushFiveBtn->setFont(font2);
+        numSixBtn = new QPushButton(game);
+        numSixBtn->setObjectName("numSixBtn");
+        numSixBtn->setGeometry(QRect(520, 470, 61, 61));
+        numSixBtn->setFont(font2);
+        numSevenBtn = new QPushButton(game);
+        numSevenBtn->setObjectName("numSevenBtn");
+        numSevenBtn->setGeometry(QRect(600, 470, 61, 61));
+        numSevenBtn->setFont(font2);
+        numEightBtn = new QPushButton(game);
+        numEightBtn->setObjectName("numEightBtn");
+        numEightBtn->setGeometry(QRect(680, 470, 61, 61));
+        numEightBtn->setFont(font2);
+        numNineBtn = new QPushButton(game);
+        numNineBtn->setObjectName("numNineBtn");
+        numNineBtn->setGeometry(QRect(760, 470, 61, 61));
+        numNineBtn->setFont(font2);
 
         retranslateUi(game);
 
@@ -72,6 +119,15 @@ public:
         QuitAllBtn->setText(QCoreApplication::translate("game", "Quit All", nullptr));
         grid1->setText(QCoreApplication::translate("game", "9", nullptr));
         grid2->setText(QCoreApplication::translate("game", "8", nullptr));
+        numOneBtn->setText(QCoreApplication::translate("game", "1", nullptr));
+        numTwoBtn->setText(QCoreApplication::translate("game", "2", nullptr));
+        numThreeBtn->setText(QCoreApplication::translate("game", "3", nullptr));
+        numFourBtn->setText(QCoreApplication::translate("game", "4", nullptr));
+        pushFiveBtn->setText(QCoreApplication::translate("game", "5", nullptr));
+        numSixBtn->setText(QCoreApplication::translate("game", "6", nullptr));
+        numSevenBtn->setText(QCoreApplication::translate("game", "7", nullptr));
+        numEightBtn->setText(QCoreApplication::translate("game", "8", nullptr));
+        numNineBtn->setText(QCoreApplication::translate("game", "9", nullptr));
     } // retranslateUi
 
 };
