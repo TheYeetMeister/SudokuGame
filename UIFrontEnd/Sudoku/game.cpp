@@ -33,7 +33,9 @@ void game::on_QuitAllBtn_clicked()
 }
 
 void game::changeCurrGridInt(int value) {
+    QPushButton* btn = buttonUIs[currentGrid];
 
+    btn->setText(QString::number(value));
 }
 
 void game::activateBtn(int gridNumber) {
