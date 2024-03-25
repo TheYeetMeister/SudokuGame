@@ -13,7 +13,7 @@ game::game(QWidget *parent, unsigned difficulty)
         emit openMainMenu();
     });
 
-    lockedGrids = {3};
+    lockedGrids = {3, 6};
 
     wrongGrids = {2};
 
