@@ -64,7 +64,7 @@ private:
 
     void markGridErrors(bool showErrors);
 
-    void resetPrevBtn();
+    void resetCurrBtn();
 
     void activateBtn(int gridNumber);
 

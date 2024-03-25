@@ -138,7 +138,7 @@ void game::activateBtn(int gridNumber) {
     btn->update();
 }
 
-void game::resetPrevBtn() {
+void game::resetCurrBtn() {
     if (currentGrid != 0 ) {
         QPushButton* btn = gridButtonUIs[currentGrid - 1];
 
@@ -211,7 +211,7 @@ void game::on_numNineBtn_clicked()
 
 void game::on_submitBtn_clicked()
 {
-    resetPrevBtn();
+    resetCurrBtn();
     deactivateNumBtns();
 
     if (solved) {
@@ -234,7 +234,7 @@ void game::on_remErrorsBtn_clicked()
 void game::on_grid1_clicked()
 {
     if (currentGrid != 1) {
-        resetPrevBtn();
+        resetCurrBtn();
 
         currentGrid = 1;
 
@@ -246,7 +246,7 @@ void game::on_grid1_clicked()
 void game::on_grid2_clicked()
 {
     if (currentGrid != 2) {
-        resetPrevBtn();
+        resetCurrBtn();
 
         currentGrid = 2;
 
@@ -257,7 +257,7 @@ void game::on_grid2_clicked()
 void game::on_grid3_clicked()
 {
     if (currentGrid != 3) {
-        resetPrevBtn();
+        resetCurrBtn();
 
         currentGrid = 3;
 
