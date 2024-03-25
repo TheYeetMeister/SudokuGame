@@ -42,6 +42,10 @@ game::~game()
 
 void game::deactivateLockedGrids() {
     for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
+        if (*it == currentGrid) {
+            continue;
+        }
+
         QPushButton* btn = gridButtonUIs[*it - 1];
 
         QPalette btnPalette = btn->palette();
