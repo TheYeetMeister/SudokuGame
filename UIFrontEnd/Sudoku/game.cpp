@@ -41,6 +41,15 @@ void game::deactivateNumBtns() {
     }
 }
 
+void game::activateNumBtns() {
+    for (QPushButton* btn :numButtonUIs) {
+        btn->setPalette(QApplication::palette(btn));
+        btn->update();
+
+        btn->setEnabled(true);
+    }
+}
+
 void game::on_QuitBtn_clicked()
 {
     this->close();

@@ -51,6 +51,8 @@ private slots:
 private:
     void deactivateNumBtns();
 
+    void activateNumBtns();
+
     void resetPrevBtn();
 
     void activateBtn(int gridNumber);
