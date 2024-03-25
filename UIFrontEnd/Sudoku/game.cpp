@@ -20,7 +20,8 @@ game::game(QWidget *parent, unsigned difficulty)
     //easy recall of buttons to grids
     gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3};
 
-    numButtonUIs = {ui->numOneBtn,
+    numButtonUIs = {ui->eraseBtn,
+                    ui->numOneBtn,
                     ui->numTwoBtn,
                     ui->numThreeBtn,
                     ui->numFourBtn,
