@@ -24,6 +24,7 @@
    </property>
    <property name="font">
     <font>
+     <family>MV Boli</family>
      <pointsize>15</pointsize>
     </font>
    </property>
@@ -42,6 +43,7 @@
    </property>
    <property name="font">
     <font>
+     <family>MV Boli</family>
      <pointsize>15</pointsize>
     </font>
    </property>
@@ -446,6 +448,25 @@
    </property>
    <property name="text">
     <string>Remove Error Highlight</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="newGameBtn">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>280</y>
+     <width>231</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MV Boli</family>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>New Game?</string>
    </property>
   </widget>
  </widget>

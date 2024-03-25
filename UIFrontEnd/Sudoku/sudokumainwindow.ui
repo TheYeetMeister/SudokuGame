@@ -175,6 +175,7 @@
     </property>
     <property name="font">
      <font>
+      <family>MV Boli</family>
       <pointsize>15</pointsize>
      </font>
     </property>

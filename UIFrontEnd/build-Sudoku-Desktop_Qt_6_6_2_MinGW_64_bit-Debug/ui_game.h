@@ -35,6 +35,7 @@ public:
     QPushButton *submitBtn;
     QPushButton *grid3;
     QPushButton *remErrorsBtn;
+    QPushButton *newGameBtn;
 
     void setupUi(QDialog *game)
     {
@@ -45,6 +46,7 @@ public:
         QuitBtn->setObjectName("QuitBtn");
         QuitBtn->setGeometry(QRect(980, 90, 111, 41));
         QFont font;
+        font.setFamilies({QString::fromUtf8("MV Boli")});
         font.setPointSize(15);
         QuitBtn->setFont(font);
         QuitAllBtn = new QPushButton(game);
@@ -141,6 +143,13 @@ public:
         QFont font4;
         font4.setPointSize(12);
         remErrorsBtn->setFont(font4);
+        newGameBtn = new QPushButton(game);
+        newGameBtn->setObjectName("newGameBtn");
+        newGameBtn->setGeometry(QRect(870, 280, 231, 91));
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("MV Boli")});
+        font5.setPointSize(30);
+        newGameBtn->setFont(font5);
 
         retranslateUi(game);
 
@@ -171,6 +180,7 @@ public:
         submitBtn->setText(QCoreApplication::translate("game", "Submit board", nullptr));
         grid3->setText(QCoreApplication::translate("game", "8", nullptr));
         remErrorsBtn->setText(QCoreApplication::translate("game", "Remove Error Highlight", nullptr));
+        newGameBtn->setText(QCoreApplication::translate("game", "New Game?", nullptr));
     } // retranslateUi
 
 };

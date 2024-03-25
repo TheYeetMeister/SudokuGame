@@ -86,7 +86,10 @@ public:
         QuitBtn = new QPushButton(centralwidget);
         QuitBtn->setObjectName("QuitBtn");
         QuitBtn->setGeometry(QRect(620, 40, 111, 41));
-        QuitBtn->setFont(font3);
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("MV Boli")});
+        font4.setPointSize(15);
+        QuitBtn->setFont(font4);
         SudokuMainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(SudokuMainWindow);

@@ -76,7 +76,7 @@ private:
     std::vector<QPushButton*> gridButtonUIs;
     std::vector<QPushButton*> numButtonUIs;
     int currentGrid = 0;
-    bool solved = false;
+    bool solved = true;
     bool showErrors = false;
     std::set<int> lockedGrids;
     std::set<int> wrongGrids;
