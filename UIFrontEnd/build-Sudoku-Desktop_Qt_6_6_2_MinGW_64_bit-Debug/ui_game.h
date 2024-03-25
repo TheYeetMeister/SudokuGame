@@ -27,7 +27,7 @@ public:
     QPushButton *numTwoBtn;
     QPushButton *numThreeBtn;
     QPushButton *numFourBtn;
-    QPushButton *pushFiveBtn;
+    QPushButton *numFiveBtn;
     QPushButton *numSixBtn;
     QPushButton *numSevenBtn;
     QPushButton *numEightBtn;
@@ -95,10 +95,10 @@ public:
         numFourBtn->setObjectName("numFourBtn");
         numFourBtn->setGeometry(QRect(360, 470, 61, 61));
         numFourBtn->setFont(font2);
-        pushFiveBtn = new QPushButton(game);
-        pushFiveBtn->setObjectName("pushFiveBtn");
-        pushFiveBtn->setGeometry(QRect(440, 470, 61, 61));
-        pushFiveBtn->setFont(font2);
+        numFiveBtn = new QPushButton(game);
+        numFiveBtn->setObjectName("numFiveBtn");
+        numFiveBtn->setGeometry(QRect(440, 470, 61, 61));
+        numFiveBtn->setFont(font2);
         numSixBtn = new QPushButton(game);
         numSixBtn->setObjectName("numSixBtn");
         numSixBtn->setGeometry(QRect(520, 470, 61, 61));
@@ -142,7 +142,7 @@ public:
         numTwoBtn->setText(QCoreApplication::translate("game", "2", nullptr));
         numThreeBtn->setText(QCoreApplication::translate("game", "3", nullptr));
         numFourBtn->setText(QCoreApplication::translate("game", "4", nullptr));
-        pushFiveBtn->setText(QCoreApplication::translate("game", "5", nullptr));
+        numFiveBtn->setText(QCoreApplication::translate("game", "5", nullptr));
         numSixBtn->setText(QCoreApplication::translate("game", "6", nullptr));
         numSevenBtn->setText(QCoreApplication::translate("game", "7", nullptr));
         numEightBtn->setText(QCoreApplication::translate("game", "8", nullptr));

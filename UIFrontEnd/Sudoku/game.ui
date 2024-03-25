@@ -255,7 +255,7 @@
     <string>4</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushFiveBtn">
+  <widget class="QPushButton" name="numFiveBtn">
    <property name="geometry">
     <rect>
      <x>440</x>

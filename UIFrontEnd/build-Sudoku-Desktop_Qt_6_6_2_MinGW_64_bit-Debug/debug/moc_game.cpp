@@ -49,7 +49,7 @@ constexpr auto qt_meta_stringdata_CLASSgameENDCLASS = QtMocHelpers::stringData(
     "on_numTwoBtn_clicked",
     "on_numThreeBtn_clicked",
     "on_numFourBtn_clicked",
-    "on_pushFiveBtn_clicked",
+    "on_numFiveBtn_clicked",
     "on_numSixBtn_clicked",
     "on_numSevenBtn_clicked",
     "on_numEightBtn_clicked",
@@ -70,7 +70,7 @@ struct qt_meta_stringdata_CLASSgameENDCLASS_t {
     char stringdata8[21];
     char stringdata9[23];
     char stringdata10[22];
-    char stringdata11[23];
+    char stringdata11[22];
     char stringdata12[21];
     char stringdata13[23];
     char stringdata14[23];
@@ -92,12 +92,12 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
         QT_MOC_LITERAL(115, 20),  // "on_numTwoBtn_clicked"
         QT_MOC_LITERAL(136, 22),  // "on_numThreeBtn_clicked"
         QT_MOC_LITERAL(159, 21),  // "on_numFourBtn_clicked"
-        QT_MOC_LITERAL(181, 22),  // "on_pushFiveBtn_clicked"
-        QT_MOC_LITERAL(204, 20),  // "on_numSixBtn_clicked"
-        QT_MOC_LITERAL(225, 22),  // "on_numSevenBtn_clicked"
-        QT_MOC_LITERAL(248, 22),  // "on_numEightBtn_clicked"
-        QT_MOC_LITERAL(271, 21),  // "on_numNineBtn_clicked"
-        QT_MOC_LITERAL(293, 20)   // "on_submitBtn_clicked"
+        QT_MOC_LITERAL(181, 21),  // "on_numFiveBtn_clicked"
+        QT_MOC_LITERAL(203, 20),  // "on_numSixBtn_clicked"
+        QT_MOC_LITERAL(224, 22),  // "on_numSevenBtn_clicked"
+        QT_MOC_LITERAL(247, 22),  // "on_numEightBtn_clicked"
+        QT_MOC_LITERAL(270, 21),  // "on_numNineBtn_clicked"
+        QT_MOC_LITERAL(292, 20)   // "on_submitBtn_clicked"
     },
     "game",
     "openMainMenu",
@@ -110,7 +110,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
     "on_numTwoBtn_clicked",
     "on_numThreeBtn_clicked",
     "on_numFourBtn_clicked",
-    "on_pushFiveBtn_clicked",
+    "on_numFiveBtn_clicked",
     "on_numSixBtn_clicked",
     "on_numSevenBtn_clicked",
     "on_numEightBtn_clicked",
@@ -202,7 +202,7 @@ Q_CONSTINIT const QMetaObject game::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_numFourBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushFiveBtn_clicked'
+        // method 'on_numFiveBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_numSixBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -233,7 +233,7 @@ void game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 6: _t->on_numTwoBtn_clicked(); break;
         case 7: _t->on_numThreeBtn_clicked(); break;
         case 8: _t->on_numFourBtn_clicked(); break;
-        case 9: _t->on_pushFiveBtn_clicked(); break;
+        case 9: _t->on_numFiveBtn_clicked(); break;
         case 10: _t->on_numSixBtn_clicked(); break;
         case 11: _t->on_numSevenBtn_clicked(); break;
         case 12: _t->on_numEightBtn_clicked(); break;
