@@ -33,6 +33,8 @@ game::game(QWidget *parent, unsigned difficulty)
     ui->remErrorsBtn->setEnabled(false);
     deactivateNumBtns();
     deactivateLockedGrids();
+
+    ui->newGameBtn->setVisible(false);
 }
 
 game::~game()
