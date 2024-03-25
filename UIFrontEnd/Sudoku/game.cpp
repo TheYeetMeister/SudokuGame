@@ -30,6 +30,8 @@ game::game(QWidget *parent, unsigned difficulty)
                     ui->numEightBtn,
                     ui->numNineBtn};
 
+    ui->remErrorsBtn->setEnabled(false);
+    deactivateNumBtns();
     deactivateLockedGrids();
 }
 
@@ -210,7 +212,15 @@ void game::on_submitBtn_clicked()
     } else {
         showErrors = true;
         markGridErrors(true);
+        ui->remErrorsBtn->setEnabled(true);
     }
+}
+
+void game::on_remErrorsBtn_clicked()
+{
+    showErrors = false;
+    markGridErrors(false);
+    ui->remErrorsBtn->setEnabled(false);
 }
 
 void game::on_grid1_clicked()

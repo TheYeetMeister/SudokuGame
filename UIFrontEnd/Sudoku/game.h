@@ -45,6 +45,8 @@ private slots:
 
     void on_submitBtn_clicked();
 
+    void on_remErrorsBtn_clicked();
+
     void on_grid1_clicked();
 
     void on_grid2_clicked();
