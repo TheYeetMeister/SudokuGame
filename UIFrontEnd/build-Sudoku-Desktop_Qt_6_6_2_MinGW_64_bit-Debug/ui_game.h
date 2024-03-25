@@ -36,6 +36,7 @@ public:
     QPushButton *grid3;
     QPushButton *remErrorsBtn;
     QPushButton *newGameBtn;
+    QPushButton *eraseBtn;
 
     void setupUi(QDialog *game)
     {
@@ -150,6 +151,10 @@ public:
         font5.setFamilies({QString::fromUtf8("MV Boli")});
         font5.setPointSize(30);
         newGameBtn->setFont(font5);
+        eraseBtn = new QPushButton(game);
+        eraseBtn->setObjectName("eraseBtn");
+        eraseBtn->setGeometry(QRect(400, 550, 131, 61));
+        eraseBtn->setFont(font2);
 
         retranslateUi(game);
 
@@ -181,6 +186,7 @@ public:
         grid3->setText(QCoreApplication::translate("game", "8", nullptr));
         remErrorsBtn->setText(QCoreApplication::translate("game", "Remove Error Highlight", nullptr));
         newGameBtn->setText(QCoreApplication::translate("game", "New Game?", nullptr));
+        eraseBtn->setText(QCoreApplication::translate("game", "Erase", nullptr));
     } // retranslateUi
 
 };
