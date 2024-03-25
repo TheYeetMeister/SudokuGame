@@ -33,6 +33,7 @@ public:
     QPushButton *numEightBtn;
     QPushButton *numNineBtn;
     QPushButton *submitBtn;
+    QPushButton *grid2_2;
 
     void setupUi(QDialog *game)
     {
@@ -121,11 +122,24 @@ public:
         QFont font3;
         font3.setPointSize(17);
         submitBtn->setFont(font3);
+        grid2_2 = new QPushButton(game);
+        grid2_2->setObjectName("grid2_2");
+        grid2_2->setGeometry(QRect(230, 80, 51, 51));
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid2_2->setPalette(palette2);
+        grid2_2->setFont(font1);
+        grid2_2->setAutoFillBackground(true);
+        grid2_2->setAutoDefault(false);
+        grid2_2->setFlat(true);
 
         retranslateUi(game);
 
         grid1->setDefault(false);
         grid2->setDefault(false);
+        grid2_2->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(game);
@@ -148,6 +162,7 @@ public:
         numEightBtn->setText(QCoreApplication::translate("game", "8", nullptr));
         numNineBtn->setText(QCoreApplication::translate("game", "9", nullptr));
         submitBtn->setText(QCoreApplication::translate("game", "Submit board", nullptr));
+        grid2_2->setText(QCoreApplication::translate("game", "8", nullptr));
     } // retranslateUi
 
 };
