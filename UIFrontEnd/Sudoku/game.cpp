@@ -83,6 +83,7 @@ void game::boardIsSolved() {
     for (QPushButton* btn :gridButtonUIs) {
         QPalette btnPalette = btn->palette();
         btnPalette.setColor(QPalette::Button, QColor(Qt::green));
+        btnPalette.setColor(QPalette::ButtonText, QColor(Qt::black));
         btn->setPalette(btnPalette);
         btn->update();
     }
@@ -177,7 +178,7 @@ void game::on_numNineBtn_clicked()
 void game::on_submitBtn_clicked()
 {
     if (solved) {
-        deactivateNumBtns();
+        boardIsSolved();
     }
 }
 
