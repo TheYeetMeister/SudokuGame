@@ -13,6 +13,16 @@ game::game(QWidget *parent, unsigned difficulty)
 
     //easy recall of buttons to grids
     buttonUIs = {ui->grid1, ui->grid2};
+
+    numButtonUIs = {ui->numOneBtn,
+                    ui->numTwoBtn,
+                    ui->numThreeBtn,
+                    ui->numFourBtn,
+                    ui->numFiveBtn,
+                    ui->numSixBtn,
+                    ui->numSevenBtn,
+                    ui->numEightBtn,
+                    ui->numNineBtn};
 }
 
 game::~game()
@@ -106,7 +116,7 @@ void game::on_numFourBtn_clicked()
 }
 
 
-void game::on_pushFiveBtn_clicked()
+void game::on_numFiveBtn_clicked()
 {
     changeCurrGridInt(5);
 }

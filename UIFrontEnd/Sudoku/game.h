@@ -36,7 +36,7 @@ private slots:
 
     void on_numFourBtn_clicked();
 
-    void on_pushFiveBtn_clicked();
+    void on_numFiveBtn_clicked();
 
     void on_numSixBtn_clicked();
 
@@ -59,6 +59,7 @@ private:
 
     unsigned int difficulty;
     std::vector<QPushButton*> buttonUIs;
+    std::vector<QPushButton*> numButtonUIs;
     int currentGrid = 0;
     bool solved = false;
 };
