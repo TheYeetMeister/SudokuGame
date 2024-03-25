@@ -179,6 +179,12 @@ void game::on_grid2_clicked()
 
 void game::on_grid3_clicked()
 {
+    if (currentGrid != 3) {
+        resetPrevBtn();
 
+        currentGrid = 3;
+
+        activateBtn(3);
+    }
 }
 
