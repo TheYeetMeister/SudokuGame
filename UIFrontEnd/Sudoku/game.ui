@@ -430,6 +430,24 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="remErrorsBtn">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>400</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Remove Error Highlight</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
