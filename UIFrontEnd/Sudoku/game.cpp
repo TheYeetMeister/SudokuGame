@@ -42,10 +42,6 @@ game::~game()
 
 void game::deactivateLockedGrids() {
     for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
-        if (*it == currentGrid) {
-            continue;
-        }
-
         QPushButton* btn = gridButtonUIs[*it - 1];
 
         QPalette btnPalette = btn->palette();
@@ -105,6 +101,10 @@ void game::boardIsSolved() {
 
 void game::markGridErrors(bool showErrors) {
     for (auto i = wrongGrids.begin(); i != wrongGrids.end(); ++i) {
+        if (!showErrors && *i == currentGrid) {
+            continue;
+        }
+
         QPushButton* btn = gridButtonUIs[*i - 1];
         QPalette btnPalette = btn->palette();
 
