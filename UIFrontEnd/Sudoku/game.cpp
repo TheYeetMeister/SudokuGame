@@ -213,6 +213,7 @@ void game::on_submitBtn_clicked()
     if (solved) {
         boardIsSolved();
     } else {
+        currentGrid = 0;
         showErrors = true;
         markGridErrors(true);
         ui->remErrorsBtn->setEnabled(true);
