@@ -88,6 +88,8 @@ void game::boardIsSolved() {
         btnPalette.setColor(QPalette::ButtonText, QColor(Qt::black));
         btn->setPalette(btnPalette);
         btn->update();
+
+        btn->setEnabled(false);
     }
 
     deactivateNumBtns();
