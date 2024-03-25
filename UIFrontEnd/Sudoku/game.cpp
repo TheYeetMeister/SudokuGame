@@ -209,6 +209,7 @@ void game::on_submitBtn_clicked()
         boardIsSolved();
     } else {
         showErrors = true;
+        markGridErrors(true);
     }
 }
 
