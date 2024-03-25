@@ -11,8 +11,10 @@ game::game(QWidget *parent, unsigned difficulty)
         emit openMainMenu();
     });
 
+    lockedGrids = {3};
+
     //easy recall of buttons to grids
-    buttonUIs = {ui->grid1, ui->grid2};
+    buttonUIs = {ui->grid1, ui->grid2, ui->grid3};
 
     numButtonUIs = {ui->numOneBtn,
                     ui->numTwoBtn,

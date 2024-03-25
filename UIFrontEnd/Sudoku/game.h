@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <vector>
+#include <set>
 
 namespace Ui {
 class game;
@@ -66,6 +67,7 @@ private:
     std::vector<QPushButton*> numButtonUIs;
     int currentGrid = 0;
     bool solved = true;
+    std::set<int> lockedGrids;
 };
 
 #endif // GAME_H
