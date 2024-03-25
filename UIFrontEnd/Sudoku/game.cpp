@@ -97,6 +97,22 @@ void game::boardIsSolved() {
     deactivateNumBtns();
 }
 
+void game::markGridErrors(bool showErrors) {
+    for (auto i = wrongGrids.begin(); i != wrongGrids.end(); ++i) {
+        QPushButton* btn = gridButtonUIs[*i - 1];
+        QPalette btnPalette = btn->palette();
+
+        if (showErrors) {
+            btnPalette.setColor(QPalette::Button, QColor(Qt::red));
+        } else {
+            btnPalette.setColor(QPalette::Button, QColor(Qt::white));
+        }
+
+        btn->setPalette(btnPalette);
+        btn->update();
+    }
+}
+
 void game::changeCurrGridInt(int value) {
     if (currentGrid != 0) {
         QPushButton* btn = gridButtonUIs[currentGrid - 1];

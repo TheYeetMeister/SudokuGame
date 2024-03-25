@@ -60,6 +60,8 @@ private:
 
     void boardIsSolved();
 
+    void markGridErrors(bool showErrors);
+
     void resetPrevBtn();
 
     void activateBtn(int gridNumber);
