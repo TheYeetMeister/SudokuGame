@@ -42,6 +42,7 @@ constexpr auto qt_meta_stringdata_CLASSgameENDCLASS = QtMocHelpers::stringData(
     "openMainMenu",
     "",
     "on_QuitBtn_clicked",
+    "on_newGameBtn_clicked",
     "on_QuitAllBtn_clicked",
     "on_numOneBtn_clicked",
     "on_numTwoBtn_clicked",
@@ -60,26 +61,27 @@ constexpr auto qt_meta_stringdata_CLASSgameENDCLASS = QtMocHelpers::stringData(
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSgameENDCLASS_t {
-    uint offsetsAndSizes[38];
+    uint offsetsAndSizes[40];
     char stringdata0[5];
     char stringdata1[13];
     char stringdata2[1];
     char stringdata3[19];
     char stringdata4[22];
-    char stringdata5[21];
+    char stringdata5[22];
     char stringdata6[21];
-    char stringdata7[23];
-    char stringdata8[22];
+    char stringdata7[21];
+    char stringdata8[23];
     char stringdata9[22];
-    char stringdata10[21];
-    char stringdata11[23];
+    char stringdata10[22];
+    char stringdata11[21];
     char stringdata12[23];
-    char stringdata13[22];
-    char stringdata14[21];
-    char stringdata15[24];
-    char stringdata16[17];
+    char stringdata13[23];
+    char stringdata14[22];
+    char stringdata15[21];
+    char stringdata16[24];
     char stringdata17[17];
     char stringdata18[17];
+    char stringdata19[17];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSgameENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -89,26 +91,28 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
         QT_MOC_LITERAL(5, 12),  // "openMainMenu"
         QT_MOC_LITERAL(18, 0),  // ""
         QT_MOC_LITERAL(19, 18),  // "on_QuitBtn_clicked"
-        QT_MOC_LITERAL(38, 21),  // "on_QuitAllBtn_clicked"
-        QT_MOC_LITERAL(60, 20),  // "on_numOneBtn_clicked"
-        QT_MOC_LITERAL(81, 20),  // "on_numTwoBtn_clicked"
-        QT_MOC_LITERAL(102, 22),  // "on_numThreeBtn_clicked"
-        QT_MOC_LITERAL(125, 21),  // "on_numFourBtn_clicked"
-        QT_MOC_LITERAL(147, 21),  // "on_numFiveBtn_clicked"
-        QT_MOC_LITERAL(169, 20),  // "on_numSixBtn_clicked"
-        QT_MOC_LITERAL(190, 22),  // "on_numSevenBtn_clicked"
-        QT_MOC_LITERAL(213, 22),  // "on_numEightBtn_clicked"
-        QT_MOC_LITERAL(236, 21),  // "on_numNineBtn_clicked"
-        QT_MOC_LITERAL(258, 20),  // "on_submitBtn_clicked"
-        QT_MOC_LITERAL(279, 23),  // "on_remErrorsBtn_clicked"
-        QT_MOC_LITERAL(303, 16),  // "on_grid1_clicked"
-        QT_MOC_LITERAL(320, 16),  // "on_grid2_clicked"
-        QT_MOC_LITERAL(337, 16)   // "on_grid3_clicked"
+        QT_MOC_LITERAL(38, 21),  // "on_newGameBtn_clicked"
+        QT_MOC_LITERAL(60, 21),  // "on_QuitAllBtn_clicked"
+        QT_MOC_LITERAL(82, 20),  // "on_numOneBtn_clicked"
+        QT_MOC_LITERAL(103, 20),  // "on_numTwoBtn_clicked"
+        QT_MOC_LITERAL(124, 22),  // "on_numThreeBtn_clicked"
+        QT_MOC_LITERAL(147, 21),  // "on_numFourBtn_clicked"
+        QT_MOC_LITERAL(169, 21),  // "on_numFiveBtn_clicked"
+        QT_MOC_LITERAL(191, 20),  // "on_numSixBtn_clicked"
+        QT_MOC_LITERAL(212, 22),  // "on_numSevenBtn_clicked"
+        QT_MOC_LITERAL(235, 22),  // "on_numEightBtn_clicked"
+        QT_MOC_LITERAL(258, 21),  // "on_numNineBtn_clicked"
+        QT_MOC_LITERAL(280, 20),  // "on_submitBtn_clicked"
+        QT_MOC_LITERAL(301, 23),  // "on_remErrorsBtn_clicked"
+        QT_MOC_LITERAL(325, 16),  // "on_grid1_clicked"
+        QT_MOC_LITERAL(342, 16),  // "on_grid2_clicked"
+        QT_MOC_LITERAL(359, 16)   // "on_grid3_clicked"
     },
     "game",
     "openMainMenu",
     "",
     "on_QuitBtn_clicked",
+    "on_newGameBtn_clicked",
     "on_QuitAllBtn_clicked",
     "on_numOneBtn_clicked",
     "on_numTwoBtn_clicked",
@@ -135,7 +139,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      17,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -143,30 +147,32 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  116,    2, 0x06,    1 /* Public */,
+       1,    0,  122,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,  117,    2, 0x08,    2 /* Private */,
-       4,    0,  118,    2, 0x08,    3 /* Private */,
-       5,    0,  119,    2, 0x08,    4 /* Private */,
-       6,    0,  120,    2, 0x08,    5 /* Private */,
-       7,    0,  121,    2, 0x08,    6 /* Private */,
-       8,    0,  122,    2, 0x08,    7 /* Private */,
-       9,    0,  123,    2, 0x08,    8 /* Private */,
-      10,    0,  124,    2, 0x08,    9 /* Private */,
-      11,    0,  125,    2, 0x08,   10 /* Private */,
-      12,    0,  126,    2, 0x08,   11 /* Private */,
-      13,    0,  127,    2, 0x08,   12 /* Private */,
-      14,    0,  128,    2, 0x08,   13 /* Private */,
-      15,    0,  129,    2, 0x08,   14 /* Private */,
-      16,    0,  130,    2, 0x08,   15 /* Private */,
-      17,    0,  131,    2, 0x08,   16 /* Private */,
-      18,    0,  132,    2, 0x08,   17 /* Private */,
+       3,    0,  123,    2, 0x08,    2 /* Private */,
+       4,    0,  124,    2, 0x08,    3 /* Private */,
+       5,    0,  125,    2, 0x08,    4 /* Private */,
+       6,    0,  126,    2, 0x08,    5 /* Private */,
+       7,    0,  127,    2, 0x08,    6 /* Private */,
+       8,    0,  128,    2, 0x08,    7 /* Private */,
+       9,    0,  129,    2, 0x08,    8 /* Private */,
+      10,    0,  130,    2, 0x08,    9 /* Private */,
+      11,    0,  131,    2, 0x08,   10 /* Private */,
+      12,    0,  132,    2, 0x08,   11 /* Private */,
+      13,    0,  133,    2, 0x08,   12 /* Private */,
+      14,    0,  134,    2, 0x08,   13 /* Private */,
+      15,    0,  135,    2, 0x08,   14 /* Private */,
+      16,    0,  136,    2, 0x08,   15 /* Private */,
+      17,    0,  137,    2, 0x08,   16 /* Private */,
+      18,    0,  138,    2, 0x08,   17 /* Private */,
+      19,    0,  139,    2, 0x08,   18 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -199,6 +205,8 @@ Q_CONSTINIT const QMetaObject game::staticMetaObject = { {
         // method 'openMainMenu'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_QuitBtn_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_newGameBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_QuitAllBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -242,21 +250,22 @@ void game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         switch (_id) {
         case 0: _t->openMainMenu(); break;
         case 1: _t->on_QuitBtn_clicked(); break;
-        case 2: _t->on_QuitAllBtn_clicked(); break;
-        case 3: _t->on_numOneBtn_clicked(); break;
-        case 4: _t->on_numTwoBtn_clicked(); break;
-        case 5: _t->on_numThreeBtn_clicked(); break;
-        case 6: _t->on_numFourBtn_clicked(); break;
-        case 7: _t->on_numFiveBtn_clicked(); break;
-        case 8: _t->on_numSixBtn_clicked(); break;
-        case 9: _t->on_numSevenBtn_clicked(); break;
-        case 10: _t->on_numEightBtn_clicked(); break;
-        case 11: _t->on_numNineBtn_clicked(); break;
-        case 12: _t->on_submitBtn_clicked(); break;
-        case 13: _t->on_remErrorsBtn_clicked(); break;
-        case 14: _t->on_grid1_clicked(); break;
-        case 15: _t->on_grid2_clicked(); break;
-        case 16: _t->on_grid3_clicked(); break;
+        case 2: _t->on_newGameBtn_clicked(); break;
+        case 3: _t->on_QuitAllBtn_clicked(); break;
+        case 4: _t->on_numOneBtn_clicked(); break;
+        case 5: _t->on_numTwoBtn_clicked(); break;
+        case 6: _t->on_numThreeBtn_clicked(); break;
+        case 7: _t->on_numFourBtn_clicked(); break;
+        case 8: _t->on_numFiveBtn_clicked(); break;
+        case 9: _t->on_numSixBtn_clicked(); break;
+        case 10: _t->on_numSevenBtn_clicked(); break;
+        case 11: _t->on_numEightBtn_clicked(); break;
+        case 12: _t->on_numNineBtn_clicked(); break;
+        case 13: _t->on_submitBtn_clicked(); break;
+        case 14: _t->on_remErrorsBtn_clicked(); break;
+        case 15: _t->on_grid1_clicked(); break;
+        case 16: _t->on_grid2_clicked(); break;
+        case 17: _t->on_grid3_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -291,13 +300,13 @@ int game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 17)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 17;
+        _id -= 18;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 17)
+        if (_id < 18)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 17;
+        _id -= 18;
     }
     return _id;
 }

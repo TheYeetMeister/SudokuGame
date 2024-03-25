@@ -27,6 +27,8 @@ private slots:
 
     void on_QuitAllBtn_clicked();
 
+    void on_eraseBtn_clicked();
+
     void on_numOneBtn_clicked();
 
     void on_numTwoBtn_clicked();

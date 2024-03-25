@@ -162,6 +162,11 @@ void game::resetCurrBtn() {
     }
 }
 
+void game::on_eraseBtn_clicked()
+{
+
+}
+
 void game::on_numOneBtn_clicked()
 {
     changeCurrGridInt(1);
