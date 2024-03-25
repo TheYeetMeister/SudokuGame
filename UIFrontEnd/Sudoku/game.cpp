@@ -216,6 +216,9 @@ void game::on_submitBtn_clicked()
 
     if (solved) {
         boardIsSolved();
+        ui->remErrorsBtn->setEnabled(false);
+        ui->submitBtn->setEnabled(false);
+        ui->QuitBtn->setEnabled(false);
     } else {
         currentGrid = 0;
         showErrors = true;
