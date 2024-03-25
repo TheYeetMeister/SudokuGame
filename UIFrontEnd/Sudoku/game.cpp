@@ -12,8 +12,7 @@ game::game(QWidget *parent, unsigned difficulty)
     });
 
     //easy recall of buttons to grids
-    buttonUIs = {{1, ui->grid1},
-                 {2, ui->grid2}};
+    buttonUIs = {ui->grid1, ui->grid2};
 }
 
 game::~game()
@@ -33,13 +32,13 @@ void game::on_QuitAllBtn_clicked()
 }
 
 void game::changeCurrGridInt(int value) {
-    QPushButton* btn = buttonUIs[currentGrid];
+    QPushButton* btn = buttonUIs[currentGrid - 1];
 
     btn->setText(QString::number(value));
 }
 
 void game::activateBtn(int gridNumber) {
-    QPushButton* btn = buttonUIs[gridNumber];
+    QPushButton* btn = buttonUIs[gridNumber - 1];
 
     QPalette btnPalette = btn->palette();
     btnPalette.setColor(QPalette::Button, QColor(Qt::cyan));
@@ -49,7 +48,7 @@ void game::activateBtn(int gridNumber) {
 
 void game::resetPrevBtn() {
     if (currentGrid != 0) {
-        QPushButton* btn = buttonUIs[currentGrid];
+        QPushButton* btn = buttonUIs[currentGrid - 1];
 
         QPalette btnPalette = btn->palette();
         btnPalette.setColor(QPalette::Button, QColor(Qt::white));
@@ -134,5 +133,11 @@ void game::on_numEightBtn_clicked()
 void game::on_numNineBtn_clicked()
 {
     changeCurrGridInt(9);
+}
+
+
+void game::on_submitBtn_clicked()
+{
+
 }
 

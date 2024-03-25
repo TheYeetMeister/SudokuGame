@@ -345,6 +345,24 @@
     <string>9</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="submitBtn">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>470</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Submit board</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -32,6 +32,7 @@ public:
     QPushButton *numSevenBtn;
     QPushButton *numEightBtn;
     QPushButton *numNineBtn;
+    QPushButton *submitBtn;
 
     void setupUi(QDialog *game)
     {
@@ -114,6 +115,12 @@ public:
         numNineBtn->setObjectName("numNineBtn");
         numNineBtn->setGeometry(QRect(760, 470, 61, 61));
         numNineBtn->setFont(font2);
+        submitBtn = new QPushButton(game);
+        submitBtn->setObjectName("submitBtn");
+        submitBtn->setGeometry(QRect(910, 470, 151, 61));
+        QFont font3;
+        font3.setPointSize(17);
+        submitBtn->setFont(font3);
 
         retranslateUi(game);
 
@@ -140,6 +147,7 @@ public:
         numSevenBtn->setText(QCoreApplication::translate("game", "7", nullptr));
         numEightBtn->setText(QCoreApplication::translate("game", "8", nullptr));
         numNineBtn->setText(QCoreApplication::translate("game", "9", nullptr));
+        submitBtn->setText(QCoreApplication::translate("game", "Submit board", nullptr));
     } // retranslateUi
 
 };

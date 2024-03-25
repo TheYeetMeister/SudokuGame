@@ -2,7 +2,7 @@
 #define GAME_H
 
 #include <QDialog>
-#include <unordered_map>
+#include <vector>
 
 namespace Ui {
 class game;
@@ -46,6 +46,8 @@ private slots:
 
     void on_numNineBtn_clicked();
 
+    void on_submitBtn_clicked();
+
 private:
     void resetPrevBtn();
 
@@ -56,8 +58,9 @@ private:
     Ui::game *ui;
 
     unsigned int difficulty;
-    std::unordered_map<int, QPushButton*> buttonUIs;
+    std::vector<QPushButton*> buttonUIs;
     int currentGrid = 0;
+    bool solved = false;
 };
 
 #endif // GAME_H
