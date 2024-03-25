@@ -58,7 +58,7 @@ private:
 
     void activateNumBtns();
 
-    void solveAllGrids();
+    void boardIsSolved();
 
     void resetPrevBtn();
 

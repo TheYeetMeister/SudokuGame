@@ -79,10 +79,15 @@ void game::on_QuitAllBtn_clicked()
     qApp->exit();
 }
 
-void game::solveAllGrids() {
+void game::boardIsSolved() {
     for (QPushButton* btn :gridButtonUIs) {
-
+        QPalette btnPalette = btn->palette();
+        btnPalette.setColor(QPalette::Button, QColor(Qt::green));
+        btn->setPalette(btnPalette);
+        btn->update();
     }
+
+    deactivateNumBtns();
 }
 
 void game::changeCurrGridInt(int value) {
