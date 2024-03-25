@@ -221,6 +221,7 @@ void game::on_submitBtn_clicked()
         ui->remErrorsBtn->setEnabled(false);
         ui->submitBtn->setEnabled(false);
         ui->QuitBtn->setEnabled(false);
+        ui->newGameBtn->setVisible(true);
     } else {
         currentGrid = 0;
         showErrors = true;
