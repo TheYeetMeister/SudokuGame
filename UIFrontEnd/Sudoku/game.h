@@ -23,6 +23,8 @@ signals:
 private slots:
     void on_QuitBtn_clicked();
 
+    void on_newGameBtn_clicked();
+
     void on_QuitAllBtn_clicked();
 
     void on_numOneBtn_clicked();

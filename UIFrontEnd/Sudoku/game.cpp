@@ -81,6 +81,11 @@ void game::on_QuitBtn_clicked()
     this->close();
 }
 
+void game::on_newGameBtn_clicked()
+{
+    this->close();
+}
+
 
 void game::on_QuitAllBtn_clicked()
 {
