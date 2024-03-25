@@ -34,6 +34,7 @@ public:
     QPushButton *numNineBtn;
     QPushButton *submitBtn;
     QPushButton *grid3;
+    QPushButton *remErrorsBtn;
 
     void setupUi(QDialog *game)
     {
@@ -134,6 +135,12 @@ public:
         grid3->setAutoFillBackground(true);
         grid3->setAutoDefault(false);
         grid3->setFlat(true);
+        remErrorsBtn = new QPushButton(game);
+        remErrorsBtn->setObjectName("remErrorsBtn");
+        remErrorsBtn->setGeometry(QRect(900, 400, 171, 41));
+        QFont font4;
+        font4.setPointSize(12);
+        remErrorsBtn->setFont(font4);
 
         retranslateUi(game);
 
@@ -163,6 +170,7 @@ public:
         numNineBtn->setText(QCoreApplication::translate("game", "9", nullptr));
         submitBtn->setText(QCoreApplication::translate("game", "Submit board", nullptr));
         grid3->setText(QCoreApplication::translate("game", "8", nullptr));
+        remErrorsBtn->setText(QCoreApplication::translate("game", "Remove Error Highlight", nullptr));
     } // retranslateUi
 
 };

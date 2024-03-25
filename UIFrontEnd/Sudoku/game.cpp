@@ -113,11 +113,17 @@ void game::activateBtn(int gridNumber) {
 }
 
 void game::resetPrevBtn() {
-    if (currentGrid != 0) {
+    if (currentGrid != 0 ) {
         QPushButton* btn = gridButtonUIs[currentGrid - 1];
 
         QPalette btnPalette = btn->palette();
-        btnPalette.setColor(QPalette::Button, QColor(Qt::white));
+
+        if (showErrors && wrongGrids.find(currentGrid) != wrongGrids.end()) {
+            btnPalette.setColor(QPalette::Button, QColor(Qt::red));
+        } else {
+            btnPalette.setColor(QPalette::Button, QColor(Qt::white));
+        }
+
         btn->setPalette(btnPalette);
         btn->update();
     }
