@@ -37,6 +37,12 @@ public:
     QPushButton *remErrorsBtn;
     QPushButton *newGameBtn;
     QPushButton *eraseBtn;
+    QPushButton *grid4;
+    QPushButton *grid5;
+    QPushButton *grid6;
+    QPushButton *grid7;
+    QPushButton *grid8;
+    QPushButton *grid9;
 
     void setupUi(QDialog *game)
     {
@@ -155,12 +161,90 @@ public:
         eraseBtn->setObjectName("eraseBtn");
         eraseBtn->setGeometry(QRect(400, 550, 131, 61));
         eraseBtn->setFont(font2);
+        grid4 = new QPushButton(game);
+        grid4->setObjectName("grid4");
+        grid4->setGeometry(QRect(290, 80, 51, 51));
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid4->setPalette(palette3);
+        grid4->setFont(font1);
+        grid4->setAutoFillBackground(true);
+        grid4->setAutoDefault(false);
+        grid4->setFlat(true);
+        grid5 = new QPushButton(game);
+        grid5->setObjectName("grid5");
+        grid5->setGeometry(QRect(350, 80, 51, 51));
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid5->setPalette(palette4);
+        grid5->setFont(font1);
+        grid5->setAutoFillBackground(true);
+        grid5->setAutoDefault(false);
+        grid5->setFlat(true);
+        grid6 = new QPushButton(game);
+        grid6->setObjectName("grid6");
+        grid6->setGeometry(QRect(410, 80, 51, 51));
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid6->setPalette(palette5);
+        grid6->setFont(font1);
+        grid6->setAutoFillBackground(true);
+        grid6->setAutoDefault(false);
+        grid6->setFlat(true);
+        grid7 = new QPushButton(game);
+        grid7->setObjectName("grid7");
+        grid7->setGeometry(QRect(470, 80, 51, 51));
+        QPalette palette6;
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid7->setPalette(palette6);
+        grid7->setFont(font1);
+        grid7->setAutoFillBackground(true);
+        grid7->setAutoDefault(false);
+        grid7->setFlat(true);
+        grid8 = new QPushButton(game);
+        grid8->setObjectName("grid8");
+        grid8->setGeometry(QRect(530, 80, 51, 51));
+        QPalette palette7;
+        palette7.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid8->setPalette(palette7);
+        grid8->setFont(font1);
+        grid8->setAutoFillBackground(true);
+        grid8->setAutoDefault(false);
+        grid8->setFlat(true);
+        grid9 = new QPushButton(game);
+        grid9->setObjectName("grid9");
+        grid9->setGeometry(QRect(590, 80, 51, 51));
+        QPalette palette8;
+        palette8.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        grid9->setPalette(palette8);
+        grid9->setFont(font1);
+        grid9->setAutoFillBackground(true);
+        grid9->setAutoDefault(false);
+        grid9->setFlat(true);
 
         retranslateUi(game);
 
         grid1->setDefault(false);
         grid2->setDefault(false);
         grid3->setDefault(false);
+        grid4->setDefault(false);
+        grid5->setDefault(false);
+        grid6->setDefault(false);
+        grid7->setDefault(false);
+        grid8->setDefault(false);
+        grid9->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(game);
@@ -171,8 +255,8 @@ public:
         game->setWindowTitle(QCoreApplication::translate("game", "Dialog", nullptr));
         QuitBtn->setText(QCoreApplication::translate("game", "Quit", nullptr));
         QuitAllBtn->setText(QCoreApplication::translate("game", "Quit All", nullptr));
-        grid1->setText(QCoreApplication::translate("game", "9", nullptr));
-        grid2->setText(QCoreApplication::translate("game", "8", nullptr));
+        grid1->setText(QString());
+        grid2->setText(QString());
         numOneBtn->setText(QCoreApplication::translate("game", "1", nullptr));
         numTwoBtn->setText(QCoreApplication::translate("game", "2", nullptr));
         numThreeBtn->setText(QCoreApplication::translate("game", "3", nullptr));
@@ -183,10 +267,16 @@ public:
         numEightBtn->setText(QCoreApplication::translate("game", "8", nullptr));
         numNineBtn->setText(QCoreApplication::translate("game", "9", nullptr));
         submitBtn->setText(QCoreApplication::translate("game", "Submit board", nullptr));
-        grid3->setText(QCoreApplication::translate("game", "8", nullptr));
+        grid3->setText(QString());
         remErrorsBtn->setText(QCoreApplication::translate("game", "Remove Error Highlight", nullptr));
         newGameBtn->setText(QCoreApplication::translate("game", "New Game?", nullptr));
         eraseBtn->setText(QCoreApplication::translate("game", "Erase", nullptr));
+        grid4->setText(QString());
+        grid5->setText(QString());
+        grid6->setText(QString());
+        grid7->setText(QString());
+        grid8->setText(QString());
+        grid9->setText(QString());
     } // retranslateUi
 
 };

@@ -57,6 +57,18 @@ private slots:
 
     void on_grid3_clicked();
 
+    void on_grid4_clicked();
+
+    void on_grid5_clicked();
+
+    void on_grid6_clicked();
+
+    void on_grid7_clicked();
+
+    void on_grid8_clicked();
+
+    void on_grid9_clicked();
+
 private:
     void deactivateLockedGrids();
 

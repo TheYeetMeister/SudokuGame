@@ -58,11 +58,17 @@ constexpr auto qt_meta_stringdata_CLASSgameENDCLASS = QtMocHelpers::stringData(
     "on_remErrorsBtn_clicked",
     "on_grid1_clicked",
     "on_grid2_clicked",
-    "on_grid3_clicked"
+    "on_grid3_clicked",
+    "on_grid4_clicked",
+    "on_grid5_clicked",
+    "on_grid6_clicked",
+    "on_grid7_clicked",
+    "on_grid8_clicked",
+    "on_grid9_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSgameENDCLASS_t {
-    uint offsetsAndSizes[42];
+    uint offsetsAndSizes[54];
     char stringdata0[5];
     char stringdata1[13];
     char stringdata2[1];
@@ -84,6 +90,12 @@ struct qt_meta_stringdata_CLASSgameENDCLASS_t {
     char stringdata18[17];
     char stringdata19[17];
     char stringdata20[17];
+    char stringdata21[17];
+    char stringdata22[17];
+    char stringdata23[17];
+    char stringdata24[17];
+    char stringdata25[17];
+    char stringdata26[17];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSgameENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -109,7 +121,13 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
         QT_MOC_LITERAL(321, 23),  // "on_remErrorsBtn_clicked"
         QT_MOC_LITERAL(345, 16),  // "on_grid1_clicked"
         QT_MOC_LITERAL(362, 16),  // "on_grid2_clicked"
-        QT_MOC_LITERAL(379, 16)   // "on_grid3_clicked"
+        QT_MOC_LITERAL(379, 16),  // "on_grid3_clicked"
+        QT_MOC_LITERAL(396, 16),  // "on_grid4_clicked"
+        QT_MOC_LITERAL(413, 16),  // "on_grid5_clicked"
+        QT_MOC_LITERAL(430, 16),  // "on_grid6_clicked"
+        QT_MOC_LITERAL(447, 16),  // "on_grid7_clicked"
+        QT_MOC_LITERAL(464, 16),  // "on_grid8_clicked"
+        QT_MOC_LITERAL(481, 16)   // "on_grid9_clicked"
     },
     "game",
     "openMainMenu",
@@ -131,7 +149,13 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
     "on_remErrorsBtn_clicked",
     "on_grid1_clicked",
     "on_grid2_clicked",
-    "on_grid3_clicked"
+    "on_grid3_clicked",
+    "on_grid4_clicked",
+    "on_grid5_clicked",
+    "on_grid6_clicked",
+    "on_grid7_clicked",
+    "on_grid8_clicked",
+    "on_grid9_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -143,7 +167,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      19,   14, // methods
+      25,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -151,32 +175,44 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  128,    2, 0x06,    1 /* Public */,
+       1,    0,  164,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,  129,    2, 0x08,    2 /* Private */,
-       4,    0,  130,    2, 0x08,    3 /* Private */,
-       5,    0,  131,    2, 0x08,    4 /* Private */,
-       6,    0,  132,    2, 0x08,    5 /* Private */,
-       7,    0,  133,    2, 0x08,    6 /* Private */,
-       8,    0,  134,    2, 0x08,    7 /* Private */,
-       9,    0,  135,    2, 0x08,    8 /* Private */,
-      10,    0,  136,    2, 0x08,    9 /* Private */,
-      11,    0,  137,    2, 0x08,   10 /* Private */,
-      12,    0,  138,    2, 0x08,   11 /* Private */,
-      13,    0,  139,    2, 0x08,   12 /* Private */,
-      14,    0,  140,    2, 0x08,   13 /* Private */,
-      15,    0,  141,    2, 0x08,   14 /* Private */,
-      16,    0,  142,    2, 0x08,   15 /* Private */,
-      17,    0,  143,    2, 0x08,   16 /* Private */,
-      18,    0,  144,    2, 0x08,   17 /* Private */,
-      19,    0,  145,    2, 0x08,   18 /* Private */,
-      20,    0,  146,    2, 0x08,   19 /* Private */,
+       3,    0,  165,    2, 0x08,    2 /* Private */,
+       4,    0,  166,    2, 0x08,    3 /* Private */,
+       5,    0,  167,    2, 0x08,    4 /* Private */,
+       6,    0,  168,    2, 0x08,    5 /* Private */,
+       7,    0,  169,    2, 0x08,    6 /* Private */,
+       8,    0,  170,    2, 0x08,    7 /* Private */,
+       9,    0,  171,    2, 0x08,    8 /* Private */,
+      10,    0,  172,    2, 0x08,    9 /* Private */,
+      11,    0,  173,    2, 0x08,   10 /* Private */,
+      12,    0,  174,    2, 0x08,   11 /* Private */,
+      13,    0,  175,    2, 0x08,   12 /* Private */,
+      14,    0,  176,    2, 0x08,   13 /* Private */,
+      15,    0,  177,    2, 0x08,   14 /* Private */,
+      16,    0,  178,    2, 0x08,   15 /* Private */,
+      17,    0,  179,    2, 0x08,   16 /* Private */,
+      18,    0,  180,    2, 0x08,   17 /* Private */,
+      19,    0,  181,    2, 0x08,   18 /* Private */,
+      20,    0,  182,    2, 0x08,   19 /* Private */,
+      21,    0,  183,    2, 0x08,   20 /* Private */,
+      22,    0,  184,    2, 0x08,   21 /* Private */,
+      23,    0,  185,    2, 0x08,   22 /* Private */,
+      24,    0,  186,    2, 0x08,   23 /* Private */,
+      25,    0,  187,    2, 0x08,   24 /* Private */,
+      26,    0,  188,    2, 0x08,   25 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -245,6 +281,18 @@ Q_CONSTINIT const QMetaObject game::staticMetaObject = { {
         // method 'on_grid2_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_grid3_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid4_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid5_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid6_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid7_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid8_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid9_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -275,6 +323,12 @@ void game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 16: _t->on_grid1_clicked(); break;
         case 17: _t->on_grid2_clicked(); break;
         case 18: _t->on_grid3_clicked(); break;
+        case 19: _t->on_grid4_clicked(); break;
+        case 20: _t->on_grid5_clicked(); break;
+        case 21: _t->on_grid6_clicked(); break;
+        case 22: _t->on_grid7_clicked(); break;
+        case 23: _t->on_grid8_clicked(); break;
+        case 24: _t->on_grid9_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -309,13 +363,13 @@ int game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 19)
+        if (_id < 25)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 19;
+        _id -= 25;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 19)
+        if (_id < 25)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 19;
+        _id -= 25;
     }
     return _id;
 }

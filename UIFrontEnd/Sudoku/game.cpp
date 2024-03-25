@@ -18,7 +18,7 @@ game::game(QWidget *parent, unsigned difficulty)
     wrongGrids = {2};
 
     //easy recall of buttons to grids
-    gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3};
+    gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3, ui->grid4, ui->grid5, ui->grid6, ui->grid7, ui->grid8, ui->grid9};
 
     numButtonUIs = {ui->eraseBtn,
                     ui->numOneBtn,
@@ -283,6 +283,78 @@ void game::on_grid3_clicked()
         currentGrid = 3;
 
         activateBtn(3);
+    }
+}
+
+
+void game::on_grid4_clicked()
+{
+    if (currentGrid != 4) {
+        resetCurrBtn();
+
+        currentGrid = 4;
+
+        activateBtn(4);
+    }
+}
+
+
+void game::on_grid5_clicked()
+{
+    if (currentGrid != 5) {
+        resetCurrBtn();
+
+        currentGrid = 5;
+
+        activateBtn(5);
+    }
+}
+
+
+void game::on_grid6_clicked()
+{
+    if (currentGrid != 6) {
+        resetCurrBtn();
+
+        currentGrid = 6;
+
+        activateBtn(6);
+    }
+}
+
+
+void game::on_grid7_clicked()
+{
+    if (currentGrid != 7) {
+        resetCurrBtn();
+
+        currentGrid = 7;
+
+        activateBtn(7);
+    }
+}
+
+
+void game::on_grid8_clicked()
+{
+    if (currentGrid != 8) {
+        resetCurrBtn();
+
+        currentGrid = 8;
+
+        activateBtn(8);
+    }
+}
+
+
+void game::on_grid9_clicked()
+{
+    if (currentGrid != 9) {
+        resetCurrBtn();
+
+        currentGrid = 9;
+
+        activateBtn(9);
     }
 }
 
