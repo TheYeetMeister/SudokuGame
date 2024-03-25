@@ -36,6 +36,8 @@ void game::deactivateNumBtns() {
         btnPalette.setColor(QPalette::Button, QColor(Qt::darkGray));
         btn->setPalette(btnPalette);
         btn->update();
+
+        btn->setEnabled(false);
     }
 }
 
