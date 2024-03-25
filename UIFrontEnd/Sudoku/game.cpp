@@ -15,6 +15,8 @@ game::game(QWidget *parent, unsigned difficulty)
 
     lockedGrids = {3};
 
+    wrongGrids = {2};
+
     //easy recall of buttons to grids
     gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3};
 
@@ -189,6 +191,8 @@ void game::on_submitBtn_clicked()
 {
     if (solved) {
         boardIsSolved();
+    } else {
+        showErrors = true;
     }
 }
 
