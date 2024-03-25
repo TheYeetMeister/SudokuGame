@@ -161,6 +161,8 @@ void game::on_numNineBtn_clicked()
 
 void game::on_submitBtn_clicked()
 {
-
+    if (solved) {
+        deactivateNumBtns();
+    }
 }
 

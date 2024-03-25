@@ -63,7 +63,7 @@ private:
     std::vector<QPushButton*> buttonUIs;
     std::vector<QPushButton*> numButtonUIs;
     int currentGrid = 0;
-    bool solved = false;
+    bool solved = true;
 };
 
 #endif // GAME_H
