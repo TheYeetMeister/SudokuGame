@@ -70,6 +70,8 @@ void game::changeCurrGridInt(int value) {
 }
 
 void game::activateBtn(int gridNumber) {
+    activateNumBtns();
+
     QPushButton* btn = buttonUIs[gridNumber - 1];
 
     QPalette btnPalette = btn->palette();
