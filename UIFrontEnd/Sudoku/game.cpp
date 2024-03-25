@@ -207,6 +207,9 @@ void game::on_numNineBtn_clicked()
 
 void game::on_submitBtn_clicked()
 {
+    resetPrevBtn();
+    deactivateNumBtns();
+
     if (solved) {
         boardIsSolved();
     } else {

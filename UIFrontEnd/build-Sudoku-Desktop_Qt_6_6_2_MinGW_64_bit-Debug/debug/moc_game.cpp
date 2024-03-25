@@ -53,13 +53,14 @@ constexpr auto qt_meta_stringdata_CLASSgameENDCLASS = QtMocHelpers::stringData(
     "on_numEightBtn_clicked",
     "on_numNineBtn_clicked",
     "on_submitBtn_clicked",
+    "on_remErrorsBtn_clicked",
     "on_grid1_clicked",
     "on_grid2_clicked",
     "on_grid3_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSgameENDCLASS_t {
-    uint offsetsAndSizes[36];
+    uint offsetsAndSizes[38];
     char stringdata0[5];
     char stringdata1[13];
     char stringdata2[1];
@@ -75,9 +76,10 @@ struct qt_meta_stringdata_CLASSgameENDCLASS_t {
     char stringdata12[23];
     char stringdata13[22];
     char stringdata14[21];
-    char stringdata15[17];
+    char stringdata15[24];
     char stringdata16[17];
     char stringdata17[17];
+    char stringdata18[17];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSgameENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -98,9 +100,10 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
         QT_MOC_LITERAL(213, 22),  // "on_numEightBtn_clicked"
         QT_MOC_LITERAL(236, 21),  // "on_numNineBtn_clicked"
         QT_MOC_LITERAL(258, 20),  // "on_submitBtn_clicked"
-        QT_MOC_LITERAL(279, 16),  // "on_grid1_clicked"
-        QT_MOC_LITERAL(296, 16),  // "on_grid2_clicked"
-        QT_MOC_LITERAL(313, 16)   // "on_grid3_clicked"
+        QT_MOC_LITERAL(279, 23),  // "on_remErrorsBtn_clicked"
+        QT_MOC_LITERAL(303, 16),  // "on_grid1_clicked"
+        QT_MOC_LITERAL(320, 16),  // "on_grid2_clicked"
+        QT_MOC_LITERAL(337, 16)   // "on_grid3_clicked"
     },
     "game",
     "openMainMenu",
@@ -117,6 +120,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
     "on_numEightBtn_clicked",
     "on_numNineBtn_clicked",
     "on_submitBtn_clicked",
+    "on_remErrorsBtn_clicked",
     "on_grid1_clicked",
     "on_grid2_clicked",
     "on_grid3_clicked"
@@ -131,7 +135,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
+      17,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -139,29 +143,31 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  110,    2, 0x06,    1 /* Public */,
+       1,    0,  116,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,  111,    2, 0x08,    2 /* Private */,
-       4,    0,  112,    2, 0x08,    3 /* Private */,
-       5,    0,  113,    2, 0x08,    4 /* Private */,
-       6,    0,  114,    2, 0x08,    5 /* Private */,
-       7,    0,  115,    2, 0x08,    6 /* Private */,
-       8,    0,  116,    2, 0x08,    7 /* Private */,
-       9,    0,  117,    2, 0x08,    8 /* Private */,
-      10,    0,  118,    2, 0x08,    9 /* Private */,
-      11,    0,  119,    2, 0x08,   10 /* Private */,
-      12,    0,  120,    2, 0x08,   11 /* Private */,
-      13,    0,  121,    2, 0x08,   12 /* Private */,
-      14,    0,  122,    2, 0x08,   13 /* Private */,
-      15,    0,  123,    2, 0x08,   14 /* Private */,
-      16,    0,  124,    2, 0x08,   15 /* Private */,
-      17,    0,  125,    2, 0x08,   16 /* Private */,
+       3,    0,  117,    2, 0x08,    2 /* Private */,
+       4,    0,  118,    2, 0x08,    3 /* Private */,
+       5,    0,  119,    2, 0x08,    4 /* Private */,
+       6,    0,  120,    2, 0x08,    5 /* Private */,
+       7,    0,  121,    2, 0x08,    6 /* Private */,
+       8,    0,  122,    2, 0x08,    7 /* Private */,
+       9,    0,  123,    2, 0x08,    8 /* Private */,
+      10,    0,  124,    2, 0x08,    9 /* Private */,
+      11,    0,  125,    2, 0x08,   10 /* Private */,
+      12,    0,  126,    2, 0x08,   11 /* Private */,
+      13,    0,  127,    2, 0x08,   12 /* Private */,
+      14,    0,  128,    2, 0x08,   13 /* Private */,
+      15,    0,  129,    2, 0x08,   14 /* Private */,
+      16,    0,  130,    2, 0x08,   15 /* Private */,
+      17,    0,  131,    2, 0x08,   16 /* Private */,
+      18,    0,  132,    2, 0x08,   17 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -216,6 +222,8 @@ Q_CONSTINIT const QMetaObject game::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_submitBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_remErrorsBtn_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_grid1_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_grid2_clicked'
@@ -245,9 +253,10 @@ void game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 10: _t->on_numEightBtn_clicked(); break;
         case 11: _t->on_numNineBtn_clicked(); break;
         case 12: _t->on_submitBtn_clicked(); break;
-        case 13: _t->on_grid1_clicked(); break;
-        case 14: _t->on_grid2_clicked(); break;
-        case 15: _t->on_grid3_clicked(); break;
+        case 13: _t->on_remErrorsBtn_clicked(); break;
+        case 14: _t->on_grid1_clicked(); break;
+        case 15: _t->on_grid2_clicked(); break;
+        case 16: _t->on_grid3_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -282,13 +291,13 @@ int game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 17;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 17)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 16;
+        _id -= 17;
     }
     return _id;
 }
