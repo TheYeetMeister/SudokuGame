@@ -93,31 +93,6 @@ void game::resetPrevBtn() {
     }
 }
 
-
-void game::on_grid1_clicked()
-{
-    if (currentGrid != 1) {
-        resetPrevBtn();
-
-        currentGrid = 1;
-
-        activateBtn(1);
-    }
-}
-
-
-void game::on_grid2_clicked()
-{
-    if (currentGrid != 2) {
-        resetPrevBtn();
-
-        currentGrid = 2;
-
-        activateBtn(2);
-    }
-}
-
-
 void game::on_numOneBtn_clicked()
 {
     changeCurrGridInt(1);
@@ -177,5 +152,33 @@ void game::on_submitBtn_clicked()
     if (solved) {
         deactivateNumBtns();
     }
+}
+
+void game::on_grid1_clicked()
+{
+    if (currentGrid != 1) {
+        resetPrevBtn();
+
+        currentGrid = 1;
+
+        activateBtn(1);
+    }
+}
+
+
+void game::on_grid2_clicked()
+{
+    if (currentGrid != 2) {
+        resetPrevBtn();
+
+        currentGrid = 2;
+
+        activateBtn(2);
+    }
+}
+
+void game::on_grid3_clicked()
+{
+
 }
 

@@ -25,10 +25,6 @@ private slots:
 
     void on_QuitAllBtn_clicked();
 
-    void on_grid1_clicked();
-
-    void on_grid2_clicked();
-
     void on_numOneBtn_clicked();
 
     void on_numTwoBtn_clicked();
@@ -48,6 +44,12 @@ private slots:
     void on_numNineBtn_clicked();
 
     void on_submitBtn_clicked();
+
+    void on_grid1_clicked();
+
+    void on_grid2_clicked();
+
+    void on_grid3_clicked();
 
 private:
     void deactivateNumBtns();
