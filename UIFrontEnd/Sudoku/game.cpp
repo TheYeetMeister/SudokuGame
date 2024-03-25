@@ -131,7 +131,11 @@ void game::changeCurrGridInt(int value) {
     if (currentGrid != 0) {
         QPushButton* btn = gridButtonUIs[currentGrid - 1];
 
-        btn->setText(QString::number(value));
+        if (value) {
+            btn->setText(QString::number(value));
+        } else {
+            btn->setText("");
+        }
     }
 }
 
@@ -165,7 +169,7 @@ void game::resetCurrBtn() {
 
 void game::on_eraseBtn_clicked()
 {
-
+    changeCurrGridInt(0);
 }
 
 void game::on_numOneBtn_clicked()
