@@ -49,6 +49,8 @@ private slots:
     void on_submitBtn_clicked();
 
 private:
+    void deactivateNumBtns();
+
     void resetPrevBtn();
 
     void activateBtn(int gridNumber);

@@ -30,6 +30,15 @@ game::~game()
     delete ui;
 }
 
+void game::deactivateNumBtns() {
+    for (QPushButton* btn :numButtonUIs) {
+        QPalette btnPalette = btn->palette();
+        btnPalette.setColor(QPalette::Button, QColor(Qt::darkGray));
+        btn->setPalette(btnPalette);
+        btn->update();
+    }
+}
+
 void game::on_QuitBtn_clicked()
 {
     this->close();
