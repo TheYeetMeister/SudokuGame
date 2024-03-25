@@ -7,6 +7,8 @@ game::game(QWidget *parent, unsigned difficulty)
     , difficulty(difficulty)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Sudoku");
+
     connect(this, &game::finished, this, [this](){
         emit openMainMenu();
     });
