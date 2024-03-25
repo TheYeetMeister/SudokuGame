@@ -162,7 +162,7 @@ public:
         numEightBtn->setText(QCoreApplication::translate("game", "8", nullptr));
         numNineBtn->setText(QCoreApplication::translate("game", "9", nullptr));
         submitBtn->setText(QCoreApplication::translate("game", "Submit board", nullptr));
-        grid3->setText(QString());
+        grid3->setText(QCoreApplication::translate("game", "8", nullptr));
     } // retranslateUi
 
 };

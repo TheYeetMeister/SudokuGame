@@ -52,9 +52,13 @@ private slots:
     void on_grid3_clicked();
 
 private:
+    void deactivateLockedGrids();
+
     void deactivateNumBtns();
 
     void activateNumBtns();
+
+    void solveAllGrids();
 
     void resetPrevBtn();
 
@@ -65,7 +69,7 @@ private:
     Ui::game *ui;
 
     unsigned int difficulty;
-    std::vector<QPushButton*> buttonUIs;
+    std::vector<QPushButton*> gridButtonUIs;
     std::vector<QPushButton*> numButtonUIs;
     int currentGrid = 0;
     bool solved = true;

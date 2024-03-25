@@ -14,7 +14,7 @@ game::game(QWidget *parent, unsigned difficulty)
     lockedGrids = {3};
 
     //easy recall of buttons to grids
-    buttonUIs = {ui->grid1, ui->grid2, ui->grid3};
+    gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3};
 
     numButtonUIs = {ui->numOneBtn,
                     ui->numTwoBtn,
@@ -25,11 +25,27 @@ game::game(QWidget *parent, unsigned difficulty)
                     ui->numSevenBtn,
                     ui->numEightBtn,
                     ui->numNineBtn};
+
+    deactivateLockedGrids();
 }
 
 game::~game()
 {
     delete ui;
+}
+
+void game::deactivateLockedGrids() {
+    for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
+        QPushButton* btn = gridButtonUIs[*it - 1];
+
+        QPalette btnPalette = btn->palette();
+        btnPalette.setColor(QPalette::Button, QColor(Qt::darkGray));
+        btnPalette.setColor(QPalette::ButtonText, QColor(Qt::white));
+        btn->setPalette(btnPalette);
+        btn->update();
+
+        btn->setEnabled(false);
+    }
 }
 
 void game::deactivateNumBtns() {
@@ -63,9 +79,15 @@ void game::on_QuitAllBtn_clicked()
     qApp->exit();
 }
 
+void game::solveAllGrids() {
+    for (QPushButton* btn :gridButtonUIs) {
+
+    }
+}
+
 void game::changeCurrGridInt(int value) {
     if (currentGrid != 0) {
-        QPushButton* btn = buttonUIs[currentGrid - 1];
+        QPushButton* btn = gridButtonUIs[currentGrid - 1];
 
         btn->setText(QString::number(value));
     }
@@ -74,7 +96,7 @@ void game::changeCurrGridInt(int value) {
 void game::activateBtn(int gridNumber) {
     activateNumBtns();
 
-    QPushButton* btn = buttonUIs[gridNumber - 1];
+    QPushButton* btn = gridButtonUIs[gridNumber - 1];
 
     QPalette btnPalette = btn->palette();
     btnPalette.setColor(QPalette::Button, QColor(Qt::cyan));
@@ -84,7 +106,7 @@ void game::activateBtn(int gridNumber) {
 
 void game::resetPrevBtn() {
     if (currentGrid != 0) {
-        QPushButton* btn = buttonUIs[currentGrid - 1];
+        QPushButton* btn = gridButtonUIs[currentGrid - 1];
 
         QPalette btnPalette = btn->palette();
         btnPalette.setColor(QPalette::Button, QColor(Qt::white));
