@@ -88,6 +88,16 @@ SudokuBoard game::createGame(unsigned difficulty) {
     return mainGame;
 }
 
+void game::getGridNum(int** board, int gridNumber) {
+    int row = gridNumber / 9;
+    int col = gridNumber % 9;
+
+    int num = board[row][col];
+
+    QPushButton* btn = gridButtonUIs[gridNumber];
+    btn->setText(QString::number(num));
+}
+
 void game::deactivateLockedGrids() {
     for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
         QPushButton* btn = gridButtonUIs[*it - 1];

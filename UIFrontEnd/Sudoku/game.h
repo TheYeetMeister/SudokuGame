@@ -218,6 +218,8 @@ private slots:
 private:
     SudokuBoard createGame(unsigned difficulty);
 
+    void getGridNum(int** board, int gridNumber);
+
     void deactivateLockedGrids();
 
     void deactivateNumBtns();
