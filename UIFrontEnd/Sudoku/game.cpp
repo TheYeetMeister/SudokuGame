@@ -57,6 +57,36 @@ game::~game()
     delete ui;
 }
 
+SudokuBoard game::createGame(unsigned difficulty) {
+    SudokuBoard mainGame = SudokuBoard(3);
+
+    switch(difficulty) {
+        case 1:
+            mainGame.generateNewPlayableBoard(VERYEASY_PERCENTAGE_MISSING);
+            break;
+
+        case 2:
+            mainGame.generateNewPlayableBoard(EASY_PERCENTAGE_MISSING);
+            break;
+
+        case 3:
+            mainGame.generateNewPlayableBoard(MEDIUM_PERCENTAGE_MISSING);
+            break;
+
+        case 4:
+            mainGame.generateNewPlayableBoard(HARD_PERCENTAGE_MISSING);
+            break;
+
+        case 5:
+            mainGame.generateNewPlayableBoard(HARD_PERCENTAGE_MISSING);
+            break;
+
+        default:
+            throw std::invalid_argument("invalid selected difficulty");
+    }
+    return mainGame;
+}
+
 void game::deactivateLockedGrids() {
     for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
         QPushButton* btn = gridButtonUIs[*it - 1];

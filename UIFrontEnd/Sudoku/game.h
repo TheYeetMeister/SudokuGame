@@ -216,6 +216,8 @@ private slots:
     void on_grid81_clicked();
 
 private:
+    SudokuBoard createGame(unsigned difficulty);
+
     void deactivateLockedGrids();
 
     void deactivateNumBtns();
@@ -234,6 +236,7 @@ private:
 
     Ui::game *ui;
 
+    SudokuBoard mainGame;
     unsigned int difficulty;
     std::vector<QPushButton*> gridButtonUIs;
     std::vector<QPushButton*> numButtonUIs;
