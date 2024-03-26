@@ -22,7 +22,13 @@ game::game(QWidget *parent, unsigned difficulty)
     //call game creation (yay!)
     mainGame = createGame(difficulty);
 
+    //set anchored grids and their values
     lockedGrids = mainGame.getAnchoredcoor();
+    int** board = mainGame.getGameBoard();
+
+    for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
+        getGridNum(board, *it);
+    }
 
     //easy recall of buttons to grids
     gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3, ui->grid4, ui->grid5, ui->grid6, ui->grid7, ui->grid8, ui->grid9,
