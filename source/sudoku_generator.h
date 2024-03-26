@@ -25,8 +25,6 @@ private:
     //picks a random number, INCLUDING the number argument given
     int pickRanVal(int n) const;
 
-    void SValueRemove(int colRowMinimum, int minimum);
-
     void insertValueIntoGridSpace(int gridSpace, int value);
 
     int removeValueFromGridSpace(int gridSpace, int value);
