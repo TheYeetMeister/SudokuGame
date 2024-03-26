@@ -19,9 +19,10 @@ game::game(QWidget *parent, unsigned difficulty)
         emit openMainMenu();
     });
 
-    lockedGrids = {3, 6};
+    //call game creation (yay!)
+    mainGame = createGame(difficulty);
 
-    wrongGrids = {2};
+    lockedGrids = mainGame.getAnchoredcoor();
 
     //easy recall of buttons to grids
     gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3, ui->grid4, ui->grid5, ui->grid6, ui->grid7, ui->grid8, ui->grid9,
