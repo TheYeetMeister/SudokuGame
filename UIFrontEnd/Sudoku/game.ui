@@ -453,9 +453,9 @@
   <widget class="QPushButton" name="newGameBtn">
    <property name="geometry">
     <rect>
-     <x>850</x>
+     <x>830</x>
      <y>310</y>
-     <width>231</width>
+     <width>251</width>
      <height>91</height>
     </rect>
    </property>

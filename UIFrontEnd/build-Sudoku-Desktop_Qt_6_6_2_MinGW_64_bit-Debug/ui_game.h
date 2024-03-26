@@ -265,7 +265,7 @@ public:
         remErrorsBtn->setFont(font4);
         newGameBtn = new QPushButton(game);
         newGameBtn->setObjectName("newGameBtn");
-        newGameBtn->setGeometry(QRect(850, 310, 231, 91));
+        newGameBtn->setGeometry(QRect(830, 310, 251, 91));
         QFont font5;
         font5.setFamilies({QString::fromUtf8("MV Boli")});
         font5.setPointSize(30);
