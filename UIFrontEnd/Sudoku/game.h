@@ -5,6 +5,8 @@
 #include <vector>
 #include <set>
 
+#include "../../source/sudoku.h"
+
 namespace Ui {
 class game;
 }
