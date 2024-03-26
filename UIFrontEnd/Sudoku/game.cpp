@@ -56,7 +56,7 @@ game::game(QWidget *parent, unsigned difficulty)
     int** board = mainGame.getGameBoard();
 
     for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
-        getGridNum(board, *it );
+        getGridNum(board, *it);
     }
 
     deactivateNumBtns();
@@ -106,7 +106,7 @@ void game::getGridNum(int** board, int gridNumber) {
 
 void game::deactivateLockedGrids() {
     for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
-        QPushButton* btn = gridButtonUIs[*it - 1];
+        QPushButton* btn = gridButtonUIs[*it];
 
         QPalette btnPalette = btn->palette();
         btnPalette.setColor(QPalette::Button, QColor(Qt::darkGray));
