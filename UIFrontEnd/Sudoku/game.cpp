@@ -23,6 +23,8 @@ game::game(QWidget *parent, unsigned difficulty)
     //call game creation (yay!)
     mainGame = SudokuBoard(3);
 
+    createGame(mainGame, difficulty);
+
     //set anchored grids and their values
     lockedGrids = mainGame.getAnchoredcoor();
     int** board = mainGame.getGameBoard();
