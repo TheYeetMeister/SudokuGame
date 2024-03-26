@@ -1,10 +1,11 @@
 #include "game.h"
 #include "ui_game.h"
 
+constexpr double VERYEASY_PERCENTAGE_MISSING = 0.50;
 constexpr double EASY_PERCENTAGE_MISSING = 0.54;
 constexpr double MEDIUM_PERCENTAGE_MISSING = 0.62;
 constexpr double HARD_PERCENTAGE_MISSING = 0.70;
-constexpr double EXPERT_PERCENTAGE_MISSING = 0.75;
+constexpr double EVIL_PERCENTAGE_MISSING = 0.75;
 
 game::game(QWidget *parent, unsigned difficulty)
     : QDialog(parent)
