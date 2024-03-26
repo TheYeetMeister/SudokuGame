@@ -109,11 +109,38 @@ constexpr auto qt_meta_stringdata_CLASSgameENDCLASS = QtMocHelpers::stringData(
     "on_grid51_clicked",
     "on_grid52_clicked",
     "on_grid53_clicked",
-    "on_grid54_clicked"
+    "on_grid54_clicked",
+    "on_grid55_clicked",
+    "on_grid56_clicked",
+    "on_grid57_clicked",
+    "on_grid58_clicked",
+    "on_grid59_clicked",
+    "on_grid60_clicked",
+    "on_grid61_clicked",
+    "on_grid62_clicked",
+    "on_grid63_clicked",
+    "on_grid64_clicked",
+    "on_grid65_clicked",
+    "on_grid66_clicked",
+    "on_grid67_clicked",
+    "on_grid68_clicked",
+    "on_grid69_clicked",
+    "on_grid70_clicked",
+    "on_grid71_clicked",
+    "on_grid72_clicked",
+    "on_grid73_clicked",
+    "on_grid74_clicked",
+    "on_grid75_clicked",
+    "on_grid76_clicked",
+    "on_grid77_clicked",
+    "on_grid78_clicked",
+    "on_grid79_clicked",
+    "on_grid80_clicked",
+    "on_grid81_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSgameENDCLASS_t {
-    uint offsetsAndSizes[144];
+    uint offsetsAndSizes[198];
     char stringdata0[5];
     char stringdata1[13];
     char stringdata2[1];
@@ -186,6 +213,33 @@ struct qt_meta_stringdata_CLASSgameENDCLASS_t {
     char stringdata69[18];
     char stringdata70[18];
     char stringdata71[18];
+    char stringdata72[18];
+    char stringdata73[18];
+    char stringdata74[18];
+    char stringdata75[18];
+    char stringdata76[18];
+    char stringdata77[18];
+    char stringdata78[18];
+    char stringdata79[18];
+    char stringdata80[18];
+    char stringdata81[18];
+    char stringdata82[18];
+    char stringdata83[18];
+    char stringdata84[18];
+    char stringdata85[18];
+    char stringdata86[18];
+    char stringdata87[18];
+    char stringdata88[18];
+    char stringdata89[18];
+    char stringdata90[18];
+    char stringdata91[18];
+    char stringdata92[18];
+    char stringdata93[18];
+    char stringdata94[18];
+    char stringdata95[18];
+    char stringdata96[18];
+    char stringdata97[18];
+    char stringdata98[18];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSgameENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -262,7 +316,34 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
         QT_MOC_LITERAL(1236, 17),  // "on_grid51_clicked"
         QT_MOC_LITERAL(1254, 17),  // "on_grid52_clicked"
         QT_MOC_LITERAL(1272, 17),  // "on_grid53_clicked"
-        QT_MOC_LITERAL(1290, 17)   // "on_grid54_clicked"
+        QT_MOC_LITERAL(1290, 17),  // "on_grid54_clicked"
+        QT_MOC_LITERAL(1308, 17),  // "on_grid55_clicked"
+        QT_MOC_LITERAL(1326, 17),  // "on_grid56_clicked"
+        QT_MOC_LITERAL(1344, 17),  // "on_grid57_clicked"
+        QT_MOC_LITERAL(1362, 17),  // "on_grid58_clicked"
+        QT_MOC_LITERAL(1380, 17),  // "on_grid59_clicked"
+        QT_MOC_LITERAL(1398, 17),  // "on_grid60_clicked"
+        QT_MOC_LITERAL(1416, 17),  // "on_grid61_clicked"
+        QT_MOC_LITERAL(1434, 17),  // "on_grid62_clicked"
+        QT_MOC_LITERAL(1452, 17),  // "on_grid63_clicked"
+        QT_MOC_LITERAL(1470, 17),  // "on_grid64_clicked"
+        QT_MOC_LITERAL(1488, 17),  // "on_grid65_clicked"
+        QT_MOC_LITERAL(1506, 17),  // "on_grid66_clicked"
+        QT_MOC_LITERAL(1524, 17),  // "on_grid67_clicked"
+        QT_MOC_LITERAL(1542, 17),  // "on_grid68_clicked"
+        QT_MOC_LITERAL(1560, 17),  // "on_grid69_clicked"
+        QT_MOC_LITERAL(1578, 17),  // "on_grid70_clicked"
+        QT_MOC_LITERAL(1596, 17),  // "on_grid71_clicked"
+        QT_MOC_LITERAL(1614, 17),  // "on_grid72_clicked"
+        QT_MOC_LITERAL(1632, 17),  // "on_grid73_clicked"
+        QT_MOC_LITERAL(1650, 17),  // "on_grid74_clicked"
+        QT_MOC_LITERAL(1668, 17),  // "on_grid75_clicked"
+        QT_MOC_LITERAL(1686, 17),  // "on_grid76_clicked"
+        QT_MOC_LITERAL(1704, 17),  // "on_grid77_clicked"
+        QT_MOC_LITERAL(1722, 17),  // "on_grid78_clicked"
+        QT_MOC_LITERAL(1740, 17),  // "on_grid79_clicked"
+        QT_MOC_LITERAL(1758, 17),  // "on_grid80_clicked"
+        QT_MOC_LITERAL(1776, 17)   // "on_grid81_clicked"
     },
     "game",
     "openMainMenu",
@@ -335,7 +416,34 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSgameENDCLASS_t qt_meta_stringda
     "on_grid51_clicked",
     "on_grid52_clicked",
     "on_grid53_clicked",
-    "on_grid54_clicked"
+    "on_grid54_clicked",
+    "on_grid55_clicked",
+    "on_grid56_clicked",
+    "on_grid57_clicked",
+    "on_grid58_clicked",
+    "on_grid59_clicked",
+    "on_grid60_clicked",
+    "on_grid61_clicked",
+    "on_grid62_clicked",
+    "on_grid63_clicked",
+    "on_grid64_clicked",
+    "on_grid65_clicked",
+    "on_grid66_clicked",
+    "on_grid67_clicked",
+    "on_grid68_clicked",
+    "on_grid69_clicked",
+    "on_grid70_clicked",
+    "on_grid71_clicked",
+    "on_grid72_clicked",
+    "on_grid73_clicked",
+    "on_grid74_clicked",
+    "on_grid75_clicked",
+    "on_grid76_clicked",
+    "on_grid77_clicked",
+    "on_grid78_clicked",
+    "on_grid79_clicked",
+    "on_grid80_clicked",
+    "on_grid81_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -347,7 +455,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      70,   14, // methods
+      97,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -355,83 +463,137 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSgameENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  434,    2, 0x06,    1 /* Public */,
+       1,    0,  596,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,  435,    2, 0x08,    2 /* Private */,
-       4,    0,  436,    2, 0x08,    3 /* Private */,
-       5,    0,  437,    2, 0x08,    4 /* Private */,
-       6,    0,  438,    2, 0x08,    5 /* Private */,
-       7,    0,  439,    2, 0x08,    6 /* Private */,
-       8,    0,  440,    2, 0x08,    7 /* Private */,
-       9,    0,  441,    2, 0x08,    8 /* Private */,
-      10,    0,  442,    2, 0x08,    9 /* Private */,
-      11,    0,  443,    2, 0x08,   10 /* Private */,
-      12,    0,  444,    2, 0x08,   11 /* Private */,
-      13,    0,  445,    2, 0x08,   12 /* Private */,
-      14,    0,  446,    2, 0x08,   13 /* Private */,
-      15,    0,  447,    2, 0x08,   14 /* Private */,
-      16,    0,  448,    2, 0x08,   15 /* Private */,
-      17,    0,  449,    2, 0x08,   16 /* Private */,
-      18,    0,  450,    2, 0x08,   17 /* Private */,
-      19,    0,  451,    2, 0x08,   18 /* Private */,
-      20,    0,  452,    2, 0x08,   19 /* Private */,
-      21,    0,  453,    2, 0x08,   20 /* Private */,
-      22,    0,  454,    2, 0x08,   21 /* Private */,
-      23,    0,  455,    2, 0x08,   22 /* Private */,
-      24,    0,  456,    2, 0x08,   23 /* Private */,
-      25,    0,  457,    2, 0x08,   24 /* Private */,
-      26,    0,  458,    2, 0x08,   25 /* Private */,
-      27,    0,  459,    2, 0x08,   26 /* Private */,
-      28,    0,  460,    2, 0x08,   27 /* Private */,
-      29,    0,  461,    2, 0x08,   28 /* Private */,
-      30,    0,  462,    2, 0x08,   29 /* Private */,
-      31,    0,  463,    2, 0x08,   30 /* Private */,
-      32,    0,  464,    2, 0x08,   31 /* Private */,
-      33,    0,  465,    2, 0x08,   32 /* Private */,
-      34,    0,  466,    2, 0x08,   33 /* Private */,
-      35,    0,  467,    2, 0x08,   34 /* Private */,
-      36,    0,  468,    2, 0x08,   35 /* Private */,
-      37,    0,  469,    2, 0x08,   36 /* Private */,
-      38,    0,  470,    2, 0x08,   37 /* Private */,
-      39,    0,  471,    2, 0x08,   38 /* Private */,
-      40,    0,  472,    2, 0x08,   39 /* Private */,
-      41,    0,  473,    2, 0x08,   40 /* Private */,
-      42,    0,  474,    2, 0x08,   41 /* Private */,
-      43,    0,  475,    2, 0x08,   42 /* Private */,
-      44,    0,  476,    2, 0x08,   43 /* Private */,
-      45,    0,  477,    2, 0x08,   44 /* Private */,
-      46,    0,  478,    2, 0x08,   45 /* Private */,
-      47,    0,  479,    2, 0x08,   46 /* Private */,
-      48,    0,  480,    2, 0x08,   47 /* Private */,
-      49,    0,  481,    2, 0x08,   48 /* Private */,
-      50,    0,  482,    2, 0x08,   49 /* Private */,
-      51,    0,  483,    2, 0x08,   50 /* Private */,
-      52,    0,  484,    2, 0x08,   51 /* Private */,
-      53,    0,  485,    2, 0x08,   52 /* Private */,
-      54,    0,  486,    2, 0x08,   53 /* Private */,
-      55,    0,  487,    2, 0x08,   54 /* Private */,
-      56,    0,  488,    2, 0x08,   55 /* Private */,
-      57,    0,  489,    2, 0x08,   56 /* Private */,
-      58,    0,  490,    2, 0x08,   57 /* Private */,
-      59,    0,  491,    2, 0x08,   58 /* Private */,
-      60,    0,  492,    2, 0x08,   59 /* Private */,
-      61,    0,  493,    2, 0x08,   60 /* Private */,
-      62,    0,  494,    2, 0x08,   61 /* Private */,
-      63,    0,  495,    2, 0x08,   62 /* Private */,
-      64,    0,  496,    2, 0x08,   63 /* Private */,
-      65,    0,  497,    2, 0x08,   64 /* Private */,
-      66,    0,  498,    2, 0x08,   65 /* Private */,
-      67,    0,  499,    2, 0x08,   66 /* Private */,
-      68,    0,  500,    2, 0x08,   67 /* Private */,
-      69,    0,  501,    2, 0x08,   68 /* Private */,
-      70,    0,  502,    2, 0x08,   69 /* Private */,
-      71,    0,  503,    2, 0x08,   70 /* Private */,
+       3,    0,  597,    2, 0x08,    2 /* Private */,
+       4,    0,  598,    2, 0x08,    3 /* Private */,
+       5,    0,  599,    2, 0x08,    4 /* Private */,
+       6,    0,  600,    2, 0x08,    5 /* Private */,
+       7,    0,  601,    2, 0x08,    6 /* Private */,
+       8,    0,  602,    2, 0x08,    7 /* Private */,
+       9,    0,  603,    2, 0x08,    8 /* Private */,
+      10,    0,  604,    2, 0x08,    9 /* Private */,
+      11,    0,  605,    2, 0x08,   10 /* Private */,
+      12,    0,  606,    2, 0x08,   11 /* Private */,
+      13,    0,  607,    2, 0x08,   12 /* Private */,
+      14,    0,  608,    2, 0x08,   13 /* Private */,
+      15,    0,  609,    2, 0x08,   14 /* Private */,
+      16,    0,  610,    2, 0x08,   15 /* Private */,
+      17,    0,  611,    2, 0x08,   16 /* Private */,
+      18,    0,  612,    2, 0x08,   17 /* Private */,
+      19,    0,  613,    2, 0x08,   18 /* Private */,
+      20,    0,  614,    2, 0x08,   19 /* Private */,
+      21,    0,  615,    2, 0x08,   20 /* Private */,
+      22,    0,  616,    2, 0x08,   21 /* Private */,
+      23,    0,  617,    2, 0x08,   22 /* Private */,
+      24,    0,  618,    2, 0x08,   23 /* Private */,
+      25,    0,  619,    2, 0x08,   24 /* Private */,
+      26,    0,  620,    2, 0x08,   25 /* Private */,
+      27,    0,  621,    2, 0x08,   26 /* Private */,
+      28,    0,  622,    2, 0x08,   27 /* Private */,
+      29,    0,  623,    2, 0x08,   28 /* Private */,
+      30,    0,  624,    2, 0x08,   29 /* Private */,
+      31,    0,  625,    2, 0x08,   30 /* Private */,
+      32,    0,  626,    2, 0x08,   31 /* Private */,
+      33,    0,  627,    2, 0x08,   32 /* Private */,
+      34,    0,  628,    2, 0x08,   33 /* Private */,
+      35,    0,  629,    2, 0x08,   34 /* Private */,
+      36,    0,  630,    2, 0x08,   35 /* Private */,
+      37,    0,  631,    2, 0x08,   36 /* Private */,
+      38,    0,  632,    2, 0x08,   37 /* Private */,
+      39,    0,  633,    2, 0x08,   38 /* Private */,
+      40,    0,  634,    2, 0x08,   39 /* Private */,
+      41,    0,  635,    2, 0x08,   40 /* Private */,
+      42,    0,  636,    2, 0x08,   41 /* Private */,
+      43,    0,  637,    2, 0x08,   42 /* Private */,
+      44,    0,  638,    2, 0x08,   43 /* Private */,
+      45,    0,  639,    2, 0x08,   44 /* Private */,
+      46,    0,  640,    2, 0x08,   45 /* Private */,
+      47,    0,  641,    2, 0x08,   46 /* Private */,
+      48,    0,  642,    2, 0x08,   47 /* Private */,
+      49,    0,  643,    2, 0x08,   48 /* Private */,
+      50,    0,  644,    2, 0x08,   49 /* Private */,
+      51,    0,  645,    2, 0x08,   50 /* Private */,
+      52,    0,  646,    2, 0x08,   51 /* Private */,
+      53,    0,  647,    2, 0x08,   52 /* Private */,
+      54,    0,  648,    2, 0x08,   53 /* Private */,
+      55,    0,  649,    2, 0x08,   54 /* Private */,
+      56,    0,  650,    2, 0x08,   55 /* Private */,
+      57,    0,  651,    2, 0x08,   56 /* Private */,
+      58,    0,  652,    2, 0x08,   57 /* Private */,
+      59,    0,  653,    2, 0x08,   58 /* Private */,
+      60,    0,  654,    2, 0x08,   59 /* Private */,
+      61,    0,  655,    2, 0x08,   60 /* Private */,
+      62,    0,  656,    2, 0x08,   61 /* Private */,
+      63,    0,  657,    2, 0x08,   62 /* Private */,
+      64,    0,  658,    2, 0x08,   63 /* Private */,
+      65,    0,  659,    2, 0x08,   64 /* Private */,
+      66,    0,  660,    2, 0x08,   65 /* Private */,
+      67,    0,  661,    2, 0x08,   66 /* Private */,
+      68,    0,  662,    2, 0x08,   67 /* Private */,
+      69,    0,  663,    2, 0x08,   68 /* Private */,
+      70,    0,  664,    2, 0x08,   69 /* Private */,
+      71,    0,  665,    2, 0x08,   70 /* Private */,
+      72,    0,  666,    2, 0x08,   71 /* Private */,
+      73,    0,  667,    2, 0x08,   72 /* Private */,
+      74,    0,  668,    2, 0x08,   73 /* Private */,
+      75,    0,  669,    2, 0x08,   74 /* Private */,
+      76,    0,  670,    2, 0x08,   75 /* Private */,
+      77,    0,  671,    2, 0x08,   76 /* Private */,
+      78,    0,  672,    2, 0x08,   77 /* Private */,
+      79,    0,  673,    2, 0x08,   78 /* Private */,
+      80,    0,  674,    2, 0x08,   79 /* Private */,
+      81,    0,  675,    2, 0x08,   80 /* Private */,
+      82,    0,  676,    2, 0x08,   81 /* Private */,
+      83,    0,  677,    2, 0x08,   82 /* Private */,
+      84,    0,  678,    2, 0x08,   83 /* Private */,
+      85,    0,  679,    2, 0x08,   84 /* Private */,
+      86,    0,  680,    2, 0x08,   85 /* Private */,
+      87,    0,  681,    2, 0x08,   86 /* Private */,
+      88,    0,  682,    2, 0x08,   87 /* Private */,
+      89,    0,  683,    2, 0x08,   88 /* Private */,
+      90,    0,  684,    2, 0x08,   89 /* Private */,
+      91,    0,  685,    2, 0x08,   90 /* Private */,
+      92,    0,  686,    2, 0x08,   91 /* Private */,
+      93,    0,  687,    2, 0x08,   92 /* Private */,
+      94,    0,  688,    2, 0x08,   93 /* Private */,
+      95,    0,  689,    2, 0x08,   94 /* Private */,
+      96,    0,  690,    2, 0x08,   95 /* Private */,
+      97,    0,  691,    2, 0x08,   96 /* Private */,
+      98,    0,  692,    2, 0x08,   97 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -653,6 +815,60 @@ Q_CONSTINIT const QMetaObject game::staticMetaObject = { {
         // method 'on_grid53_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_grid54_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid55_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid56_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid57_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid58_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid59_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid60_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid61_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid62_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid63_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid64_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid65_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid66_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid67_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid68_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid69_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid70_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid71_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid72_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid73_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid74_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid75_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid76_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid77_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid78_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid79_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid80_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_grid81_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -734,6 +950,33 @@ void game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 67: _t->on_grid52_clicked(); break;
         case 68: _t->on_grid53_clicked(); break;
         case 69: _t->on_grid54_clicked(); break;
+        case 70: _t->on_grid55_clicked(); break;
+        case 71: _t->on_grid56_clicked(); break;
+        case 72: _t->on_grid57_clicked(); break;
+        case 73: _t->on_grid58_clicked(); break;
+        case 74: _t->on_grid59_clicked(); break;
+        case 75: _t->on_grid60_clicked(); break;
+        case 76: _t->on_grid61_clicked(); break;
+        case 77: _t->on_grid62_clicked(); break;
+        case 78: _t->on_grid63_clicked(); break;
+        case 79: _t->on_grid64_clicked(); break;
+        case 80: _t->on_grid65_clicked(); break;
+        case 81: _t->on_grid66_clicked(); break;
+        case 82: _t->on_grid67_clicked(); break;
+        case 83: _t->on_grid68_clicked(); break;
+        case 84: _t->on_grid69_clicked(); break;
+        case 85: _t->on_grid70_clicked(); break;
+        case 86: _t->on_grid71_clicked(); break;
+        case 87: _t->on_grid72_clicked(); break;
+        case 88: _t->on_grid73_clicked(); break;
+        case 89: _t->on_grid74_clicked(); break;
+        case 90: _t->on_grid75_clicked(); break;
+        case 91: _t->on_grid76_clicked(); break;
+        case 92: _t->on_grid77_clicked(); break;
+        case 93: _t->on_grid78_clicked(); break;
+        case 94: _t->on_grid79_clicked(); break;
+        case 95: _t->on_grid80_clicked(); break;
+        case 96: _t->on_grid81_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -768,13 +1011,13 @@ int game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 70)
+        if (_id < 97)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 70;
+        _id -= 97;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 70)
+        if (_id < 97)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 70;
+        _id -= 97;
     }
     return _id;
 }

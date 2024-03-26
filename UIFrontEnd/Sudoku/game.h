@@ -159,6 +159,60 @@ private slots:
 
     void on_grid54_clicked();
 
+    void on_grid55_clicked();
+
+    void on_grid56_clicked();
+
+    void on_grid57_clicked();
+
+    void on_grid58_clicked();
+
+    void on_grid59_clicked();
+
+    void on_grid60_clicked();
+
+    void on_grid61_clicked();
+
+    void on_grid62_clicked();
+
+    void on_grid63_clicked();
+
+    void on_grid64_clicked();
+
+    void on_grid65_clicked();
+
+    void on_grid66_clicked();
+
+    void on_grid67_clicked();
+
+    void on_grid68_clicked();
+
+    void on_grid69_clicked();
+
+    void on_grid70_clicked();
+
+    void on_grid71_clicked();
+
+    void on_grid72_clicked();
+
+    void on_grid73_clicked();
+
+    void on_grid74_clicked();
+
+    void on_grid75_clicked();
+
+    void on_grid76_clicked();
+
+    void on_grid77_clicked();
+
+    void on_grid78_clicked();
+
+    void on_grid79_clicked();
+
+    void on_grid80_clicked();
+
+    void on_grid81_clicked();
+
 private:
     void deactivateLockedGrids();
 

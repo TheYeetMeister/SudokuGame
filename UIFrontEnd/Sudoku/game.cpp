@@ -23,7 +23,10 @@ game::game(QWidget *parent, unsigned difficulty)
                     ui->grid19, ui->grid20, ui->grid21, ui->grid22, ui->grid23, ui->grid24, ui->grid25, ui->grid26, ui->grid27,
                     ui->grid28, ui->grid29, ui->grid30, ui->grid31, ui->grid32, ui->grid33, ui->grid34, ui->grid35, ui->grid36,
                     ui->grid37, ui->grid38, ui->grid39, ui->grid40, ui->grid41, ui->grid42, ui->grid43, ui->grid44, ui->grid45,
-                    ui->grid46, ui->grid47, ui->grid48, ui->grid49, ui->grid50, ui->grid51, ui->grid52, ui->grid53, ui->grid54};
+                    ui->grid46, ui->grid47, ui->grid48, ui->grid49, ui->grid50, ui->grid51, ui->grid52, ui->grid53, ui->grid54,
+                    ui->grid55, ui->grid56, ui->grid57, ui->grid58, ui->grid59, ui->grid60, ui->grid61, ui->grid62, ui->grid63,
+                    ui->grid64, ui->grid65, ui->grid66, ui->grid67, ui->grid68, ui->grid69, ui->grid70, ui->grid71, ui->grid72,
+                    ui->grid73, ui->grid74, ui->grid75, ui->grid76, ui->grid77, ui->grid78, ui->grid79, ui->grid80, ui->grid81};
 
     numButtonUIs = {ui->eraseBtn,
                     ui->numOneBtn,
@@ -900,6 +903,330 @@ void game::on_grid54_clicked()
         currentGrid = 54;
 
         activateBtn(54);
+    }
+}
+
+
+void game::on_grid55_clicked()
+{
+    if (currentGrid != 55) {
+        resetCurrBtn();
+
+        currentGrid = 55;
+
+        activateBtn(55);
+    }
+}
+
+
+void game::on_grid56_clicked()
+{
+    if (currentGrid != 56) {
+        resetCurrBtn();
+
+        currentGrid = 56;
+
+        activateBtn(56);
+    }
+}
+
+
+void game::on_grid57_clicked()
+{
+    if (currentGrid != 57) {
+        resetCurrBtn();
+
+        currentGrid = 57;
+
+        activateBtn(57);
+    }
+}
+
+
+void game::on_grid58_clicked()
+{
+    if (currentGrid != 58) {
+        resetCurrBtn();
+
+        currentGrid = 58;
+
+        activateBtn(58);
+    }
+}
+
+
+void game::on_grid59_clicked()
+{
+    if (currentGrid != 59) {
+        resetCurrBtn();
+
+        currentGrid = 59;
+
+        activateBtn(59);
+    }
+}
+
+
+void game::on_grid60_clicked()
+{
+    if (currentGrid != 60) {
+        resetCurrBtn();
+
+        currentGrid = 60;
+
+        activateBtn(60);
+    }
+}
+
+
+void game::on_grid61_clicked()
+{
+    if (currentGrid != 61) {
+        resetCurrBtn();
+
+        currentGrid = 61;
+
+        activateBtn(61);
+    }
+}
+
+
+void game::on_grid62_clicked()
+{
+    if (currentGrid != 62) {
+        resetCurrBtn();
+
+        currentGrid = 62;
+
+        activateBtn(62);
+    }
+}
+
+
+void game::on_grid63_clicked()
+{
+    if (currentGrid != 63) {
+        resetCurrBtn();
+
+        currentGrid = 63;
+
+        activateBtn(63);
+    }
+}
+
+
+void game::on_grid64_clicked()
+{
+    if (currentGrid != 64) {
+        resetCurrBtn();
+
+        currentGrid = 64;
+
+        activateBtn(64);
+    }
+}
+
+
+void game::on_grid65_clicked()
+{
+    if (currentGrid != 65) {
+        resetCurrBtn();
+
+        currentGrid = 65;
+
+        activateBtn(65);
+    }
+}
+
+
+void game::on_grid66_clicked()
+{
+    if (currentGrid != 66) {
+        resetCurrBtn();
+
+        currentGrid = 66;
+
+        activateBtn(66);
+    }
+}
+
+
+void game::on_grid67_clicked()
+{
+    if (currentGrid != 67) {
+        resetCurrBtn();
+
+        currentGrid = 67;
+
+        activateBtn(67);
+    }
+}
+
+
+void game::on_grid68_clicked()
+{
+    if (currentGrid != 68) {
+        resetCurrBtn();
+
+        currentGrid = 68;
+
+        activateBtn(68);
+    }
+}
+
+
+void game::on_grid69_clicked()
+{
+    if (currentGrid != 69) {
+        resetCurrBtn();
+
+        currentGrid = 69;
+
+        activateBtn(69);
+    }
+}
+
+
+void game::on_grid70_clicked()
+{
+    if (currentGrid != 70) {
+        resetCurrBtn();
+
+        currentGrid = 70;
+
+        activateBtn(70);
+    }
+}
+
+
+void game::on_grid71_clicked()
+{
+    if (currentGrid != 71) {
+        resetCurrBtn();
+
+        currentGrid = 71;
+
+        activateBtn(71);
+    }
+}
+
+
+void game::on_grid72_clicked()
+{
+    if (currentGrid != 72) {
+        resetCurrBtn();
+
+        currentGrid = 72;
+
+        activateBtn(72);
+    }
+}
+
+
+void game::on_grid73_clicked()
+{
+    if (currentGrid != 73) {
+        resetCurrBtn();
+
+        currentGrid = 73;
+
+        activateBtn(73);
+    }
+}
+
+
+void game::on_grid74_clicked()
+{
+    if (currentGrid != 74) {
+        resetCurrBtn();
+
+        currentGrid = 74;
+
+        activateBtn(74);
+    }
+}
+
+
+void game::on_grid75_clicked()
+{
+    if (currentGrid != 75) {
+        resetCurrBtn();
+
+        currentGrid = 75;
+
+        activateBtn(75);
+    }
+}
+
+
+void game::on_grid76_clicked()
+{
+    if (currentGrid != 76) {
+        resetCurrBtn();
+
+        currentGrid = 76;
+
+        activateBtn(76);
+    }
+}
+
+
+void game::on_grid77_clicked()
+{
+    if (currentGrid != 77) {
+        resetCurrBtn();
+
+        currentGrid = 77;
+
+        activateBtn(77);
+    }
+}
+
+
+void game::on_grid78_clicked()
+{
+    if (currentGrid != 78) {
+        resetCurrBtn();
+
+        currentGrid = 78;
+
+        activateBtn(78);
+    }
+}
+
+
+void game::on_grid79_clicked()
+{
+    if (currentGrid != 79) {
+        resetCurrBtn();
+
+        currentGrid = 79;
+
+        activateBtn(79);
+    }
+}
+
+
+void game::on_grid80_clicked()
+{
+    if (currentGrid != 80) {
+        resetCurrBtn();
+
+        currentGrid = 80;
+
+        activateBtn(80);
+    }
+}
+
+
+void game::on_grid81_clicked()
+{
+    if (currentGrid != 81) {
+        resetCurrBtn();
+
+        currentGrid = 81;
+
+        activateBtn(81);
     }
 }
 
