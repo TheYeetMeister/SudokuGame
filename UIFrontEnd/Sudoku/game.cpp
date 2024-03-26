@@ -43,8 +43,6 @@ game::game(QWidget *parent, unsigned difficulty)
                     ui->numNineBtn};
 
     ui->remErrorsBtn->setEnabled(false);
-    deactivateNumBtns();
-    deactivateLockedGrids();
 
     ui->newGameBtn->setVisible(false);
 
@@ -60,6 +58,9 @@ game::game(QWidget *parent, unsigned difficulty)
     for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
         getGridNum(board, *it );
     }
+
+    deactivateNumBtns();
+    deactivateLockedGrids();
 }
 
 game::~game()
