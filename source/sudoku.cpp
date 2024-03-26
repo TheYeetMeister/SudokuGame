@@ -78,7 +78,7 @@ SudokuBoard& SudokuBoard::operator=(const SudokuBoard &s) {
 }
 
 SudokuBoard::SudokuBoard(SudokuBoard &&s): size(s.size), gridSize(s.gridSize), 
-                        madeNotUsingNew(s.madeNotUsingNew), anchoredCoor(s.anchoredCoor)  {
+                        anchoredCoor(s.anchoredCoor), madeNotUsingNew(s.madeNotUsingNew)  {
     gameBoard = new int*[size];
 
     for (int i = 0; i < size; ++i) {
