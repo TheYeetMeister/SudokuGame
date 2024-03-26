@@ -4,14 +4,7 @@
 #include <QDialog>
 #include <vector>
 #include <set>
-
-/*had to import all relevant libraries,
-maybe has something to do with imports in these files don't work as they are not in the same directory
-as my QT files*/
 #include "../../source/sudoku.h"
-#include "../../source/sudoku.cpp"
-#include "../../source/sudoku_generator.h"
-#include "../../source/sudoku_generator.cpp"
 
 namespace Ui {
 class game;
@@ -222,7 +215,7 @@ private slots:
     void on_grid81_clicked();
 
 private:
-    SudokuBoard createGame(unsigned difficulty);
+    void createGame(SudokuBoard &mainGame, unsigned difficulty);
 
     void getGridNum(int** board, int gridNumber);
 

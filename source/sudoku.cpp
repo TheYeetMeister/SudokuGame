@@ -34,6 +34,107 @@ SudokuBoard::SudokuBoard(int** exampleBoard): size(SIZE_OF_TEST_BOARD), gridSize
     madeNotUsingNew = true;
 }
 
+SudokuBoard::SudokuBoard(const SudokuBoard &s): size(s.size), gridSize(s.gridSize), madeNotUsingNew(s.madeNotUsingNew) {
+    gameBoard = new int*[size];
+
+    for (int i = 0; i < size; ++i) {
+        gameBoard[i] = new int[size]{0};
+    }
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    for (auto it = s.anchoredCoor.begin(); it != s.anchoredCoor.end(); ++it) {
+        anchoredCoor.insert(*it);
+    }
+}
+
+SudokuBoard::SudokuBoard(const SudokuBoard &s): size(s.size), gridSize(s.gridSize), madeNotUsingNew(s.madeNotUsingNew) {
+    gameBoard = new int*[size];
+
+    for (int i = 0; i < size; ++i) {
+        gameBoard[i] = new int[size]{0};
+    }
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    for (auto it = s.anchoredCoor.begin(); it != s.anchoredCoor.end(); ++it) {
+        anchoredCoor.insert(*it);
+    }
+}
+
+SudokuBoard& SudokuBoard::operator=(const SudokuBoard &s) {
+    if (s.gridSize != gridSize) {
+        throw std::length_error("sizes of sudoku boards do not match");
+    }
+
+    if (this == &s) {
+        return *this;
+    }
+
+    size = s.size;
+    madeNotUsingNew = s.madeNotUsingNew;
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    for (auto it = s.anchoredCoor.begin(); it != s.anchoredCoor.end(); ++it) {
+        anchoredCoor.insert(*it);
+    }
+
+    return *this;
+}
+
+SudokuBoard::SudokuBoard(const SudokuBoard &s): size(s.size), gridSize(s.gridSize), 
+                        madeNotUsingNew(s.madeNotUsingNew), gameBoard(s.gameBoard),  {
+    gameBoard = new int*[size];
+
+    for (int i = 0; i < size; ++i) {
+        gameBoard[i] = new int[size]{0};
+    }
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    anchoredCoor = s.anchoredCoor;
+}
+
+SudokuBoard& SudokuBoard::operator=(SudokuBoard &&s) {
+    if (s.gridSize != gridSize) {
+        throw std::length_error("sizes of sudoku boards do not match");
+    }
+
+    if (this == &s) {
+        return *this;
+    }
+
+    size = s.size;
+    madeNotUsingNew = s.madeNotUsingNew;
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    anchoredCoor = s.anchoredCoor;
+
+    return *this;
+}
+
 SudokuBoard::~SudokuBoard() {
     if (madeNotUsingNew) return;
 
