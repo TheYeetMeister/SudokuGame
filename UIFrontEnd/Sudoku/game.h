@@ -5,7 +5,13 @@
 #include <vector>
 #include <set>
 
+/*had to import all relevant libraries,
+maybe has something to do with imports in these files don't work as they are not in the same directory
+as my QT files*/
 #include "../../source/sudoku.h"
+#include "../../source/sudoku.cpp"
+#include "../../source/sudoku_generator.h"
+#include "../../source/sudoku_generator.cpp"
 
 namespace Ui {
 class game;

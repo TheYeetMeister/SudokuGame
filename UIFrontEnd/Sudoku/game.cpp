@@ -1,6 +1,7 @@
 #include "game.h"
 #include "ui_game.h"
 
+
 constexpr double VERYEASY_PERCENTAGE_MISSING = 0.50;
 constexpr double EASY_PERCENTAGE_MISSING = 0.54;
 constexpr double MEDIUM_PERCENTAGE_MISSING = 0.62;
@@ -20,15 +21,15 @@ game::game(QWidget *parent, unsigned difficulty)
     });
 
     //call game creation (yay!)
-    mainGame = createGame(difficulty);
+   // mainGame = createGame(difficulty);
 
     //set anchored grids and their values
-    lockedGrids = mainGame.getAnchoredcoor();
-    int** board = mainGame.getGameBoard();
+    //lockedGrids = mainGame.getAnchoredcoor();
+    //int** board = mainGame.getGameBoard();
 
-    for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
-        getGridNum(board, *it);
-    }
+    //for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
+    //    getGridNum(board, *it);
+    //}
 
     //easy recall of buttons to grids
     gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3, ui->grid4, ui->grid5, ui->grid6, ui->grid7, ui->grid8, ui->grid9,
@@ -64,7 +65,7 @@ game::~game()
     delete ui;
 }
 
-SudokuBoard game::createGame(unsigned difficulty) {
+/*SudokuBoard game::createGame(unsigned difficulty) {
     SudokuBoard mainGame = SudokuBoard(3);
 
     switch(difficulty) {
@@ -85,14 +86,14 @@ SudokuBoard game::createGame(unsigned difficulty) {
             break;
 
         case 5:
-            mainGame.generateNewPlayableBoard(HARD_PERCENTAGE_MISSING);
+            mainGame.generateNewPlayableBoard(EVIL_PERCENTAGE_MISSING);
             break;
 
         default:
             throw std::invalid_argument("invalid selected difficulty");
     }
     return mainGame;
-}
+}*/
 
 void game::getGridNum(int** board, int gridNumber) {
     int row = gridNumber / 9;
