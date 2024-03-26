@@ -20,19 +20,6 @@ game::game(QWidget *parent, unsigned difficulty)
         emit openMainMenu();
     });
 
-    //call game creation (yay!)
-    mainGame = SudokuBoard(3);
-
-    createGame(mainGame, difficulty);
-
-    //set anchored grids and their values
-    lockedGrids = mainGame.getAnchoredcoor();
-    int** board = mainGame.getGameBoard();
-
-    for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
-        getGridNum(board, *it);
-    }
-
     //easy recall of buttons to grids
     gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3, ui->grid4, ui->grid5, ui->grid6, ui->grid7, ui->grid8, ui->grid9,
                     ui->grid10, ui->grid11, ui->grid12, ui->grid13, ui->grid14, ui->grid15, ui->grid16, ui->grid17, ui->grid18,
@@ -60,6 +47,19 @@ game::game(QWidget *parent, unsigned difficulty)
     deactivateLockedGrids();
 
     ui->newGameBtn->setVisible(false);
+
+    //call game creation (yay!)
+    mainGame = SudokuBoard(3);
+
+    createGame(mainGame, difficulty);
+
+    //set anchored grids and their values
+    lockedGrids = mainGame.getAnchoredcoor();
+    int** board = mainGame.getGameBoard();
+
+    for (auto it = lockedGrids.begin(); it != lockedGrids.end(); ++it) {
+        getGridNum(board, *it );
+    }
 }
 
 game::~game()

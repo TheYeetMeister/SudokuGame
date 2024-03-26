@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     ../../source/sudoku.cpp \
+    ../../source/sudoku_generator.cpp \
     game.cpp \
     main.cpp \
     sudokumainwindow.cpp
 
 HEADERS += \
     ../../source/sudoku.h \
+    ../../source/sudoku_generator.h \
     game.h \
     sudokumainwindow.h
 
