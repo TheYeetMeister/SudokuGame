@@ -56,7 +56,7 @@ public:
 
     //generating newBoard class (public for testing purposes)
 
-    void generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals);
+    void generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals = 0);
 private:
 
     std::string adjustStringSize(const char value) const;
