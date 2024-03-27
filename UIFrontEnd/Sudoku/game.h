@@ -227,7 +227,9 @@ private:
 
     void boardIsSolved();
 
-    void markGridErrors(bool showErrors);
+    void markGridErrors();
+
+    void eraseErrorMarks();
 
     void resetCurrBtn();
 

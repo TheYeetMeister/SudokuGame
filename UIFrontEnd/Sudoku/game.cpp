@@ -168,23 +168,28 @@ void game::boardIsSolved() {
     deactivateNumBtns();
 }
 
-void game::markGridErrors(bool showErrors) {
+void game::markGridErrors() {
     for (auto i = wrongGrids.begin(); i != wrongGrids.end(); ++i) {
-        if (!showErrors && *i == currentGrid) {
-            continue;
-        }
-
         QPushButton* btn = gridButtonUIs[*i];
         QPalette btnPalette = btn->palette();
-
-        if (showErrors) {
-            btnPalette.setColor(QPalette::Button, QColor(Qt::red));
-        } else {
-            btnPalette.setColor(QPalette::Button, QColor(Qt::white));
-        }
-
+        btnPalette.setColor(QPalette::Button, QColor(Qt::red));
         btn->setPalette(btnPalette);
         btn->update();
+    }
+}
+
+void game::eraseErrorMarks() {
+    auto anchoredIter = lockedGrids.begin();
+    for(int i = 0; i < 81; ++i) {
+        if (anchoredIter == lockedGrids.end() || i < *anchoredIter) {
+            QPushButton* btn = gridButtonUIs[i];
+            QPalette btnPalette = btn->palette();
+            btnPalette.setColor(QPalette::Button, QColor(Qt::white));
+            btn->setPalette(btnPalette);
+            btn->update();
+        } else {
+            ++anchoredIter;
+        }
     }
 }
 
@@ -305,7 +310,7 @@ void game::on_submitBtn_clicked()
     } else {
         wrongGrids = mainGame.getAllWrongGrids();
         showErrors = true;
-        markGridErrors(true);
+        markGridErrors();
         ui->remErrorsBtn->setEnabled(true);
     }
 }
@@ -313,7 +318,7 @@ void game::on_submitBtn_clicked()
 void game::on_remErrorsBtn_clicked()
 {
     showErrors = false;
-    markGridErrors(false);
+    eraseErrorMarks();
     ui->remErrorsBtn->setEnabled(false);
 }
 
