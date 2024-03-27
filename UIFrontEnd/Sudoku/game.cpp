@@ -293,6 +293,8 @@ void game::on_submitBtn_clicked()
 {
     resetCurrBtn();
     deactivateNumBtns();
+    currentGrid = 0;
+    solved = mainGame.isTheWholeBoardSolved();
 
     if (solved) {
         boardIsSolved();
@@ -301,7 +303,6 @@ void game::on_submitBtn_clicked()
         ui->QuitBtn->setEnabled(false);
         ui->newGameBtn->setVisible(true);
     } else {
-        currentGrid = 0;
         showErrors = true;
         markGridErrors(true);
         ui->remErrorsBtn->setEnabled(true);
