@@ -84,9 +84,12 @@ void newBoardGenerator::createCompletedBoard() {
     delete[] dp;
 }
 
-std::set<int> newBoardGenerator::eraseNumOfSquares(int n) {
+std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int rowColRemoveLimit) {
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
+    std::vector<int> removeRowValCount(size, 0);
+    std::vector<int> removeColValCount(size, 0);
+
     int fullGridSize = size * size;
     int eraseCount = 0;
 
