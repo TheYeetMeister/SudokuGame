@@ -219,7 +219,7 @@ void game::resetCurrBtn() {
 
         QPalette btnPalette = btn->palette();
 
-        if (showErrors && wrongGrids.find(currentGrid) != wrongGrids.end()) {
+        if (showErrors && wrongGrids.find(currentGrid - 1) != wrongGrids.end()) {
             btnPalette.setColor(QPalette::Button, QColor(Qt::red));
         } else {
             btnPalette.setColor(QPalette::Button, QColor(Qt::white));
