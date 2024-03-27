@@ -303,6 +303,7 @@ void game::on_submitBtn_clicked()
         ui->QuitBtn->setEnabled(false);
         ui->newGameBtn->setVisible(true);
     } else {
+        wrongGrids = mainGame.getAllWrongGrids();
         showErrors = true;
         markGridErrors(true);
         ui->remErrorsBtn->setEnabled(true);
