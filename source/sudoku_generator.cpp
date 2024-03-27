@@ -118,9 +118,9 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int minimumNumOfRowCol
 
         if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
+        } else {
             --removedRowValCount[row];
             --removedColValCount[col];
-        } else {
             remainingGridNumbers.erase(gridNumber);
             ++eraseCount;
         }
