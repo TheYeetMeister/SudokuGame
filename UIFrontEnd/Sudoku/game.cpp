@@ -194,8 +194,10 @@ void game::changeCurrGridInt(int value) {
 
         if (value) {
             btn->setText(QString::number(value));
+            mainGame.playerInsertNumber(value, (currentGrid - 1) / 9 + 1, (currentGrid - 1 % 9) + 1);
         } else {
             btn->setText("");
+            mainGame.playerRemoveNumber((currentGrid - 1) / 9 + 1, (currentGrid - 1 % 9) + 1);
         }
     }
 }
