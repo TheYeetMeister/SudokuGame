@@ -87,8 +87,8 @@ void newBoardGenerator::createCompletedBoard() {
 std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int rowColRemoveLimit) {
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
-    std::vector<int> removeRowValCount(size, 0);
-    std::vector<int> removeColValCount(size, 0);
+    std::vector<int> removedRowValCount(size, 0);
+    std::vector<int> removedColValCount(size, 0);
 
     int fullGridSize = size * size;
     int eraseCount = 0;
@@ -103,6 +103,11 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int rowColRemoveLimit)
         int row = calRowNumber(gridNumber);
         int col = calColNumber(gridNumber);
 
+        if (removedRowValCount[row] >= rowColRemoveLimit ||
+            removedColValCount[col] >= rowColRemoveLimit) {
+                continue;
+        }
+
         int prevValue = newGameBoard[row][col];
 
         erasedNumbers.push_back(gridNumber);
@@ -113,6 +118,8 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int rowColRemoveLimit)
 
         if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
+            ++removedRowValCount[row];
+            ++removedColValCount[col];
         } else {
             remainingGridNumbers.erase(gridNumber);
             ++eraseCount;
