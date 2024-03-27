@@ -67,11 +67,11 @@ private:
 
     void printHeader(std::ostream &out) const;
 
-    bool valueInRange(int value) const;
+    bool isValueInRange(int value) const;
 
     void checkRowColVal(int num, int row, int col) const;
 
-    bool isGridAnchored(int row, int col);
+    bool isGridAnchored(int row, int col) const;
 
     int calGridNumber(int row, int col) const;
 

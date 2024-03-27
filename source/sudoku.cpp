@@ -230,7 +230,7 @@ std::set<int> SudokuBoard::getAllWrongGrids() const {
 bool SudokuBoard::isConsecutiveSetsSolved(int rowDelta, int colDelta) const {
     int limiter = 0;
     for(int row = 0, col = 0;
-        valueInRange(row + 1) && valueInRange(col + 1) && UPPER_LIMIT > limiter;
+        isValueInRange(row + 1) && isValueInRange(col + 1) && UPPER_LIMIT > limiter;
         row += rowDelta, col += colDelta, ++limiter) {
         
         if (!isSetOfNumbersSolved(row, col, colDelta, rowDelta)) return false;
@@ -249,7 +249,7 @@ bool SudokuBoard::isSetOfNumbersSolved(int row, int col, int rowDelta, int colDe
 
     int limiter = 0;
 
-    for(;valueInRange(row + 1) && valueInRange(col + 1) && UPPER_LIMIT > limiter;
+    for(;isValueInRange(row + 1) && isValueInRange(col + 1) && UPPER_LIMIT > limiter;
         row += rowDelta, col += colDelta, ++limiter) {
         if (!gameBoard[row][col]) return false;
         if (rowColSet.find(gameBoard[row][col]) != rowColSet.end()) return false;
@@ -315,7 +315,7 @@ std::set<int> SudokuBoard::getWrongGridsInSet(int row, int col, int rowDelta, in
     std::unordered_map<int, int> valueAndGridSpace;
     std::set<int> wrongGrids;
 
-    for (;valueInRange(row + 1) && valueInRange(col + 1) && limiter < UPPER_LIMIT;
+    for (;isValueInRange(row + 1) && isValueInRange(col + 1) && limiter < UPPER_LIMIT;
         row += rowDelta, col += colDelta, ++limiter) {
         if (!gameBoard[row][col]) {
             wrongGrids.insert(calGridNumber(row, col));
@@ -451,17 +451,17 @@ void SudokuBoard::printHeader(std::ostream &out) const {
     out << '\n';
 }
 
-bool SudokuBoard::valueInRange(int value) const {
+bool SudokuBoard::isValueInRange(int value) const {
     //doesn't include zero as values inside sudoku board that are valid are never zero
     return (0 < value && value <= size);
 }
 
 void SudokuBoard::checkRowColVal(int num, int row, int col) const {
-    if (!valueInRange(num)) throw ValueOutOfBounds("The value inserted into the board is out of bounds/invalid : " + std::to_string(num));
+    if (!isValueInRange(num)) throw ValueOutOfBounds("The value inserted into the board is out of bounds/invalid : " + std::to_string(num));
 
-    if (!valueInRange(row)) throw ValueOutOfBounds("The given row is out of bounds/invalid : " + std::to_string(row));
+    if (!isValueInRange(row)) throw ValueOutOfBounds("The given row is out of bounds/invalid : " + std::to_string(row));
 
-    if (!valueInRange(col)) throw ValueOutOfBounds("The given col is out of bounds/invalid : " + std::to_string(col));
+    if (!isValueInRange(col)) throw ValueOutOfBounds("The given col is out of bounds/invalid : " + std::to_string(col));
 }
 
 bool SudokuBoard::isGridAnchored(int row, int col) const {
