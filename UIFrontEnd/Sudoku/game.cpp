@@ -174,7 +174,7 @@ void game::markGridErrors(bool showErrors) {
             continue;
         }
 
-        QPushButton* btn = gridButtonUIs[*i - 1];
+        QPushButton* btn = gridButtonUIs[*i];
         QPalette btnPalette = btn->palette();
 
         if (showErrors) {
