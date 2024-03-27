@@ -197,7 +197,7 @@ void game::changeCurrGridInt(int value) {
             mainGame.playerInsertNumber(value, (currentGrid - 1) / 9 + 1, (currentGrid - 1) % 9 + 1);
         } else {
             btn->setText("");
-            mainGame.playerRemoveNumber((currentGrid - 1) / 9 + 1, (currentGrid - 1 % 9) + 1);
+            mainGame.playerRemoveNumber((currentGrid - 1) / 9 + 1, (currentGrid - 1) % 9 + 1);
         }
     }
 }
