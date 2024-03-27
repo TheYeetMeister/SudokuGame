@@ -320,7 +320,8 @@ std::set<int> SudokuBoard::getWrongGridsInSet(int row, int col, int rowDelta, in
         if (!gameBoard[row][col]) {
             wrongGrids.insert(calGridNumber(row, col));
 
-        } else if (valueAndGridSpace.find(gameBoard[row][col]) != valueAndGridSpace.end()) {
+        } else if (!isGridAnchored(row, col) &&
+                    valueAndGridSpace.find(gameBoard[row][col]) != valueAndGridSpace.end()) {
             wrongGrids.insert(calGridNumber(row, col));
             wrongGrids.insert(valueAndGridSpace.find(gameBoard[row][col])->second);
 
@@ -367,7 +368,8 @@ std::set<int> SudokuBoard::getWrongGridsInMacroGrid(int gridRow, int gridCol) co
 
             if (!gameBoard[row][col]) {
                 wrongGrids.insert(calGridNumber(row, col));
-            } else if (valueAndGridSpace.find(gameBoard[row][col]) != valueAndGridSpace.end()) {
+            } else if (!isGridAnchored(row, col) &&
+                        valueAndGridSpace.find(gameBoard[row][col]) != valueAndGridSpace.end()) {
                 wrongGrids.insert(calGridNumber(row, col));
                 wrongGrids.insert(valueAndGridSpace.find(gameBoard[row][col])->second);
             } else {
@@ -462,7 +464,7 @@ void SudokuBoard::checkRowColVal(int num, int row, int col) const {
     if (!valueInRange(col)) throw ValueOutOfBounds("The given col is out of bounds/invalid : " + std::to_string(col));
 }
 
-bool SudokuBoard::isGridAnchored(int row, int col) {
+bool SudokuBoard::isGridAnchored(int row, int col) const {
     return (anchoredCoor.find(calGridNumber(row, col)) == anchoredCoor.end());
 }
 
