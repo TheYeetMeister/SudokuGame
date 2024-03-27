@@ -103,8 +103,8 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int minimumNumOfRowCol
         int row = calRowNumber(gridNumber);
         int col = calColNumber(gridNumber);
 
-        if (removedRowValCount[row] < minimumNumOfRowColVals ||
-            removedColValCount[col] < minimumNumOfRowColVals) {
+        if (removedRowValCount[row] <= minimumNumOfRowColVals ||
+            removedColValCount[col] <= minimumNumOfRowColVals) {
                 continue;
         }
 
