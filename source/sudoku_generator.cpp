@@ -84,11 +84,11 @@ void newBoardGenerator::createCompletedBoard() {
     delete[] dp;
 }
 
-std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int rowColRemoveLimit) {
+std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int minimumNumOfRowColVals) {
     std::vector<int> erasedNumbers;
     std::vector<int> prevValues;
-    std::vector<int> removedRowValCount(size, 0);
-    std::vector<int> removedColValCount(size, 0);
+    std::vector<int> removedRowValCount(size, minimumNumOfRowColVals);
+    std::vector<int> removedColValCount(size, minimumNumOfRowColVals);
 
     int fullGridSize = size * size;
     int eraseCount = 0;
@@ -103,8 +103,8 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int rowColRemoveLimit)
         int row = calRowNumber(gridNumber);
         int col = calColNumber(gridNumber);
 
-        if (removedRowValCount[row] >= rowColRemoveLimit ||
-            removedColValCount[col] >= rowColRemoveLimit) {
+        if (removedRowValCount[row] <= minimumNumOfRowColVals ||
+            removedColValCount[col] <= minimumNumOfRowColVals) {
                 continue;
         }
 
@@ -118,8 +118,8 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int rowColRemoveLimit)
 
         if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
             insertValueIntoGridSpace(gridNumber, prevValue);
-            ++removedRowValCount[row];
-            ++removedColValCount[col];
+            --removedRowValCount[row];
+            --removedColValCount[col];
         } else {
             remainingGridNumbers.erase(gridNumber);
             ++eraseCount;

@@ -13,7 +13,7 @@ public:
 
     void createCompletedBoard();
 
-    std::set<int> eraseNumOfSquares(int n, int rowColRemoveLimit);
+    std::set<int> eraseNumOfSquares(int n, int minimumNumOfRowColVals);
 
     void getAvailableNumberSet(int gridSpace,
                                 std::vector<int> &target,
