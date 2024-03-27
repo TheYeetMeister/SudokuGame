@@ -70,23 +70,23 @@ game::~game()
 void game::createGame(SudokuBoard &mainGame, unsigned difficulty) {
     switch(difficulty) {
         case 1:
-            mainGame.generateNewPlayableBoard(VERYEASY_PERCENTAGE_MISSING);
+            mainGame.generateNewPlayableBoard(VERYEASY_PERCENTAGE_MISSING, 5);
             break;
 
         case 2:
-            mainGame.generateNewPlayableBoard(EASY_PERCENTAGE_MISSING);
+            mainGame.generateNewPlayableBoard(EASY_PERCENTAGE_MISSING, 4);
             break;
 
         case 3:
-            mainGame.generateNewPlayableBoard(MEDIUM_PERCENTAGE_MISSING);
+            mainGame.generateNewPlayableBoard(MEDIUM_PERCENTAGE_MISSING, 3);
             break;
 
         case 4:
-            mainGame.generateNewPlayableBoard(HARD_PERCENTAGE_MISSING);
+            mainGame.generateNewPlayableBoard(HARD_PERCENTAGE_MISSING, 2);
             break;
 
         case 5:
-            mainGame.generateNewPlayableBoard(EVIL_PERCENTAGE_MISSING);
+            mainGame.generateNewPlayableBoard(EVIL_PERCENTAGE_MISSING, 0);
             break;
 
         default:
