@@ -134,6 +134,7 @@ std::set<int> newBoardGenerator::eraseRandNumOfSquares(int n, int minimumNumOfRo
     std::vector<int> prevValues;
     std::vector<int> removedRowValCount(size, size);
     std::vector<int> removedColValCount(size, size);
+    std::set<int> possibleRemovals = remainingGridNumbers;
 
     int eraseCount = 0;
 
@@ -148,8 +149,8 @@ std::set<int> newBoardGenerator::eraseRandNumOfSquares(int n, int minimumNumOfRo
     //randomly erases values (for easier game modes and less needed removed squares)
     while (eraseCount < n) {
         //random gridNumber grab begin
-        std::uniform_int_distribution<std::mt19937::result_type> randSetIndex(0, remainingGridNumbers.size() - 1);
-        auto it = remainingGridNumbers.begin();
+        std::uniform_int_distribution<std::mt19937::result_type> randSetIndex(0, possibleRemovals.size() - 1);
+        auto it = possibleRemovals.begin();
         int randValue = randSetIndex(rng);
         for (int i = 0; i < randValue; ++i) {
             ++it;
@@ -162,6 +163,7 @@ std::set<int> newBoardGenerator::eraseRandNumOfSquares(int n, int minimumNumOfRo
 
         if (removedRowValCount[row] <= minimumNumOfRowColVals ||
             removedColValCount[col] <= minimumNumOfRowColVals) {
+                possibleRemovals.erase(gridNumber);
                 continue;
         }
 
@@ -181,6 +183,7 @@ std::set<int> newBoardGenerator::eraseRandNumOfSquares(int n, int minimumNumOfRo
             remainingGridNumbers.erase(gridNumber);
             ++eraseCount;
         }
+        possibleRemovals.erase(gridNumber);
     }
 
     return remainingGridNumbers;
