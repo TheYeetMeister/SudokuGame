@@ -86,7 +86,7 @@ void game::createGame(SudokuBoard &mainGame, unsigned difficulty) {
             break;
 
         case 5:
-            mainGame.generateNewPlayableBoard(EVIL_PERCENTAGE_MISSING, 0);
+            mainGame.generateNewPlayableBoard(EVIL_PERCENTAGE_MISSING);
             break;
 
         default:

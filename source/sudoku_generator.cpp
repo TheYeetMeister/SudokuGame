@@ -152,7 +152,7 @@ std::set<int> newBoardGenerator::eraseNumOfSquaresSPattern(int n, int minimumNum
         } else {
             col = size - 1;
         }
-        for (; col < size && col >= 0 && eraseCount < n; col += colDelta, col += colDelta) {
+        for (; col < size && col >= 0 && eraseCount < n; col += colDelta) {
             if (removedRowValCount[row] <= minimumNumOfRowColVals ||
                 removedColValCount[col] <= minimumNumOfRowColVals) {
                     continue;
