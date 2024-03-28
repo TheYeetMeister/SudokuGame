@@ -147,7 +147,7 @@ std::set<int> newBoardGenerator::eraseRandNumOfSquares(int n, int minimumNumOfRo
     std::mt19937 rng(dev());
 
     //randomly erases values (for easier game modes and less needed removed squares)
-    while (eraseCount < n) {
+    while (eraseCount < n && possibleRemovals.size()) {
         //random gridNumber grab begin
         std::uniform_int_distribution<std::mt19937::result_type> randSetIndex(0, possibleRemovals.size() - 1);
         auto it = possibleRemovals.begin();
