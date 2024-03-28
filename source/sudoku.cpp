@@ -485,7 +485,7 @@ int SudokuBoard::calGridNumber(int row, int col) const {
     return (row) * (size) + col;
 }
 
-void SudokuBoard::generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals) {
+void SudokuBoard::generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals, bool isRandom) {
     if (percentageEmpty < 0 || percentageEmpty > 1) {
         throw ValueOutOfBounds("Number of removed values is either too large or too small");
     }
@@ -504,7 +504,12 @@ void SudokuBoard::generateNewPlayableBoard(double percentageEmpty, int minimumNu
     generator.createCompletedBoard();
 
     int numOfRemovedValues = int((size * size) * percentageEmpty + 0.5);
-    anchoredCoor = generator.eraseNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+
+    if (isRandom) {
+        anchoredCoor = generator.eraseRandNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+    } else {
+        anchoredCoor = generator.eraseNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+    }
 }
 
 std::ostream &operator<<(std::ostream &out, const SudokuBoard &b) {
