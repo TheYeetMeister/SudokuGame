@@ -55,8 +55,8 @@ public:
     std::set<int> getWrongGridsInMacroGrid(int gridRow, int gridCol) const;
 
     //generating newBoard class (public for testing purposes)
-
-    void generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals = 0, bool isRandom = false);
+    //digging pattern selects which pattern will be used in removing values
+    void generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals = 0, unsigned diggingPattern = 0);
 private:
 
     std::string adjustStringSize(const char value) const;

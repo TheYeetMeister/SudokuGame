@@ -485,7 +485,7 @@ int SudokuBoard::calGridNumber(int row, int col) const {
     return (row) * (size) + col;
 }
 
-void SudokuBoard::generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals, bool isRandom) {
+void SudokuBoard::generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals, unsigned diggingPattern) {
     if (percentageEmpty < 0 || percentageEmpty > 1) {
         throw ValueOutOfBounds("Number of removed values is either too large or too small");
     }
@@ -505,10 +505,18 @@ void SudokuBoard::generateNewPlayableBoard(double percentageEmpty, int minimumNu
 
     int numOfRemovedValues = int((size * size) * percentageEmpty + 0.5);
 
-    if (isRandom) {
-        anchoredCoor = generator.eraseRandNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
-    } else {
-        anchoredCoor = generator.eraseNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+    switch (diggingPattern) {
+        case 0:
+            anchoredCoor = generator.eraseNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+            break;
+        case 1:
+            anchoredCoor = generator.eraseNumOfSquaresSPattern(numOfRemovedValues, minimumNumOfRowColVals);
+            break;
+        case 2:
+            anchoredCoor = generator.eraseRandNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+            break;
+        default:
+            throw std::out_of_range("given digging pattern is out of range of given choices, 0-2");
     }
 }
 
