@@ -129,6 +129,63 @@ std::set<int> newBoardGenerator::eraseNumOfSquares(int n, int minimumNumOfRowCol
     return remainingGridNumbers;
 }
 
+std::set<int> newBoardGenerator::eraseRandNumOfSquares(int n, int minimumNumOfRowColVals) {
+    std::vector<int> erasedNumbers;
+    std::vector<int> prevValues;
+    std::vector<int> removedRowValCount(size, size);
+    std::vector<int> removedColValCount(size, size);
+
+    int eraseCount = 0;
+
+    if (n < 0 || n > size * size) {
+        throw CreationValueOutOfBounds("Number of values erased too large, or too small");
+    }
+
+    //randomNumber generator
+    std::random_device dev;
+    std::mt19937 rng(dev());
+
+    //randomly erases values (for easier game modes and less needed removed squares)
+    while (eraseCount < n) {
+        //random gridNumber grab begin
+        std::uniform_int_distribution<std::mt19937::result_type> randSetIndex(0, remainingGridNumbers.size() - 1);
+        auto it = remainingGridNumbers.begin();
+        int randValue = randSetIndex(rng);
+        for (int i = 0; i < randValue; ++i) {
+            ++it;
+        }
+        int gridNumber = *it;
+        //random gridNumber grab end
+
+        int row = calRowNumber(gridNumber);
+        int col = calColNumber(gridNumber);
+
+        if (removedRowValCount[row] <= minimumNumOfRowColVals ||
+            removedColValCount[col] <= minimumNumOfRowColVals) {
+                continue;
+        }
+
+        int prevValue = newGameBoard[row][col];
+
+        erasedNumbers.push_back(gridNumber);
+        prevValues.push_back(prevValue);
+
+        //hold value that's removed for pruning for searching other solutions
+        int value = removeValueFromGridSpace(gridNumber, prevValue);
+
+        if (!isUniqueSolution(erasedNumbers, erasedNumbers, prevValues, gridNumber, value)) {
+            insertValueIntoGridSpace(gridNumber, prevValue);
+        } else {
+            --removedRowValCount[row];
+            --removedColValCount[col];
+            remainingGridNumbers.erase(gridNumber);
+            ++eraseCount;
+        }
+    }
+
+    return remainingGridNumbers;
+}
+
 bool newBoardGenerator::isUniqueSolution(std::vector<int> &emptyGrids, std::vector<int> &erasedNumbers, std::vector<int> &prevValues, 
                                         int erasedGrid, int erasedValue) {
         //added prev erased grid numbers and values
