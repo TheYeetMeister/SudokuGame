@@ -56,6 +56,9 @@ public:
 
     //generating newBoard class (public for testing purposes)
     //digging pattern selects which pattern will be used in removing values
+    //0 is left to right, up to down
+    //1 removes values in an s pattern starting at the top left
+    //2 randomly removes values in random grids
     void generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals = 0, unsigned diggingPattern = 0);
 private:
 
