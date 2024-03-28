@@ -18,6 +18,8 @@ public:
     //as these functions assume you've already called the before function
     std::set<int> eraseNumOfSquares(int n, int minimumNumOfRowColVals);
 
+    std::set<int> eraseNumOfSquaresSPattern(int n, int minimumNumOfRowColVals);
+
     std::set<int> eraseRandNumOfSquares(int n, int minimumNumOfRowColVals);
 
     void getAvailableNumberSet(int gridSpace,
