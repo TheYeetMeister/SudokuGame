@@ -84,19 +84,19 @@ void createGameDifficulty(SudokuBoard &mainGame) {
 
         switch(difficulty) {
             case 1:
-                mainGame.generateNewPlayableBoard(EASY_PERCENTAGE_MISSING);
+                mainGame.generateNewPlayableBoard(EASY_PERCENTAGE_MISSING, 4);
                 return;
 
             case 2:
-                mainGame.generateNewPlayableBoard(MEDIUM_PERCENTAGE_MISSING);
+                mainGame.generateNewPlayableBoard(MEDIUM_PERCENTAGE_MISSING, 3);
                 return;
 
             case 3:
-                mainGame.generateNewPlayableBoard(HARD_PERCENTAGE_MISSING);
+                mainGame.generateNewPlayableBoard(HARD_PERCENTAGE_MISSING, 2);
                 return;
 
             case 4:
-                mainGame.generateNewPlayableBoard(EXPERT_PERCENTAGE_MISSING);
+                mainGame.generateNewPlayableBoard(EXPERT_PERCENTAGE_MISSING, 0);
                 return;
 
             default:

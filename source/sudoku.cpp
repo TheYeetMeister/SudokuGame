@@ -34,6 +34,87 @@ SudokuBoard::SudokuBoard(int** exampleBoard): size(SIZE_OF_TEST_BOARD), gridSize
     madeNotUsingNew = true;
 }
 
+SudokuBoard::SudokuBoard(const SudokuBoard &s): size(s.size), gridSize(s.gridSize), madeNotUsingNew(s.madeNotUsingNew) {
+    gameBoard = new int*[size];
+
+    for (int i = 0; i < size; ++i) {
+        gameBoard[i] = new int[size]{0};
+    }
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    for (auto it = s.anchoredCoor.begin(); it != s.anchoredCoor.end(); ++it) {
+        anchoredCoor.insert(*it);
+    }
+}
+
+SudokuBoard& SudokuBoard::operator=(const SudokuBoard &s) {
+    if (s.gridSize != gridSize) {
+        throw std::length_error("sizes of sudoku boards do not match");
+    }
+
+    if (this == &s) {
+        return *this;
+    }
+
+    size = s.size;
+    madeNotUsingNew = s.madeNotUsingNew;
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    for (auto it = s.anchoredCoor.begin(); it != s.anchoredCoor.end(); ++it) {
+        anchoredCoor.insert(*it);
+    }
+
+    return *this;
+}
+
+SudokuBoard::SudokuBoard(SudokuBoard &&s): size(s.size), gridSize(s.gridSize), 
+                        anchoredCoor(s.anchoredCoor), madeNotUsingNew(s.madeNotUsingNew)  {
+    gameBoard = new int*[size];
+
+    for (int i = 0; i < size; ++i) {
+        gameBoard[i] = new int[size]{0};
+    }
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+}
+
+SudokuBoard& SudokuBoard::operator=(SudokuBoard &&s) {
+    if (s.gridSize != gridSize) {
+        throw std::length_error("sizes of sudoku boards do not match");
+    }
+
+    if (this == &s) {
+        return *this;
+    }
+
+    size = s.size;
+    madeNotUsingNew = s.madeNotUsingNew;
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            gameBoard[i][j] = s.gameBoard[i][j];
+        }
+    }
+
+    anchoredCoor = s.anchoredCoor;
+
+    return *this;
+}
+
 SudokuBoard::~SudokuBoard() {
     if (madeNotUsingNew) return;
 
@@ -65,7 +146,7 @@ void SudokuBoard::insertAnchoredNumber(int num, int row, int col) {
 void SudokuBoard::playerInsertNumber(int num, int row, int col) {
     checkRowColVal(num, row, col);
 
-    if (!isGridAnchored(row - 1, col - 1)) {
+    if (isGridAnchored(row - 1, col - 1)) {
         throw GridPositionAlreadyTaken("Position in sudoku grid already taken by anchored number at row: " + std::to_string(row) + " and col: " + std::to_string(col));
     }
 
@@ -75,7 +156,7 @@ void SudokuBoard::playerInsertNumber(int num, int row, int col) {
 void SudokuBoard::playerRemoveNumber(int row, int col) {
     checkRowColVal(1, row, col);
 
-    if (!isGridAnchored(row - 1, col - 1)) {
+    if (isGridAnchored(row - 1, col - 1)) {
         throw GridPositionAlreadyTaken("Position in sudoku grid is an anchored number, can not be removed; row: " + std::to_string(row) + ", column: " + std::to_string(col));
     }
 
@@ -149,7 +230,7 @@ std::set<int> SudokuBoard::getAllWrongGrids() const {
 bool SudokuBoard::isConsecutiveSetsSolved(int rowDelta, int colDelta) const {
     int limiter = 0;
     for(int row = 0, col = 0;
-        valueInRange(row + 1) && valueInRange(col + 1) && UPPER_LIMIT > limiter;
+        isValueInRange(row + 1) && isValueInRange(col + 1) && UPPER_LIMIT > limiter;
         row += rowDelta, col += colDelta, ++limiter) {
         
         if (!isSetOfNumbersSolved(row, col, colDelta, rowDelta)) return false;
@@ -168,7 +249,7 @@ bool SudokuBoard::isSetOfNumbersSolved(int row, int col, int rowDelta, int colDe
 
     int limiter = 0;
 
-    for(;valueInRange(row + 1) && valueInRange(col + 1) && UPPER_LIMIT > limiter;
+    for(;isValueInRange(row + 1) && isValueInRange(col + 1) && UPPER_LIMIT > limiter;
         row += rowDelta, col += colDelta, ++limiter) {
         if (!gameBoard[row][col]) return false;
         if (rowColSet.find(gameBoard[row][col]) != rowColSet.end()) return false;
@@ -234,14 +315,21 @@ std::set<int> SudokuBoard::getWrongGridsInSet(int row, int col, int rowDelta, in
     std::unordered_map<int, int> valueAndGridSpace;
     std::set<int> wrongGrids;
 
-    for (;valueInRange(row + 1) && valueInRange(col + 1) && limiter < UPPER_LIMIT;
+    for (;isValueInRange(row + 1) && isValueInRange(col + 1) && limiter < UPPER_LIMIT;
         row += rowDelta, col += colDelta, ++limiter) {
         if (!gameBoard[row][col]) {
             wrongGrids.insert(calGridNumber(row, col));
 
         } else if (valueAndGridSpace.find(gameBoard[row][col]) != valueAndGridSpace.end()) {
-            wrongGrids.insert(calGridNumber(row, col));
-            wrongGrids.insert(valueAndGridSpace.find(gameBoard[row][col])->second);
+
+            if (!isGridAnchored(row, col)) {
+                wrongGrids.insert(calGridNumber(row, col));
+            }
+
+            int prevGridValue = valueAndGridSpace.find(gameBoard[row][col])->second;
+            if (anchoredCoor.find(prevGridValue) == anchoredCoor.end()) {
+                wrongGrids.insert(valueAndGridSpace.find(gameBoard[row][col])->second);
+            }
 
         } else {
             valueAndGridSpace[gameBoard[row][col]] = calGridNumber(row, col);
@@ -287,8 +375,16 @@ std::set<int> SudokuBoard::getWrongGridsInMacroGrid(int gridRow, int gridCol) co
             if (!gameBoard[row][col]) {
                 wrongGrids.insert(calGridNumber(row, col));
             } else if (valueAndGridSpace.find(gameBoard[row][col]) != valueAndGridSpace.end()) {
-                wrongGrids.insert(calGridNumber(row, col));
-                wrongGrids.insert(valueAndGridSpace.find(gameBoard[row][col])->second);
+
+                if (!isGridAnchored(row, col)) {
+                    wrongGrids.insert(calGridNumber(row, col));
+                }
+
+                int prevGridValue = valueAndGridSpace.find(gameBoard[row][col])->second;
+                if (anchoredCoor.find(prevGridValue) == anchoredCoor.end()) {
+                    wrongGrids.insert(valueAndGridSpace.find(gameBoard[row][col])->second);
+                }
+                
             } else {
                 valueAndGridSpace[gameBoard[row][col]] = calGridNumber(row, col);
             }
@@ -368,28 +464,28 @@ void SudokuBoard::printHeader(std::ostream &out) const {
     out << '\n';
 }
 
-bool SudokuBoard::valueInRange(int value) const {
+bool SudokuBoard::isValueInRange(int value) const {
     //doesn't include zero as values inside sudoku board that are valid are never zero
     return (0 < value && value <= size);
 }
 
 void SudokuBoard::checkRowColVal(int num, int row, int col) const {
-    if (!valueInRange(num)) throw ValueOutOfBounds("The value inserted into the board is out of bounds/invalid : " + std::to_string(num));
+    if (!isValueInRange(num)) throw ValueOutOfBounds("The value inserted into the board is out of bounds/invalid : " + std::to_string(num));
 
-    if (!valueInRange(row)) throw ValueOutOfBounds("The given row is out of bounds/invalid : " + std::to_string(row));
+    if (!isValueInRange(row)) throw ValueOutOfBounds("The given row is out of bounds/invalid : " + std::to_string(row));
 
-    if (!valueInRange(col)) throw ValueOutOfBounds("The given col is out of bounds/invalid : " + std::to_string(col));
+    if (!isValueInRange(col)) throw ValueOutOfBounds("The given col is out of bounds/invalid : " + std::to_string(col));
 }
 
-bool SudokuBoard::isGridAnchored(int row, int col) {
-    return (anchoredCoor.find(calGridNumber(row, col)) == anchoredCoor.end());
+bool SudokuBoard::isGridAnchored(int row, int col) const {
+    return (anchoredCoor.find(calGridNumber(row, col)) != anchoredCoor.end());
 }
 
 int SudokuBoard::calGridNumber(int row, int col) const {
     return (row) * (size) + col;
 }
 
-void SudokuBoard::generateNewPlayableBoard(double percentageEmpty) {
+void SudokuBoard::generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals, unsigned diggingPattern) {
     if (percentageEmpty < 0 || percentageEmpty > 1) {
         throw ValueOutOfBounds("Number of removed values is either too large or too small");
     }
@@ -408,7 +504,20 @@ void SudokuBoard::generateNewPlayableBoard(double percentageEmpty) {
     generator.createCompletedBoard();
 
     int numOfRemovedValues = int((size * size) * percentageEmpty + 0.5);
-    anchoredCoor = generator.eraseNumOfSquares(numOfRemovedValues);
+
+    switch (diggingPattern) {
+        case 0:
+            anchoredCoor = generator.eraseNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+            break;
+        case 1:
+            anchoredCoor = generator.eraseNumOfSquaresSPattern(numOfRemovedValues, minimumNumOfRowColVals);
+            break;
+        case 2:
+            anchoredCoor = generator.eraseRandNumOfSquares(numOfRemovedValues, minimumNumOfRowColVals);
+            break;
+        default:
+            throw std::out_of_range("given digging pattern is out of range of given choices, 0-2");
+    }
 }
 
 std::ostream &operator<<(std::ostream &out, const SudokuBoard &b) {

@@ -13,7 +13,14 @@ public:
 
     void createCompletedBoard();
 
-    std::set<int> eraseNumOfSquares(int n);
+    //for seperation purposes these functions are made seperately but 
+    //ensure that you create a completed board BEFORE you start erasing
+    //as these functions assume you've already called the before function
+    std::set<int> eraseNumOfSquares(int n, int minimumNumOfRowColVals);
+
+    std::set<int> eraseNumOfSquaresSPattern(int n, int minimumNumOfRowColVals);
+
+    std::set<int> eraseRandNumOfSquares(int n, int minimumNumOfRowColVals);
 
     void getAvailableNumberSet(int gridSpace,
                                 std::vector<int> &target,
@@ -24,8 +31,6 @@ public:
 private:
     //picks a random number, INCLUDING the number argument given
     int pickRanVal(int n) const;
-
-    void SValueRemove(int colRowMinimum, int minimum);
 
     void insertValueIntoGridSpace(int gridSpace, int value);
 

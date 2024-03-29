@@ -55,8 +55,11 @@ public:
     std::set<int> getWrongGridsInMacroGrid(int gridRow, int gridCol) const;
 
     //generating newBoard class (public for testing purposes)
-
-    void generateNewPlayableBoard(double percentageEmpty);
+    //digging pattern selects which pattern will be used in removing values
+    //0 is left to right, up to down
+    //1 removes values in an s pattern starting at the top left
+    //2 randomly removes values in random grids
+    void generateNewPlayableBoard(double percentageEmpty, int minimumNumOfRowColVals = 0, unsigned diggingPattern = 0);
 private:
 
     std::string adjustStringSize(const char value) const;
@@ -67,11 +70,11 @@ private:
 
     void printHeader(std::ostream &out) const;
 
-    bool valueInRange(int value) const;
+    bool isValueInRange(int value) const;
 
     void checkRowColVal(int num, int row, int col) const;
 
-    bool isGridAnchored(int row, int col);
+    bool isGridAnchored(int row, int col) const;
 
     int calGridNumber(int row, int col) const;
 
