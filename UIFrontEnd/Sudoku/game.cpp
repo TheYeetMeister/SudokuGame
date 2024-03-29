@@ -59,6 +59,14 @@ game::game(QWidget *parent, unsigned difficulty)
         getGridNum(board, *it);
     }
 
+    //sets font color for buttons to black for dark mode users
+    for (QPushButton* btn: gridButtonUIs) {
+        QPalette btnPalette = btn->palette();
+        btnPalette.setColor(QPalette::ButtonText, QColor(Qt::black));
+        btn->setPalette(btnPalette);
+        btn->update();
+    }
+
     deactivateNumBtns();
     deactivateLockedGrids();
 }
