@@ -227,7 +227,6 @@ Makefile: ../Sudoku/Sudoku.pro C:/Qt-framework/6.6.2/mingw_64/mkspecs/win32-g++/
 		../Sudoku/Sudoku.pro \
 		C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Widgets.prl \
 		C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Gui.prl \
-		C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Concurrent.prl \
 		C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Core.prl \
 		C:/Qt-framework/6.6.2/mingw_64/lib/Qt6EntryPoint.prl \
 		C:/Qt-framework/6.6.2/mingw_64/mkspecs/features/build_pass.prf
@@ -389,7 +388,6 @@ C:/Qt-framework/6.6.2/mingw_64/mkspecs/features/lex.prf:
 ../Sudoku/Sudoku.pro:
 C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Gui.prl:
-C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Concurrent.prl:
 C:/Qt-framework/6.6.2/mingw_64/lib/Qt6Core.prl:
 C:/Qt-framework/6.6.2/mingw_64/lib/Qt6EntryPoint.prl:
 C:/Qt-framework/6.6.2/mingw_64/mkspecs/features/build_pass.prf:

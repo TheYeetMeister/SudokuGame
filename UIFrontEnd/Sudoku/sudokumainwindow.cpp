@@ -15,9 +15,6 @@ SudokuMainWindow::SudokuMainWindow(QWidget *parent)
                   {4, ui->HardBtn},
                   {5, ui->EvilBtn}};
 
-    //sets the loading label to invisible to allow the user to press the button
-    ui->loadingGifAnim->setVisible(false);
-
     //sets color of btn
     QPalette btn = ui->VEasyBtn->palette();
     btn.setColor(QPalette::Button, QColor(Qt::green));
@@ -34,23 +31,11 @@ SudokuMainWindow::~SudokuMainWindow()
 
 void SudokuMainWindow::on_StartBtn_clicked()
 {
-    //including concurrent library so the loading screen AND the sudoku builder can run at the same time (really cool library)
-    //sets up loading screen
-    std::unique_ptr<QMovie> loadingScrn(new QMovie(QCoreApplication::applicationDirPath() + "../../loadingGif/loading.gif")); //creates the UI of the loading screen
-    ui->loadingGifAnim->setMovie(loadingScrn.get());
-    ui->loadingGifAnim->setVisible(true);
-    ui->loadingGifAnim->raise();
-    loadingScrn->start();
-
-    //closing loading screen as soon as the game window is ready
     gameWindow = std::unique_ptr<game>(new game(this, difficulty));
     gameWindow->show();
     this->hide();
 
     connect(gameWindow.get(), &game::openMainMenu, this, &SudokuMainWindow::showWindow);
-
-    ui->loadingGifAnim->setVisible(false);
-    loadingScrn->stop();
 }
 
 

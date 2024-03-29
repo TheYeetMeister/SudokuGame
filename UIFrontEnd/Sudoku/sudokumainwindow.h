@@ -2,11 +2,6 @@
 #define SUDOKUMAINWINDOW_H
 
 #include <QMainWindow>
-#include <QtConcurrent>
-#include <QFuture>
-#include <QThread>
-#include <QMovie>
-
 #include <memory>
 #include <unordered_map>
 #include "game.h"
