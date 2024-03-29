@@ -12,7 +12,7 @@ class VictoryScreen : public QDialog
     Q_OBJECT
 
 public:
-    explicit VictoryScreen(QWidget *parent = nullptr);
+    explicit VictoryScreen(QWidget *parent, unsigned difficulty);
     ~VictoryScreen();
 
 private:
