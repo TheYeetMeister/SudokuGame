@@ -31,6 +31,7 @@ public:
     QPushButton *HardBtn;
     QPushButton *EvilBtn;
     QPushButton *QuitBtn;
+    QLabel *loadingGifAnim;
 
     void setupUi(QMainWindow *SudokuMainWindow)
     {
@@ -90,6 +91,9 @@ public:
         font4.setFamilies({QString::fromUtf8("MV Boli")});
         font4.setPointSize(15);
         QuitBtn->setFont(font4);
+        loadingGifAnim = new QLabel(centralwidget);
+        loadingGifAnim->setObjectName("loadingGifAnim");
+        loadingGifAnim->setGeometry(QRect(360, 210, 301, 301));
         SudokuMainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(SudokuMainWindow);
@@ -109,6 +113,7 @@ public:
         HardBtn->setText(QCoreApplication::translate("SudokuMainWindow", "Hard", nullptr));
         EvilBtn->setText(QCoreApplication::translate("SudokuMainWindow", "Evil", nullptr));
         QuitBtn->setText(QCoreApplication::translate("SudokuMainWindow", "Quit", nullptr));
+        loadingGifAnim->setText(QString());
     } // retranslateUi
 
 };

@@ -183,6 +183,19 @@
      <string>Quit</string>
     </property>
    </widget>
+   <widget class="QLabel" name="loadingGifAnim">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>210</y>
+      <width>301</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
