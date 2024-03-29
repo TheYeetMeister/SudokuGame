@@ -31,9 +31,17 @@ SudokuMainWindow::~SudokuMainWindow()
 
 void SudokuMainWindow::on_StartBtn_clicked()
 {
+    this->hide();
+    //sets up loading screen
+
+    QSplashScreen *loadingScrn = new QSplashScreen;
+    loadingScrn->setPixmap(QPixmap("../../loadingGif/loading.gif"));
+    loadingScrn->show();
+
+    //closing loading screen as soon as the game window is ready
     gameWindow = std::unique_ptr<game>(new game(this, difficulty));
     gameWindow->show();
-    this->hide();
+    loadingScrn->close();
 
     connect(gameWindow.get(), &game::openMainMenu, this, &SudokuMainWindow::showWindow);
 }

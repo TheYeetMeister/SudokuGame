@@ -2,6 +2,7 @@
 #define SUDOKUMAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSplashScreen>
 #include <memory>
 #include <unordered_map>
 #include "game.h"
