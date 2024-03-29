@@ -13,17 +13,20 @@ SOURCES += \
     ../../source/sudoku_generator.cpp \
     game.cpp \
     main.cpp \
-    sudokumainwindow.cpp
+    sudokumainwindow.cpp \
+    victoryscreen.cpp
 
 HEADERS += \
     ../../source/sudoku.h \
     ../../source/sudoku_generator.h \
     game.h \
-    sudokumainwindow.h
+    sudokumainwindow.h \
+    victoryscreen.h
 
 FORMS += \
     game.ui \
-    sudokumainwindow.ui
+    sudokumainwindow.ui \
+    victoryscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
