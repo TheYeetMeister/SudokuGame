@@ -66,7 +66,16 @@ OBJECTS       = debug/sudoku.o \
 		debug/moc_sudokumainwindow.o \
 		debug/moc_victoryscreen.o
 
-DIST          =  ../../source/sudoku.h \
+DIST          = ../../imgs/win_imgs/confetti.gif \
+		../../imgs/win_imgs/crown.png \
+		../../imgs/win_imgs/datboi.gif \
+		../../imgs/win_imgs/frog_dance.gif \
+		../../imgs/win_imgs/golden-star.png \
+		../../imgs/win_imgs/med-evil-winimg.png \
+		../../imgs/win_imgs/north-star.png \
+		../../imgs/win_imgs/rainbow-star.png \
+		../../imgs/win_imgs/veryeasy-easy.winimg.png \
+		../../imgs/win_imgs/veryeasy_star.png ../../source/sudoku.h \
 		../../source/sudoku_generator.h \
 		../Sudoku/game.h \
 		../Sudoku/sudokumainwindow.h \
@@ -289,7 +298,43 @@ debug/moc_game.cpp: ../Sudoku/game.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QSizeF \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QTransform \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QCloseEvent \
 		../../source/sudoku.h \
+		../Sudoku/victoryscreen.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QMovie \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qmovie.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimagereader.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qeventloop.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfutureinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qmutex.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qelapsedtimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qtsan_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qresultstore.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthreadpool.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthread.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qrunnable.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qexception.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimageiohandler.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qplugin.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/quuid.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qendian.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/q20algorithm.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfactoryinterface.h \
 		debug/moc_predefs.h \
 		C:/Qt-framework/6.6.2/mingw_64/bin/moc.exe
 	'C:\Qt-framework\6.6.2\mingw_64\bin\moc.exe' $(DEFINES) --include C:/Users/KTran/Repos/SudokuGame/UIFrontEnd/executable/debug/moc_predefs.h -IC:/Qt-framework/6.6.2/mingw_64/mkspecs/win32-g++ -IC:/Users/KTran/Repos/SudokuGame/UIFrontEnd/Sudoku -IC:/Qt-framework/6.6.2/mingw_64/include -IC:/Qt-framework/6.6.2/mingw_64/include/QtWidgets -IC:/Qt-framework/6.6.2/mingw_64/include/QtGui -IC:/Qt-framework/6.6.2/mingw_64/include/QtCore -I. -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt-framework/Tools/mingw1120_64/x86_64-w64-mingw32/include ../Sudoku/game.h -o debug/moc_game.cpp
@@ -462,7 +507,43 @@ debug/moc_sudokumainwindow.cpp: ../Sudoku/sudokumainwindow.h \
 		../Sudoku/game.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QDialog \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QCloseEvent \
 		../../source/sudoku.h \
+		../Sudoku/victoryscreen.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QMovie \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qmovie.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimagereader.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qeventloop.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfutureinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qmutex.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qelapsedtimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qtsan_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qresultstore.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthreadpool.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthread.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qrunnable.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qexception.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimageiohandler.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qplugin.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/quuid.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qendian.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/q20algorithm.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfactoryinterface.h \
 		debug/moc_predefs.h \
 		C:/Qt-framework/6.6.2/mingw_64/bin/moc.exe
 	'C:\Qt-framework\6.6.2\mingw_64\bin\moc.exe' $(DEFINES) --include C:/Users/KTran/Repos/SudokuGame/UIFrontEnd/executable/debug/moc_predefs.h -IC:/Qt-framework/6.6.2/mingw_64/mkspecs/win32-g++ -IC:/Users/KTran/Repos/SudokuGame/UIFrontEnd/Sudoku -IC:/Qt-framework/6.6.2/mingw_64/include -IC:/Qt-framework/6.6.2/mingw_64/include/QtWidgets -IC:/Qt-framework/6.6.2/mingw_64/include/QtGui -IC:/Qt-framework/6.6.2/mingw_64/include/QtCore -I. -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt-framework/Tools/mingw1120_64/x86_64-w64-mingw32/include ../Sudoku/sudokumainwindow.h -o debug/moc_sudokumainwindow.cpp
@@ -631,6 +712,40 @@ debug/moc_victoryscreen.cpp: ../Sudoku/victoryscreen.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QSizeF \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QTransform \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QMovie \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qmovie.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimagereader.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qeventloop.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfutureinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qmutex.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qelapsedtimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qtsan_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qresultstore.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthreadpool.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthread.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qrunnable.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qexception.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimageiohandler.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qplugin.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/quuid.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qendian.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/q20algorithm.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfactoryinterface.h \
 		debug/moc_predefs.h \
 		C:/Qt-framework/6.6.2/mingw_64/bin/moc.exe
 	'C:\Qt-framework\6.6.2\mingw_64\bin\moc.exe' $(DEFINES) --include C:/Users/KTran/Repos/SudokuGame/UIFrontEnd/executable/debug/moc_predefs.h -IC:/Qt-framework/6.6.2/mingw_64/mkspecs/win32-g++ -IC:/Users/KTran/Repos/SudokuGame/UIFrontEnd/Sudoku -IC:/Qt-framework/6.6.2/mingw_64/include -IC:/Qt-framework/6.6.2/mingw_64/include/QtWidgets -IC:/Qt-framework/6.6.2/mingw_64/include/QtGui -IC:/Qt-framework/6.6.2/mingw_64/include/QtCore -I. -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt-framework/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt-framework/Tools/mingw1120_64/x86_64-w64-mingw32/include ../Sudoku/victoryscreen.h -o debug/moc_victoryscreen.cpp
@@ -835,11 +950,13 @@ debug/game.o: ../Sudoku/game.cpp ../Sudoku/game.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QSizeF \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QTransform \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qnativeinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QCloseEvent \
 		../../source/sudoku.h \
-		../Sudoku/ui_game.h \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QVariant \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qapplication.h \
+		../Sudoku/victoryscreen.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QMovie \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qmovie.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimagereader.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qeventloop.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
@@ -856,9 +973,26 @@ debug/game.o: ../Sudoku/game.cpp ../Sudoku/game.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qrunnable.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qexception.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimageiohandler.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qplugin.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/quuid.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qendian.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/q20algorithm.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfactoryinterface.h \
+		../Sudoku/ui_game.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QVariant \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qinputmethod.h \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QFrame \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qframe.h \
@@ -1035,9 +1169,13 @@ debug/main.o: ../Sudoku/main.cpp ../Sudoku/sudokumainwindow.h \
 		../Sudoku/game.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QDialog \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QCloseEvent \
 		../../source/sudoku.h \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qapplication.h \
+		../Sudoku/victoryscreen.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QMovie \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qmovie.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimagereader.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qeventloop.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
@@ -1054,9 +1192,24 @@ debug/main.o: ../Sudoku/main.cpp ../Sudoku/sudokumainwindow.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qrunnable.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qexception.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimageiohandler.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qplugin.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/quuid.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qendian.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/q20algorithm.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfactoryinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qinputmethod.h \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/main.o ../Sudoku/main.cpp
 
@@ -1228,11 +1381,13 @@ debug/sudokumainwindow.o: ../Sudoku/sudokumainwindow.cpp ../Sudoku/sudokumainwin
 		../Sudoku/game.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QDialog \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QCloseEvent \
 		../../source/sudoku.h \
-		../Sudoku/ui_sudokumainwindow.h \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QVariant \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QApplication \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qapplication.h \
+		../Sudoku/victoryscreen.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QMovie \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qmovie.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimagereader.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qeventloop.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
@@ -1249,9 +1404,26 @@ debug/sudokumainwindow.o: ../Sudoku/sudokumainwindow.cpp ../Sudoku/sudokumainwin
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qrunnable.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qexception.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimageiohandler.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qplugin.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/quuid.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qendian.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/q20algorithm.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfactoryinterface.h \
+		../Sudoku/ui_sudokumainwindow.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QVariant \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qinputmethod.h \
-		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QLabel \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qlabel.h \
@@ -1428,7 +1600,52 @@ debug/victoryscreen.o: ../Sudoku/victoryscreen.cpp ../Sudoku/victoryscreen.h \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QSizeF \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QTransform \
 		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qnativeinterface.h \
-		ui_victoryscreen.h
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/QMovie \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qmovie.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimagereader.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qeventloop.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfutureinterface.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qmutex.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qelapsedtimer.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qtsan_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qresultstore.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfuture_impl.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthreadpool.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qthread.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qrunnable.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qexception.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qimageiohandler.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qplugin.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qjsonvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborvalue.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qcborcommon.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/quuid.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qendian.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/q20algorithm.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/qfactoryinterface.h \
+		../Sudoku/ui_victoryscreen.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtCore/QVariant \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qinputmethod.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qguiapplication_platform.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt-framework/6.6.2/mingw_64/include/QtGui/qtextdocument.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/victoryscreen.o ../Sudoku/victoryscreen.cpp
 
 debug/moc_game.o: debug/moc_game.cpp 
