@@ -17,6 +17,7 @@ public:
     ~VictoryScreen();
 
 private:
+    void displayVictoryScreen();
 
     unsigned difficulty;
     Ui::VictoryScreen *ui;
