@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <vector>
 #include <set>
+#include <QCloseEvent>
 #include "../../source/sudoku.h"
 #include "victoryscreen.h"
 
@@ -52,6 +53,8 @@ private slots:
     void on_submitBtn_clicked();
 
     void on_remErrorsBtn_clicked();
+
+    virtual void closeEvent (QCloseEvent *event) override;
 
     void on_grid1_clicked();
 

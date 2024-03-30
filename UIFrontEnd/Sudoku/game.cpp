@@ -16,10 +16,6 @@ game::game(QWidget *parent, unsigned difficulty)
     ui->setupUi(this);
     this->setWindowTitle("Sudoku");
 
-    connect(this, &game::finished, this, [this](){
-        emit openMainMenu();
-    });
-
     //easy recall of buttons to grids
     gridButtonUIs = {ui->grid1, ui->grid2, ui->grid3, ui->grid4, ui->grid5, ui->grid6, ui->grid7, ui->grid8, ui->grid9,
                     ui->grid10, ui->grid11, ui->grid12, ui->grid13, ui->grid14, ui->grid15, ui->grid16, ui->grid17, ui->grid18,
@@ -337,6 +333,14 @@ void game::on_remErrorsBtn_clicked()
     showErrors = false;
     eraseErrorMarks();
     ui->remErrorsBtn->setEnabled(false);
+}
+
+void game::closeEvent (QCloseEvent *event) {
+    if (winScrn) {
+        winScrn->close();
+    }
+    emit openMainMenu();
+    event->accept();
 }
 
 void game::on_grid1_clicked()
