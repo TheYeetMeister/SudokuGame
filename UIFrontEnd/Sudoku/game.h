@@ -250,7 +250,7 @@ private:
     std::set<int> lockedGrids;
     std::set<int> wrongGrids;
 
-    std::unique_ptr<VictoryScreen> winScrn;
+    std::unique_ptr<VictoryScreen> winScrn = nullptr;
 };
 
 #endif // GAME_H

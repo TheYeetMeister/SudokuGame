@@ -24,6 +24,8 @@ private:
 
     void displayConfetti();
 
+    void displayEvilGifsImgs();
+
     unsigned difficulty;
     Ui::VictoryScreen *ui;
 };

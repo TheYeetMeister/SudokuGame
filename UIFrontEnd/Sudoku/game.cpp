@@ -73,6 +73,10 @@ game::game(QWidget *parent, unsigned difficulty)
 
 game::~game()
 {
+    if (winScrn) {
+        winScrn->close();
+    }
+
     delete ui;
 }
 void game::createGame(SudokuBoard &mainGame, unsigned difficulty) {

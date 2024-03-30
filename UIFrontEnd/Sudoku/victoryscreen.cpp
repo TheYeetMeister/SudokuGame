@@ -6,11 +6,16 @@ VictoryScreen::VictoryScreen(QWidget *parent, unsigned difficulty)
     , ui(new Ui::VictoryScreen)
 {
     ui->setupUi(this);
+    this->setWindowTitle("WinnerWinnerChickenDinner");
     displayVictoryScreen();
     displayStars();
 
     if (difficulty > 3) {
         displayConfetti();
+    }
+
+    if (difficulty > 4) {
+        displayEvilGifsImgs();
     }
 }
 
@@ -74,4 +79,20 @@ void VictoryScreen::displayConfetti() {
     QMovie *movie = new QMovie("../../imgs/win_imgs/confetti.gif");
     ui->confettiLabel->setMovie(movie);
     movie->start();
+}
+
+void VictoryScreen::displayEvilGifsImgs() {
+    QMovie *datBoi = new QMovie("../../imgs/win_imgs/datboi.gif");
+    ui->frogGif->setMovie(datBoi);
+    ui->frogGif->setScaledContents(true);
+    datBoi->start();
+
+    QMovie *frogDance = new QMovie("../../imgs/win_imgs/frog_dance.gif");
+    ui->frogGif2->setMovie(frogDance);
+    ui->frogGif2->setScaledContents(true);
+    frogDance->start();
+
+    QPixmap pm("../../imgs/win_imgs/crown.png");
+    ui->crown->setPixmap(pm);
+    ui->crown->setScaledContents(true);
 }
