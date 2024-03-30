@@ -58,4 +58,10 @@ void VictoryScreen::displayStars() {
         stars[i]->setPixmap(starImg);
         stars[i]->setScaledContents(true);
     }
+
+    if (difficulty == 5) {
+        QPixmap omegaStar("../../imgs/win_imgs/north-star.png");
+        stars[0]->setPixmap(omegaStar);
+        stars[0]->setScaledContents(true);
+    }
 }
