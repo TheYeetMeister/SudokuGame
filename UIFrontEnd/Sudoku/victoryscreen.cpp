@@ -27,3 +27,7 @@ void VictoryScreen::displayVictoryScreen() {
     ui->displayScreen->setPixmap(pm);
     ui->displayScreen->setScaledContents(true);
 }
+
+void VictoryScreen::displayStars() {
+
+}
