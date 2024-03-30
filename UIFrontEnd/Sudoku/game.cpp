@@ -315,6 +315,9 @@ void game::on_submitBtn_clicked()
         ui->submitBtn->setEnabled(false);
         ui->QuitBtn->setEnabled(false);
         ui->newGameBtn->setVisible(true);
+
+        //shows victory screen, saves the ptr in a class ptr
+        winScrn = std::unique_ptr<VictoryScreen>(new VictoryScreen(this, difficulty));
     } else {
         eraseErrorMarks();
         wrongGrids = mainGame.getAllWrongGrids();
