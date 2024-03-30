@@ -2,6 +2,7 @@
 #define VICTORYSCREEN_H
 
 #include <QDialog>
+#include <QPixmap>
 
 namespace Ui {
 class VictoryScreen;
@@ -16,6 +17,8 @@ public:
     ~VictoryScreen();
 
 private:
+
+    unsigned difficulty;
     Ui::VictoryScreen *ui;
 };
 
