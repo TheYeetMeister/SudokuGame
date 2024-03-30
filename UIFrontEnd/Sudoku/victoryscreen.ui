@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>775</width>
-    <height>565</height>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>120</y>
+     <y>0</y>
      <width>771</width>
-     <height>441</height>
+     <height>561</height>
     </rect>
    </property>
    <property name="text">
@@ -29,8 +29,8 @@
   <widget class="QLabel" name="star1">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>70</y>
+     <x>360</x>
+     <y>290</y>
      <width>71</width>
      <height>71</height>
     </rect>
@@ -42,8 +42,8 @@
   <widget class="QLabel" name="star2">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>80</y>
+     <x>260</x>
+     <y>320</y>
      <width>71</width>
      <height>71</height>
     </rect>
@@ -55,8 +55,8 @@
   <widget class="QLabel" name="star3">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>80</y>
+     <x>460</x>
+     <y>320</y>
      <width>71</width>
      <height>71</height>
     </rect>
@@ -68,8 +68,8 @@
   <widget class="QLabel" name="star4">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>170</y>
+     <x>220</x>
+     <y>390</y>
      <width>71</width>
      <height>71</height>
     </rect>
@@ -81,8 +81,8 @@
   <widget class="QLabel" name="star5">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>170</y>
+     <x>520</x>
+     <y>390</y>
      <width>71</width>
      <height>71</height>
     </rect>
