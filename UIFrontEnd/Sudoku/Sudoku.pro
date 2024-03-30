@@ -34,6 +34,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    ../../imgs/win_imgs/confetti.gif \
+    ../../imgs/win_imgs/crown.png \
+    ../../imgs/win_imgs/datboi.gif \
+    ../../imgs/win_imgs/frog_dance.gif \
     ../../imgs/win_imgs/golden-star.png \
     ../../imgs/win_imgs/med-evil-winimg.png \
     ../../imgs/win_imgs/north-star.png \

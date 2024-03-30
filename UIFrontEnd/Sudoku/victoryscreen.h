@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QPixmap>
+#include <QMovie>
 
 namespace Ui {
 class VictoryScreen;
@@ -20,6 +21,8 @@ private:
     void displayVictoryScreen();
 
     void displayStars();
+
+    void displayConfetti();
 
     unsigned difficulty;
     Ui::VictoryScreen *ui;

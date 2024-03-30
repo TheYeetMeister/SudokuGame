@@ -8,6 +8,10 @@ VictoryScreen::VictoryScreen(QWidget *parent, unsigned difficulty)
     ui->setupUi(this);
     displayVictoryScreen();
     displayStars();
+
+    if (difficulty > 3) {
+        displayConfetti();
+    }
 }
 
 VictoryScreen::~VictoryScreen()
@@ -64,4 +68,10 @@ void VictoryScreen::displayStars() {
         stars[0]->setPixmap(omegaStar);
         stars[0]->setScaledContents(true);
     }
+}
+
+void VictoryScreen::displayConfetti() {
+    QMovie *movie = new QMovie("../../imgs/win_imgs/confetti.gif");
+    ui->confettiLabel->setMovie(movie);
+    movie->start();
 }
