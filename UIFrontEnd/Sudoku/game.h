@@ -246,7 +246,7 @@ private:
     std::vector<QPushButton*> numButtonUIs;
     int currentGrid = 0;
     bool solved;
-    bool showErrors = false;
+    bool showErrors = true;
     std::set<int> lockedGrids;
     std::set<int> wrongGrids;
 

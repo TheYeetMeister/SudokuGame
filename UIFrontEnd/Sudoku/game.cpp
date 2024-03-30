@@ -307,7 +307,7 @@ void game::on_submitBtn_clicked()
     resetCurrBtn();
     deactivateNumBtns();
     currentGrid = 0;
-    solved = mainGame.isTheWholeBoardSolved();
+    //solved = mainGame.isTheWholeBoardSolved();
 
     if (solved) {
         boardIsSolved();
