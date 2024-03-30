@@ -7,6 +7,7 @@ VictoryScreen::VictoryScreen(QWidget *parent, unsigned difficulty)
 {
     ui->setupUi(this);
     displayVictoryScreen();
+    displayStars();
 }
 
 VictoryScreen::~VictoryScreen()
