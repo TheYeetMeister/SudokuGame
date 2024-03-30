@@ -5,6 +5,7 @@
 #include <vector>
 #include <set>
 #include "../../source/sudoku.h"
+#include "victoryscreen.h"
 
 namespace Ui {
 class game;
@@ -248,6 +249,8 @@ private:
     bool showErrors = false;
     std::set<int> lockedGrids;
     std::set<int> wrongGrids;
+
+    std::unique_ptr<VictoryScreen> winScrn;
 };
 
 #endif // GAME_H
