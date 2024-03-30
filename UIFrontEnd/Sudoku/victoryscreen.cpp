@@ -36,6 +36,18 @@ void VictoryScreen::displayStars() {
         case 1:
             pathToImg = "../../imgs/win_imgs/veryeasy_star.png";
             break;
+        case 2:
+            pathToImg = "../../imgs/win_imgs/golden-star.png";
+            break;
+        case 3:
+            pathToImg = "../../imgs/win_imgs/golden-star.png";
+            break;
+        case 4:
+            pathToImg = "../../imgs/win_imgs/rainbow-star.png";
+            break;
+        case 5:
+            pathToImg = "../../imgs/win_imgs/rainbow-star.png";
+            break;
         default:
             throw std::out_of_range("given difficulty value is out of range");
     }
