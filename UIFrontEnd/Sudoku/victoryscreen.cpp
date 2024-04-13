@@ -28,9 +28,9 @@ void VictoryScreen::displayVictoryScreen() {
     QString pathToImg;
 
     if (difficulty < 3) {
-        pathToImg = ("../../imgs/win_imgs/veryeasy-easy.winimg.png");
+        pathToImg = ("win_imgs/veryeasy-easy.winimg.png");
     } else {
-        pathToImg = ("../../imgs/win_imgs/med-evil-winimg.png");
+        pathToImg = ("win_imgs/med-evil-winimg.png");
     }
 
     QPixmap pm(pathToImg);
@@ -44,19 +44,19 @@ void VictoryScreen::displayStars() {
 
     switch(difficulty) {
         case 1:
-            pathToImg = "../../imgs/win_imgs/veryeasy_star.png";
+            pathToImg = "win_imgs/veryeasy_star.png";
             break;
         case 2:
-            pathToImg = "../../imgs/win_imgs/golden-star.png";
+            pathToImg = "win_imgs/golden-star.png";
             break;
         case 3:
-            pathToImg = "../../imgs/win_imgs/golden-star.png";
+            pathToImg = "win_imgs/golden-star.png";
             break;
         case 4:
-            pathToImg = "../../imgs/win_imgs/rainbow-star.png";
+            pathToImg = "win_imgs/rainbow-star.png";
             break;
         case 5:
-            pathToImg = "../../imgs/win_imgs/rainbow-star.png";
+            pathToImg = "win_imgs/rainbow-star.png";
             break;
         default:
             throw std::out_of_range("given difficulty value is out of range");
@@ -69,30 +69,30 @@ void VictoryScreen::displayStars() {
     }
 
     if (difficulty == 5) {
-        QPixmap omegaStar("../../imgs/win_imgs/north-star.png");
+        QPixmap omegaStar("win_imgs/north-star.png");
         stars[0]->setPixmap(omegaStar);
         stars[0]->setScaledContents(true);
     }
 }
 
 void VictoryScreen::displayConfetti() {
-    QMovie *movie = new QMovie("../../imgs/win_imgs/confetti.gif");
+    QMovie *movie = new QMovie("win_imgs/confetti.gif");
     ui->confettiLabel->setMovie(movie);
     movie->start();
 }
 
 void VictoryScreen::displayEvilGifsImgs() {
-    QMovie *datBoi = new QMovie("../../imgs/win_imgs/datboi.gif");
+    QMovie *datBoi = new QMovie("win_imgs/datboi.gif");
     ui->frogGif->setMovie(datBoi);
     ui->frogGif->setScaledContents(true);
     datBoi->start();
 
-    QMovie *frogDance = new QMovie("../../imgs/win_imgs/frog_dance.gif");
+    QMovie *frogDance = new QMovie("win_imgs/frog_dance.gif");
     ui->frogGif2->setMovie(frogDance);
     ui->frogGif2->setScaledContents(true);
     frogDance->start();
 
-    QPixmap pm("../../imgs/win_imgs/crown.png");
+    QPixmap pm("win_imgs/crown.png");
     ui->crown->setPixmap(pm);
     ui->crown->setScaledContents(true);
 }

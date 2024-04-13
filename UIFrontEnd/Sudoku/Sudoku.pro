@@ -43,4 +43,14 @@ DISTFILES += \
     ../../imgs/win_imgs/north-star.png \
     ../../imgs/win_imgs/rainbow-star.png \
     ../../imgs/win_imgs/veryeasy-easy.winimg.png \
-    ../../imgs/win_imgs/veryeasy_star.png
+    ../../imgs/win_imgs/veryeasy_star.png \
+    win_imgs/confetti.gif \
+    win_imgs/crown.png \
+    win_imgs/datboi.gif \
+    win_imgs/frog_dance.gif \
+    win_imgs/golden-star.png \
+    win_imgs/med-evil-winimg.png \
+    win_imgs/north-star.png \
+    win_imgs/rainbow-star.png \
+    win_imgs/veryeasy-easy.winimg.png \
+    win_imgs/veryeasy_star.png
