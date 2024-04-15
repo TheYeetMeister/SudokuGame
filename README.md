@@ -1,5 +1,5 @@
 # SudokuGame
-## My Sudoku Game, made using C++
+## My Epic Sudoku Game, made using C++
 
 Hello! This is my Sudoku Game I've built using mainly C++ to run the logic. If you've never played Sudoku, here's a list of the rules that you follow:
 
