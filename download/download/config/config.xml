@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
-    <Name>Your application</Name>
+    <Name>SudokuGame</Name>
     <Version>1.0.0</Version>
-    <Title>Your application Installer</Title>
-    <Publisher>Your vendor</Publisher>
+    <Title>SudokuGame Installer</Title>
+    <Publisher>TheYeetMeister Games</Publisher>
     <StartMenuDir>Super App</StartMenuDir>
-    <TargetDir>@HomeDir@/InstallationDirectory</TargetDir>
+    <TargetDir>@HomeDir@/SudokuGame</TargetDir>
 </Installer>
