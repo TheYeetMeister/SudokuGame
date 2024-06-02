@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>SudokuGame</DisplayName>
+    <Description>This will install SudokuGame onto your machine!</Description>
+    <Version>0.1.0-1</Version>
+    <ReleaseDate>2024-06-01</ReleaseDate>
+    <Licenses>
+        <License name="Beer Public License Agreement" file="license.txt" />
+    </Licenses>
+    <Default>true</Default>
+</Package>
