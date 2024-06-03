@@ -5,7 +5,7 @@ Hello! This is my Sudoku Game I've built using mainly C++ to run the logic.
 
 Here's the download link:
 
-## Download <a id="raw/main/SudokuGameInstaller/SudokuGameInstaller.exe"></a>
+## Download <a id="raw/main/SudokuGameInstaller/SudokuGameInstaller.exe">link</a>
 
 If you've never played Sudoku, here's a list of the rules that you follow:
 
