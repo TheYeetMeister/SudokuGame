@@ -1,7 +1,13 @@
 # SudokuGame
 ## My Sudoku Game, made using C++
 
-Hello! This is my Sudoku Game I've built using mainly C++ to run the logic. If you've never played Sudoku, here's a list of the rules that you follow:
+Hello! This is my Sudoku Game I've built using mainly C++ to run the logic. 
+
+Here's the download link:
+
+## Download <a id="raw/main/SudokuGameInstaller/SudokuGameInstaller.exe"></a>
+
+If you've never played Sudoku, here's a list of the rules that you follow:
 
 
 ## Sudoku Rules
